@@ -1,0 +1,275 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="|NnCSezjX(K`Kkx`[5L5">planet</variable>
+    <variable id="2F68R1-t{7+{A6vkAU%2">size</variable>
+    <variable id="3Z%UWj5[0%OwjF+.@P]a">i</variable>
+    <variable id="3X;f.Bgk~%;qUt,r)_!,">name</variable>
+    <variable id="GztxmhB0,Up|~J?_Uu$o">max</variable>
+    <variable id="@B3Z$+3Q%v]+MPBrmOR}">index</variable>
+  </variables>
+  <block type="io_comment_dropdown" id="%fkn`Szc-]oHE^O^0,FW" x="97" y="52">
+    <field name="NAME">#</field>
+    <value name="v1">
+      <shadow type="indata" id="@Sp$2Us$Gx._/bOE8]:/">
+        <field name="indata1">태양계에서 가장 큰 행성 맞추기 퀴즈(3번의 기회)</field>
+      </shadow>
+    </value>
+    <next>
+      <block type="list_create" id=":[+v|Op%3Q.7-b@I-VG#">
+        <value name="list">
+          <shadow type="indata">
+            <field name="indata1"></field>
+          </shadow>
+          <block type="variables_get" id="f?%]D|c{]xqBMvwf+gXo">
+            <field name="VAR" id="|NnCSezjX(K`Kkx`[5L5">planet</field>
+          </block>
+        </value>
+        <value name="text">
+          <shadow type="indata" id="CI/~cOw|(}AI:VO_DX#N">
+            <field name="indata1">'수성','금성','지구','화성','목성','토성','천왕성','해왕성'</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="list_create" id="-rMTb09C,o?shTzDKLbC">
+            <value name="list">
+              <shadow type="indata">
+                <field name="indata1"></field>
+              </shadow>
+              <block type="variables_get" id="+}.?Ywf!RA4fFb{xb`x1">
+                <field name="VAR" id="2F68R1-t{7+{A6vkAU%2">size</field>
+              </block>
+            </value>
+            <value name="text">
+              <shadow type="indata" id="BY9;4Lb/HH0y;_CrD%JH">
+                <field name="indata1">2440,6052,6378,3390,69911,58232,25362,24622</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="repeat_for" id="KX-%r$2Fl4hJtd~I5D.~">
+                <value name="v1">
+                  <shadow type="indata">
+                    <field name="indata1"></field>
+                  </shadow>
+                  <block type="variables_get" id="~7v=LZ5#m0p-V{^{;U+y">
+                    <field name="VAR" id="3Z%UWj5[0%OwjF+.@P]a">i</field>
+                  </block>
+                </value>
+                <value name="v2">
+                  <shadow type="indata" id="9hv]ck^sOYGm`|Z*GaB`">
+                    <field name="indata1"></field>
+                  </shadow>
+                  <block type="repeat_range" id="N;mO^(KHf|b2iK_n2~bf">
+                    <value name="v1">
+                      <shadow type="indata" id="y9{qW0p15O,!xUoTR!WG">
+                        <field name="indata1">1</field>
+                      </shadow>
+                    </value>
+                    <value name="v2">
+                      <shadow type="indata" id="v~QW{|7%|k0zK+WMhX)M">
+                        <field name="indata1">4</field>
+                      </shadow>
+                    </value>
+                    <value name="v3">
+                      <shadow type="indata" id="X9uceZA6T=5!yNK=EEtH">
+                        <field name="indata1"></field>
+                      </shadow>
+                    </value>
+                  </block>
+                </value>
+                <statement name="v3">
+                  <block type="math_change" id="0Xtq+..HNGW8?P^A7(,U">
+                    <field name="NAME">=</field>
+                    <value name="var_name">
+                      <shadow xmlns="" type="indata">
+                        <field name="indata1">0</field>
+                      </shadow>
+                      <block type="variables_get" id="r1lBj?,HOiTG1wZD`g@Y">
+                        <field name="VAR" id="3X;f.Bgk~%;qUt,r)_!,">name</field>
+                      </block>
+                    </value>
+                    <value name="DELTA">
+                      <shadow type="indata">
+                        <field name="indata1">0</field>
+                      </shadow>
+                      <block type="io_input" id="FV$q_Zl{b@DU{kIY.@S%">
+                        <value name="content1">
+                          <shadow type="indata" id="8~vN4F%Zkv+I-RGqWI=^">
+                            <field name="indata1"></field>
+                          </shadow>
+                          <block type="dynamic_dragfill_print" id="c`{k7E0$0V46Zm8-Y?ZS">
+                            <field name="func">{i} 번째. 태양계에서 가장 큰 행성은 무엇입니까? </field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="math_change" id="${,?uU:5-*^b}*2;LFTe">
+                        <field name="NAME">=</field>
+                        <value name="var_name">
+                          <shadow xmlns="" type="indata">
+                            <field name="indata1">0</field>
+                          </shadow>
+                          <block type="variables_get" id="uBmyYU6^IB;d+}j]`Z:=">
+                            <field name="VAR" id="GztxmhB0,Up|~J?_Uu$o">max</field>
+                          </block>
+                        </value>
+                        <value name="DELTA">
+                          <shadow type="indata" id="GG:=Dk6;`8+5-8bXnco2">
+                            <field name="indata1">0</field>
+                          </shadow>
+                          <block type="dynamic_dragfill_control" id="{WFKoc#]CvOQ6{eZ8y)b">
+                            <field name="func">max</field>
+                            <value name="param">
+                              <shadow xmlns="" type="indata">
+                                <field name="indata1">var</field>
+                              </shadow>
+                              <block type="variables_get" id="7o3NQN1upw6*c^sT$s#%">
+                                <field name="VAR" id="2F68R1-t{7+{A6vkAU%2">size</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="math_change" id="fqF5IS]VbfojG0ws3v{y">
+                            <field name="NAME">=</field>
+                            <value name="var_name">
+                              <shadow xmlns="" type="indata">
+                                <field name="indata1">0</field>
+                              </shadow>
+                              <block type="variables_get" id="9UWFis|0=:o$5u=gEuxQ">
+                                <field name="VAR" id="@B3Z$+3Q%v]+MPBrmOR}">index</field>
+                              </block>
+                            </value>
+                            <value name="DELTA">
+                              <shadow type="indata">
+                                <field name="indata1">0</field>
+                              </shadow>
+                              <block type="dynamic_dragfill_collection" id="34x(x0N!c:IZBfo7q/B%">
+                                <field name="func">index</field>
+                                <value name="v1">
+                                  <shadow xmlns="" type="indata">
+                                    <field name="indata1">0</field>
+                                  </shadow>
+                                  <block type="variables_get" id=";rg*wS7RtT#uZfUe[t%{">
+                                    <field name="VAR" id="2F68R1-t{7+{A6vkAU%2">size</field>
+                                  </block>
+                                </value>
+                                <value name="param">
+                                  <shadow type="indata" id="r2Jf`n?|^8Mv488PW]i4">
+                                    <field name="indata1">요소값</field>
+                                  </shadow>
+                                  <block type="variables_get" id="^fzI{O=P3SYe.|EpsC_:">
+                                    <field name="VAR" id="GztxmhB0,Up|~J?_Uu$o">max</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="controls_if" id="CbD/^YkW27AuXXz4n@m{">
+                                <value name="IF0">
+                                  <shadow type="indata">
+                                    <field name="indata1"></field>
+                                  </shadow>
+                                  <block type="oper_compare" id="NAuc^)a8vCvy7m3G~z;q">
+                                    <field name="NAME">==</field>
+                                    <value name="v1">
+                                      <shadow type="indata">
+                                        <field name="indata1"></field>
+                                      </shadow>
+                                      <block type="variables_get" id="pz5D{]?v_6Tb0ZNWc)Y9">
+                                        <field name="VAR" id="3X;f.Bgk~%;qUt,r)_!,">name</field>
+                                      </block>
+                                    </value>
+                                    <value name="v2">
+                                      <shadow type="indata" id="/gg#a}Yh*qw`[x9z6BNf">
+                                        <field name="indata1">0</field>
+                                      </shadow>
+                                      <block type="list_index" id="1T=lTZR$66I9eM9:YK-=">
+                                        <value name="list">
+                                          <shadow xmlns="" type="indata">
+                                            <field name="indata1"></field>
+                                          </shadow>
+                                          <block type="variables_get" id="hYn4DqECB+I?M/?`kQje">
+                                            <field name="VAR" id="|NnCSezjX(K`Kkx`[5L5">planet</field>
+                                          </block>
+                                        </value>
+                                        <value name="dic1">
+                                          <shadow type="indata">
+                                            <field name="indata1">0</field>
+                                          </shadow>
+                                          <block type="variables_get" id="SoffQ(OD!c/3P#Ch1DWP">
+                                            <field name="VAR" id="@B3Z$+3Q%v]+MPBrmOR}">index</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <statement name="DO0">
+                                  <block type="io_print_empty" id="tM`KgY#8QBB.FL`nx]s9">
+                                    <value name="content1">
+                                      <shadow type="indata">
+                                        <field name="indata1">"Hello, 파이썬! 😍"</field>
+                                      </shadow>
+                                      <block type="dynamic_dragfill_print" id="dh|K=u0)[[3X:k]lbf$@">
+                                        <field name="func">{i}번째에 맞추었습니다. 태양계에서 가장 큰 행성은 {name} 입니다.</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="Repeat_break" id="=ZQo7?^gJYt{^xrBQh`g"></block>
+                                    </next>
+                                  </block>
+                                </statement>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <next>
+                  <block type="controls_if" id="[pc}~Q.D+#e%u}IRzOne">
+                    <value name="IF0">
+                      <shadow type="indata">
+                        <field name="indata1"></field>
+                      </shadow>
+                      <block type="oper_compare" id="Hs/~7%FcdLM1!Id95UN`">
+                        <field name="NAME">==</field>
+                        <value name="v1">
+                          <shadow type="indata">
+                            <field name="indata1"></field>
+                          </shadow>
+                          <block type="variables_get" id="546uV|^m!}aqnmI=X-k:">
+                            <field name="VAR" id="3Z%UWj5[0%OwjF+.@P]a">i</field>
+                          </block>
+                        </value>
+                        <value name="v2">
+                          <shadow type="indata" id="p:VBi#{n@4{Rs~)h.g?(">
+                            <field name="indata1">3</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="io_print_empty" id="Y{UoMgs1VI]%-%~,3qR0">
+                        <value name="content1">
+                          <shadow type="indata">
+                            <field name="indata1">"Hello, 파이썬! 😍"</field>
+                          </shadow>
+                          <block type="dynamic_dragfill_print" id="uJ}S+!DFP:`Q,G{E{?xH">
+                            <field name="func">죄송합니다. 3번째에도 못 맞추었습니다.</field>
+                          </block>
+                        </value>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

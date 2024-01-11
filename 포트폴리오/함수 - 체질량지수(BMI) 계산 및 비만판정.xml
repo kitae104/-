@@ -1,0 +1,492 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="nnD5cB2SKl4(WPu`J?@@">bmi_calculator</variable>
+    <variable id="eFXH7i:N)g%SQxt9:r^e">weight</variable>
+    <variable id="=O??sAhM?Nm)cLxhl{O$">height</variable>
+    <variable id="`C},wzljm[CX3V)ZU~9v">bmi_determin</variable>
+    <variable id="Ej`6j(3z=JBEF8^Y|S%3">bmi</variable>
+    <variable id="iUlRtd*i1dB`~lrK_8Pd">determin</variable>
+    <variable id="J5f~tVwZ_1R4]`nuS`@9">result</variable>
+  </variables>
+  <block type="webdefine" id="DF|jd{GSRbR8Pvzez+%6" x="52" y="23">
+    <value name="1">
+      <shadow type="indata">
+        <field name="indata1"></field>
+      </shadow>
+      <block type="variables_get" id="9{/.*x.55Tc`*v2ku^QM">
+        <field name="VAR" id="nnD5cB2SKl4(WPu`J?@@">bmi_calculator</field>
+      </block>
+    </value>
+    <value name="2">
+      <shadow type="indata" id="}=i|$DcvpbfjegQ1n+p_">
+        <field name="indata1"></field>
+      </shadow>
+      <block type="class_func_param" id="rcf2;zGgUK@IG.BaiS9)">
+        <mutation items="2"></mutation>
+        <value name="ADD0">
+          <block type="variables_get" id="gs%m;HOD0r)a1intA;UC">
+            <field name="VAR" id="eFXH7i:N)g%SQxt9:r^e">weight</field>
+          </block>
+        </value>
+        <value name="ADD1">
+          <block type="variables_get" id="=;UF8ecdrD[Y0_I[hq6v">
+            <field name="VAR" id="=O??sAhM?Nm)cLxhl{O$">height</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <statement name="DO">
+      <block type="math_change" id="qPi1e%Q{LL!?k7H+v-Lt">
+        <field name="NAME">=</field>
+        <value name="var_name">
+          <shadow xmlns="" type="indata">
+            <field name="indata1">0</field>
+          </shadow>
+          <block type="variables_get" id="THj$1XdSh1wSPrf6T%]1">
+            <field name="VAR" id="=O??sAhM?Nm)cLxhl{O$">height</field>
+          </block>
+        </value>
+        <value name="DELTA">
+          <shadow type="indata" id="uA*$3d,jT|etyt84svp6">
+            <field name="indata1">0</field>
+          </shadow>
+          <block type="oper_arithmetic" id="l!~Td[KdR]0{3]GCtqQ_">
+            <field name="NAME">/</field>
+            <value name="v1">
+              <shadow type="indata">
+                <field name="indata1"></field>
+              </shadow>
+              <block type="variables_get" id="XpI4]DYM|eyP*KqmHD=j">
+                <field name="VAR" id="=O??sAhM?Nm)cLxhl{O$">height</field>
+              </block>
+            </value>
+            <value name="v2">
+              <shadow type="indata" id="$Wf!OAi`?EfaOc6$:_}s">
+                <field name="indata1">100</field>
+              </shadow>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="math_change" id="eySgJFIXMx+y+3!q=uqP">
+            <field name="NAME">=</field>
+            <value name="var_name">
+              <shadow xmlns="" type="indata">
+                <field name="indata1">0</field>
+              </shadow>
+              <block type="variables_get" id="ItqRUE^J!T^LKu^3.Lx$">
+                <field name="VAR" id="Ej`6j(3z=JBEF8^Y|S%3">bmi</field>
+              </block>
+            </value>
+            <value name="DELTA">
+              <shadow type="indata" id="-wEKf0hF;y/J%FfCd7;*">
+                <field name="indata1">0</field>
+              </shadow>
+              <block type="oper_arithmetic" id="SKEwxHx(_Kut0S)/3ccY">
+                <field name="NAME">/</field>
+                <value name="v1">
+                  <shadow type="indata">
+                    <field name="indata1"></field>
+                  </shadow>
+                  <block type="variables_get" id="!`L}x%#~~uhZI_RiHL;B">
+                    <field name="VAR" id="eFXH7i:N)g%SQxt9:r^e">weight</field>
+                  </block>
+                </value>
+                <value name="v2">
+                  <shadow type="indata" id="3;)y?=bs)3U_+h%cuMxS">
+                    <field name="indata1">0</field>
+                  </shadow>
+                  <block type="oper_arithmetic" id="7`uo}ZV=ML1G#J{7v.X~">
+                    <field name="NAME">**</field>
+                    <value name="v1">
+                      <shadow type="indata">
+                        <field name="indata1"></field>
+                      </shadow>
+                      <block type="variables_get" id="dM3dqX;I8=nW50DyM2V!">
+                        <field name="VAR" id="=O??sAhM?Nm)cLxhl{O$">height</field>
+                      </block>
+                    </value>
+                    <value name="v2">
+                      <shadow type="indata" id="L,XC@kQf08HeRrS1yta!">
+                        <field name="indata1">2</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="webreturn2" id="xA/-xiYH@[hHr^JMyI2]">
+                <value name="return">
+                  <shadow type="indata">
+                    <field name="indata1"></field>
+                  </shadow>
+                  <block type="class_func_param" id="`BoQMGz9JrU.fe,hmwB`">
+                    <mutation items="1"></mutation>
+                    <value name="ADD0">
+                      <block type="variables_get" id="DR~,`ky2)|)~XcxM@e9-">
+                        <field name="VAR" id="Ej`6j(3z=JBEF8^Y|S%3">bmi</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <next>
+      <block type="webdefine" id="~j9+l@IG?j{C?:$@~1Uv">
+        <value name="1">
+          <shadow type="indata">
+            <field name="indata1"></field>
+          </shadow>
+          <block type="variables_get" id="`#gv$F?HU[Bbdsv^sf]!">
+            <field name="VAR" id="`C},wzljm[CX3V)ZU~9v">bmi_determin</field>
+          </block>
+        </value>
+        <value name="2">
+          <shadow type="indata">
+            <field name="indata1"></field>
+          </shadow>
+          <block type="class_func_param" id="bpF9.AP)yjC!M(=#vMtA">
+            <mutation items="1"></mutation>
+            <value name="ADD0">
+              <block type="variables_get" id="A|chW[v;m2;nY[7x;)tv">
+                <field name="VAR" id="Ej`6j(3z=JBEF8^Y|S%3">bmi</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO">
+          <block type="controls_if" id="0l[;+zIAq.Voa,TBt,sU">
+            <value name="IF0">
+              <shadow type="indata">
+                <field name="indata1"></field>
+              </shadow>
+              <block type="oper_compare" id=";%eqG)._v~^`_5^0bjKX">
+                <field name="NAME">&lt;</field>
+                <value name="v1">
+                  <shadow type="indata">
+                    <field name="indata1"></field>
+                  </shadow>
+                  <block type="variables_get" id="v+[lViWYIA59D_e$$u6$">
+                    <field name="VAR" id="Ej`6j(3z=JBEF8^Y|S%3">bmi</field>
+                  </block>
+                </value>
+                <value name="v2">
+                  <shadow type="indata" id="s(5;[fGo~tUoZwmcj6aU">
+                    <field name="indata1">20</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="math_change" id="{,Iw(YLuqV|,Mg4}3Yjr">
+                <field name="NAME">=</field>
+                <value name="var_name">
+                  <shadow xmlns="" type="indata">
+                    <field name="indata1">0</field>
+                  </shadow>
+                  <block type="variables_get" id="CqtsUy6i+t4Ui5uu}sul">
+                    <field name="VAR" id="iUlRtd*i1dB`~lrK_8Pd">determin</field>
+                  </block>
+                </value>
+                <value name="DELTA">
+                  <shadow type="indata" id=")dr`2H751jsV;W+-y*=7">
+                    <field name="indata1">'저체중'</field>
+                  </shadow>
+                </value>
+              </block>
+            </statement>
+            <next>
+              <block type="elif_statement" id=":b_w#T@X0`b50VGn,v/y">
+                <value name="v1">
+                  <shadow type="indata">
+                    <field name="indata1"></field>
+                  </shadow>
+                  <block type="oper_compare" id="EUib}UWH.Wy#PYGuJf5r">
+                    <field name="NAME">&lt;=</field>
+                    <value name="v1">
+                      <shadow type="indata">
+                        <field name="indata1"></field>
+                      </shadow>
+                      <block type="variables_get" id="~bZhBD:QSim}:%b_ODqL">
+                        <field name="VAR" id="Ej`6j(3z=JBEF8^Y|S%3">bmi</field>
+                      </block>
+                    </value>
+                    <value name="v2">
+                      <shadow type="indata" id="#3SJ.iaAb{qNmDtL7$-r">
+                        <field name="indata1">24</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </value>
+                <statement name="v2">
+                  <block type="math_change" id="YClqn9D0zJh(s,{Zt8?N">
+                    <field name="NAME">=</field>
+                    <value name="var_name">
+                      <shadow type="indata" id="_2/33d?r{~du-:|qhhPH">
+                        <field name="indata1">0</field>
+                      </shadow>
+                      <block type="variables_get" id="5bHbm[yeR;_fz5XJyE_=">
+                        <field name="VAR" id="iUlRtd*i1dB`~lrK_8Pd">determin</field>
+                      </block>
+                    </value>
+                    <value name="DELTA">
+                      <shadow type="indata" id="w/FTWbA-B23u2kHgnVx2">
+                        <field name="indata1">'정상체중'</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </statement>
+                <next>
+                  <block type="elif_statement" id="=*w;@a?(RVTI~#XwCRq;">
+                    <value name="v1">
+                      <shadow type="indata">
+                        <field name="indata1"></field>
+                      </shadow>
+                      <block type="oper_compare" id="ol/JDhor@(]s_b}72+YD">
+                        <field name="NAME">&lt;=</field>
+                        <value name="v1">
+                          <shadow type="indata">
+                            <field name="indata1"></field>
+                          </shadow>
+                          <block type="variables_get" id="baTHXckD_~%_#4)Ld_{6">
+                            <field name="VAR" id="Ej`6j(3z=JBEF8^Y|S%3">bmi</field>
+                          </block>
+                        </value>
+                        <value name="v2">
+                          <shadow type="indata" id="m(v7E-9LA53bkk-c2Gk`">
+                            <field name="indata1">29</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="v2">
+                      <block type="math_change" id="@Z@R)[n?^3-[`0SH8i;@">
+                        <field name="NAME">=</field>
+                        <value name="var_name">
+                          <shadow type="indata">
+                            <field name="indata1">0</field>
+                          </shadow>
+                          <block type="variables_get" id="Jp-z#C,oU}Z9dzrL@m1L">
+                            <field name="VAR" id="iUlRtd*i1dB`~lrK_8Pd">determin</field>
+                          </block>
+                        </value>
+                        <value name="DELTA">
+                          <shadow type="indata" id="EV5:1DZ?c?B;eH$Z*iH8">
+                            <field name="indata1">'과체중'</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="else_statement" id="`9x{rOpPmMMSov9C]7eD">
+                        <statement name="v2">
+                          <block type="math_change" id="#wZ@;%5g2mrRH0vICmKn">
+                            <field name="NAME">=</field>
+                            <value name="var_name">
+                              <shadow type="indata">
+                                <field name="indata1">0</field>
+                              </shadow>
+                              <block type="variables_get" id="Vj`dwR[+}nMbi*^o*?X~">
+                                <field name="VAR" id="iUlRtd*i1dB`~lrK_8Pd">determin</field>
+                              </block>
+                            </value>
+                            <value name="DELTA">
+                              <shadow type="indata" id="g[zQ.C/Yx|u_jDt^AlN^">
+                                <field name="indata1">'비만'</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="webreturn2" id="6KGClYe-rAKi^V@OgzID">
+                            <value name="return">
+                              <shadow type="indata">
+                                <field name="indata1"></field>
+                              </shadow>
+                              <block type="class_func_param" id="|a~J#r(}6F9fsh,D=zhN">
+                                <mutation items="1"></mutation>
+                                <value name="ADD0">
+                                  <block type="variables_get" id="tMe*%8jMGZ},]rl=uaCa">
+                                    <field name="VAR" id="iUlRtd*i1dB`~lrK_8Pd">determin</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+  <block type="math_change" id="QZ#=zmv:?J`p%#hi1h}~" x="443" y="293">
+    <field name="NAME">=</field>
+    <value name="var_name">
+      <shadow type="indata" id="[C9J):p,U-TSM:-G{qPe">
+        <field name="indata1">0</field>
+      </shadow>
+      <block type="variables_get" id="ruBF%|dOtzJt(7[nQqA*">
+        <field name="VAR" id="eFXH7i:N)g%SQxt9:r^e">weight</field>
+      </block>
+    </value>
+    <value name="DELTA">
+      <shadow type="indata" id="B7[:X1{F+VO07J4krjoG">
+        <field name="indata1">0</field>
+      </shadow>
+      <block type="io_trans_for_input" id="-FY+f|-2^VsyvBQSUP}j">
+        <field name="NAME">float</field>
+        <value name="v1">
+          <shadow type="indata">
+            <field name="indata1"></field>
+          </shadow>
+          <block type="io_input" id="e]hn?Imxikgmqqpirb+^">
+            <value name="content1">
+              <shadow type="indata" id="kA;Yus,hP([-(kk$Tk](">
+                <field name="indata1">"몸무게 입력(kg) "</field>
+              </shadow>
+            </value>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="math_change" id="Ab=]zydDtk5aBX,Bu4ZN">
+        <field name="NAME">=</field>
+        <value name="var_name">
+          <shadow xmlns="" type="indata">
+            <field name="indata1">0</field>
+          </shadow>
+          <block type="variables_get" id="x%:bQ(lVe3T5+1uq30x5">
+            <field name="VAR" id="=O??sAhM?Nm)cLxhl{O$">height</field>
+          </block>
+        </value>
+        <value name="DELTA">
+          <shadow type="indata">
+            <field name="indata1">0</field>
+          </shadow>
+          <block type="io_trans_for_input" id="z,.l1obGO)A3P}(.vfJW">
+            <field name="NAME">float</field>
+            <value name="v1">
+              <shadow type="indata">
+                <field name="indata1"></field>
+              </shadow>
+              <block type="io_input" id=".pJU8TcU^bEf-Ed~)!Ka">
+                <value name="content1">
+                  <shadow type="indata" id="+{e:6qcMOx[F3*=?ppK@">
+                    <field name="indata1">"키 입력(cm) "</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="func_return1" id=".?d-xA+$HMG7yqQ=ba#~">
+            <value name="1">
+              <shadow type="indata">
+                <field name="indata1"></field>
+              </shadow>
+              <block type="variables_get" id="Sippqq],!-)-|uzQ$JK^">
+                <field name="VAR" id="Ej`6j(3z=JBEF8^Y|S%3">bmi</field>
+              </block>
+            </value>
+            <value name="2">
+              <shadow type="indata">
+                <field name="indata1"></field>
+              </shadow>
+              <block type="variables_get" id="w`{rHzxjyqRBG9E72bZh">
+                <field name="VAR" id="nnD5cB2SKl4(WPu`J?@@">bmi_calculator</field>
+              </block>
+            </value>
+            <value name="3">
+              <shadow type="indata" id="V%iRi|G0cB=ekR/UCZTd">
+                <field name="indata1"></field>
+              </shadow>
+              <block type="class_func_param" id="9X$Pv(=DpnH:{oOq_ky?">
+                <mutation items="2"></mutation>
+                <value name="ADD0">
+                  <block type="variables_get" id="j;c4a)(/Ig?^`HI8_[{D">
+                    <field name="VAR" id="eFXH7i:N)g%SQxt9:r^e">weight</field>
+                  </block>
+                </value>
+                <value name="ADD1">
+                  <block type="variables_get" id="E@P7Xc;CU9oc_|9Yknl=">
+                    <field name="VAR" id="=O??sAhM?Nm)cLxhl{O$">height</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="func_return1" id="C~w$xRwMz+qU;GX1^?k%">
+                <value name="1">
+                  <shadow type="indata">
+                    <field name="indata1"></field>
+                  </shadow>
+                  <block type="variables_get" id="/_^_bsY!0dd#xaoktZ{@">
+                    <field name="VAR" id="J5f~tVwZ_1R4]`nuS`@9">result</field>
+                  </block>
+                </value>
+                <value name="2">
+                  <shadow type="indata">
+                    <field name="indata1"></field>
+                  </shadow>
+                  <block type="variables_get" id="Ks95)409iB+0]@SC!T}[">
+                    <field name="VAR" id="`C},wzljm[CX3V)ZU~9v">bmi_determin</field>
+                  </block>
+                </value>
+                <value name="3">
+                  <shadow type="indata" id="qc2Gfas2GM}c-BMxW1xY">
+                    <field name="indata1"></field>
+                  </shadow>
+                  <block type="class_func_param" id="#tc9J6p0e;}x:.GBB?|L">
+                    <mutation items="1"></mutation>
+                    <value name="ADD0">
+                      <block type="variables_get" id="FurmJ.wTdV67Ais6Z?Fd">
+                        <field name="VAR" id="Ej`6j(3z=JBEF8^Y|S%3">bmi</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="io_print_empty" id="wdfx2-r!6g#SBE~e5Arp">
+                    <value name="content1">
+                      <shadow type="indata" id="LkROav#m}T|%nD.ysW+a">
+                        <field name="indata1"></field>
+                      </shadow>
+                      <block type="dynamic_dragfill_print" id="@`7Npc0-{4QUqJWTF%%4">
+                        <field name="func">몸무게 {weight}kg, 키 {height}cm 일 때, BMI는 {bmi} 입니다.</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="io_print_empty" id="#^VdJv`Yb`8vof+*xpG8">
+                        <value name="content1">
+                          <shadow type="indata">
+                            <field name="indata1"></field>
+                          </shadow>
+                          <block type="dynamic_dragfill_print" id="a98j/;)+E8YE2K}dsSrI">
+                            <field name="func">BMI에 따른 판정은 {result} 입니다.</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

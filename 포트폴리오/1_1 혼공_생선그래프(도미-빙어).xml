@@ -1,0 +1,257 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="lcyW2i(Y7qvv7KO[bB[M">bream_length</variable>
+    <variable id="A6-X7{UM1Yb[v;z=9vDM">brean_weight</variable>
+    <variable id="FAsY|(`?/HjkRgm7O%!g">plt</variable>
+    <variable id="30!xv)53.N/ejAJCQ$_u">smelt_length</variable>
+    <variable id="(70Vk?.=BI^P!b_3Wl/%">smelt_weight</variable>
+  </variables>
+  <block type="math_change" id="xJP8W$MRP!kSKLm:M#RL" x="59" y="87">
+    <field name="NAME">=</field>
+    <value name="var_name">
+      <shadow xmlns="" type="indata">
+        <field name="indata1">0</field>
+      </shadow>
+      <block type="variables_get" id="{]Wj/QKA)heR2lxvZtmB">
+        <field name="VAR" id="lcyW2i(Y7qvv7KO[bB[M">bream_length</field>
+      </block>
+    </value>
+    <value name="DELTA">
+      <shadow type="indata" id="$7zGg6{wK$i}-SMZ{tj(">
+        <field name="indata1">[25.4, 26.3, 26.5, 29.0, 29.0, 29.7, 29.7, 30.0, 30.0, 30.7, 31.0, 31.0, 31.5, 32.0, 32.0, 32.0, 33.0, 33.0, 33.5, 33.5, 34.0, 34.0, 34.5, 35.0, 35.0, 35.0, 35.0, 36.0, 36.0, 37.0, 38.5, 38.5, 39.5, 41.0, 41.0]</field>
+      </shadow>
+    </value>
+    <next>
+      <block type="math_change" id="FNt7c;=Jut]XS42V%Dki">
+        <field name="NAME">=</field>
+        <value name="var_name">
+          <shadow xmlns="" type="indata">
+            <field name="indata1">0</field>
+          </shadow>
+          <block type="variables_get" id="lCZq.}yo-jQ01H:jRh;g">
+            <field name="VAR" id="A6-X7{UM1Yb[v;z=9vDM">brean_weight</field>
+          </block>
+        </value>
+        <value name="DELTA">
+          <shadow type="indata" id="AdIkg(Bn5,J.n*o-[kx{">
+            <field name="indata1">[242.0, 290.0, 340.0, 363.0, 430.0, 450.0, 500.0, 390.0, 450.0, 500.0, 475.0, 500.0, 500.0, 340.0, 600.0, 600.0, 700.0, 700.0, 610.0, 650.0, 575.0, 685.0, 620.0, 680.0,  700.0, 725.0, 720.0, 714.0, 850.0, 1000.0, 920.0, 955.0, 925.0, 975.0, 950.0]</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="import_matplotlib_list" id="KXW/h*}nzzo$Rrx~{f6.">
+            <field name="list">matplotlib.pyplot as plt&#10;import matplotlib.font_manager as fm&#10;fontprop = fm.FontProperties(fname='malgun.ttf')</field>
+            <next>
+              <block type="dynamic_dragfill_mplplt_3" id="fB{ISNG+mSeq^L[f|G7V">
+                <field name="func">scatter</field>
+                <value name="v1">
+                  <shadow xmlns="" type="indata">
+                    <field name="indata1"></field>
+                  </shadow>
+                  <block type="variables_get" id=",M$^Z;S4jok/}xJ^O*:y">
+                    <field name="VAR" id="FAsY|(`?/HjkRgm7O%!g">plt</field>
+                  </block>
+                </value>
+                <value name="param">
+                  <shadow xmlns="" type="indata">
+                    <field name="indata1">x_data</field>
+                  </shadow>
+                  <block type="variables_get" id="}|7mAEVwR=8W],Ax?VlR">
+                    <field name="VAR" id="lcyW2i(Y7qvv7KO[bB[M">bream_length</field>
+                  </block>
+                </value>
+                <value name="add1">
+                  <shadow xmlns="" type="indata">
+                    <field name="indata1">y_data</field>
+                  </shadow>
+                  <block type="variables_get" id="(tbB[(yaC89.R;[DbJiD">
+                    <field name="VAR" id="A6-X7{UM1Yb[v;z=9vDM">brean_weight</field>
+                  </block>
+                </value>
+                <value name="add2">
+                  <shadow type="indata" id="mO.IU6Wa67V-0{@j#]xj">
+                    <field name="indata1">label='도미', c='b', marker='o', s=20</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="matplotlib_title_label" id="uGXam|wS9E_?i{vi/Wo_">
+                    <value name="v1">
+                      <shadow type="indata">
+                        <field name="indata1"></field>
+                      </shadow>
+                      <block type="variables_get" id="qv;i-?A$olD)uq6_FC6@">
+                        <field name="VAR" id="FAsY|(`?/HjkRgm7O%!g">plt</field>
+                      </block>
+                    </value>
+                    <value name="v3">
+                      <shadow type="indata" id="YkhwQjf-.,NPRkKIa*|z">
+                        <field name="indata1">'도미'</field>
+                      </shadow>
+                    </value>
+                    <value name="v4">
+                      <shadow type="indata" id="ju0Kis)F[{NA0t(^`=Op">
+                        <field name="indata1">'길이(cm)'</field>
+                      </shadow>
+                    </value>
+                    <value name="v5">
+                      <shadow type="indata" id="@f^HOcCpO~SH)4A/ne{J">
+                        <field name="indata1">'무게(g)'</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="matplotlib_legend" id="3nTYi*pkdO?7xZ,y)[!V">
+                        <value name="v1">
+                          <shadow type="indata">
+                            <field name="indata1"></field>
+                          </shadow>
+                          <block type="variables_get" id="13}hJClX.)3EF,-%R[oS">
+                            <field name="VAR" id="FAsY|(`?/HjkRgm7O%!g">plt</field>
+                          </block>
+                        </value>
+                        <value name="v2">
+                          <shadow type="indata" id="#`mDg,p`o7:v?x=6]PZ[">
+                            <field name="indata1">'best'</field>
+                          </shadow>
+                        </value>
+                        <value name="v3">
+                          <shadow type="indata" id="RiMbh.$H6p_1vObyA~Gv">
+                            <field name="indata1">10</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="matplotlib_plt_show" id="b*jOF]$N(ZY~$.0~eT5G">
+                            <next>
+                              <block type="math_change" id="nU;9Y`vuW?b#hu`F^*R[">
+                                <field name="NAME">=</field>
+                                <value name="var_name">
+                                  <shadow xmlns="" type="indata">
+                                    <field name="indata1">0</field>
+                                  </shadow>
+                                  <block type="variables_get" id="x|^A|Vz|;U[5OcX%Z$l_">
+                                    <field name="VAR" id="30!xv)53.N/ejAJCQ$_u">smelt_length</field>
+                                  </block>
+                                </value>
+                                <value name="DELTA">
+                                  <shadow type="indata" id="`7tpr?+Ab1N#EB3wkWyw">
+                                    <field name="indata1">[9.8, 10.5, 10.6, 11.0, 11.2, 11.3, 11.8, 11.8, 12.0, 12.2, 12.4, 13.0, 14.3, 15.0]</field>
+                                  </shadow>
+                                </value>
+                                <next>
+                                  <block type="math_change" id="M-W7qj!}erfJ`1%)x:6H">
+                                    <field name="NAME">=</field>
+                                    <value name="var_name">
+                                      <shadow xmlns="" type="indata">
+                                        <field name="indata1">0</field>
+                                      </shadow>
+                                      <block type="variables_get" id="@ZPiCypWD.l:);$#FiH5">
+                                        <field name="VAR" id="(70Vk?.=BI^P!b_3Wl/%">smelt_weight</field>
+                                      </block>
+                                    </value>
+                                    <value name="DELTA">
+                                      <shadow type="indata" id="vK2H6Sw(g.{{-KbL}l34">
+                                        <field name="indata1">[6.7, 7.5, 7.0, 9.7, 9.8, 8.7, 10.0, 9.9, 9.8, 12.2, 13.4, 12.2, 19.7, 19.9]</field>
+                                      </shadow>
+                                    </value>
+                                    <next>
+                                      <block type="dynamic_dragfill_mplplt_3" id=":$.tEqg+E9]IJM@7w;?A">
+                                        <field name="func">scatter</field>
+                                        <value name="v1">
+                                          <shadow xmlns="" type="indata">
+                                            <field name="indata1"></field>
+                                          </shadow>
+                                          <block type="variables_get" id="H}4J7JOj6TE+IHn}{He*">
+                                            <field name="VAR" id="FAsY|(`?/HjkRgm7O%!g">plt</field>
+                                          </block>
+                                        </value>
+                                        <value name="param">
+                                          <shadow xmlns="" type="indata">
+                                            <field name="indata1">x_data</field>
+                                          </shadow>
+                                          <block type="variables_get" id="1O{)kLi_Sl+A.z^lq+7`">
+                                            <field name="VAR" id="30!xv)53.N/ejAJCQ$_u">smelt_length</field>
+                                          </block>
+                                        </value>
+                                        <value name="add1">
+                                          <shadow xmlns="" type="indata">
+                                            <field name="indata1">y_data</field>
+                                          </shadow>
+                                          <block type="variables_get" id="5ecubCAkW*Q;6t{B-;W+">
+                                            <field name="VAR" id="(70Vk?.=BI^P!b_3Wl/%">smelt_weight</field>
+                                          </block>
+                                        </value>
+                                        <value name="add2">
+                                          <shadow type="indata" id="Vy.:}EhVd@.@eBGrj0,Z">
+                                            <field name="indata1">label='빙어', c='c', marker='o', s=20</field>
+                                          </shadow>
+                                        </value>
+                                        <next>
+                                          <block type="matplotlib_title_label" id="DAPtRR|mFAyanfP5aaZg">
+                                            <value name="v1">
+                                              <shadow type="indata">
+                                                <field name="indata1"></field>
+                                              </shadow>
+                                              <block type="variables_get" id="%#u.wb%#qe:X:MOIOmM}">
+                                                <field name="VAR" id="FAsY|(`?/HjkRgm7O%!g">plt</field>
+                                              </block>
+                                            </value>
+                                            <value name="v3">
+                                              <shadow type="indata" id="8p+W(B)WC?,.fLd0v+~E">
+                                                <field name="indata1">'도미-빙어'</field>
+                                              </shadow>
+                                            </value>
+                                            <value name="v4">
+                                              <shadow type="indata" id="yL[$WtA:e(qW4{s-t7(B">
+                                                <field name="indata1">'길이(cm)'</field>
+                                              </shadow>
+                                            </value>
+                                            <value name="v5">
+                                              <shadow type="indata" id="aKO`r%dpy@u_|66uB#:Q">
+                                                <field name="indata1">'무게(g)'</field>
+                                              </shadow>
+                                            </value>
+                                            <next>
+                                              <block type="matplotlib_legend" id="Vk,?ava|CxZkO3.!Bam0">
+                                                <value name="v1">
+                                                  <shadow type="indata">
+                                                    <field name="indata1"></field>
+                                                  </shadow>
+                                                  <block type="variables_get" id=":;F[Omh.f?i!xs[Qyf`U">
+                                                    <field name="VAR" id="FAsY|(`?/HjkRgm7O%!g">plt</field>
+                                                  </block>
+                                                </value>
+                                                <value name="v2">
+                                                  <shadow type="indata" id="BtVPt3qm9Z~C7$l_2dUI">
+                                                    <field name="indata1">'best'</field>
+                                                  </shadow>
+                                                </value>
+                                                <value name="v3">
+                                                  <shadow type="indata" id="BeI.kp({1bd#aJ2i{$Dg">
+                                                    <field name="indata1">10</field>
+                                                  </shadow>
+                                                </value>
+                                                <next>
+                                                  <block type="matplotlib_plt_show" id="4XoA),At]B(Hye!pkscv"></block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

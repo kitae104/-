@@ -1,0 +1,345 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="|NnCSezjX(K`Kkx`[5L5">planet</variable>
+    <variable id="2F68R1-t{7+{A6vkAU%2">size</variable>
+    <variable id="Ammb]I087G/y|$1ETU!B">plt</variable>
+  </variables>
+  <block type="list_create" id=":[+v|Op%3Q.7-b@I-VG#" x="113" y="53">
+    <value name="list">
+      <shadow type="indata">
+        <field name="indata1"></field>
+      </shadow>
+      <block type="variables_get" id="f?%]D|c{]xqBMvwf+gXo">
+        <field name="VAR" id="|NnCSezjX(K`Kkx`[5L5">planet</field>
+      </block>
+    </value>
+    <value name="text">
+      <shadow type="indata" id="CI/~cOw|(}AI:VO_DX#N">
+        <field name="indata1">'수성','금성','지구','화성','목성','토성','천왕성','해왕성'</field>
+      </shadow>
+    </value>
+    <next>
+      <block type="list_create" id="-rMTb09C,o?shTzDKLbC">
+        <value name="list">
+          <shadow type="indata">
+            <field name="indata1"></field>
+          </shadow>
+          <block type="variables_get" id="+}.?Ywf!RA4fFb{xb`x1">
+            <field name="VAR" id="2F68R1-t{7+{A6vkAU%2">size</field>
+          </block>
+        </value>
+        <value name="text">
+          <shadow type="indata" id="BY9;4Lb/HH0y;_CrD%JH">
+            <field name="indata1">2440,6052,6378,3390,69911,58232,25362,24622</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="import_matplotlib_list" id="ZkA?WF|?xBJcC@vx_{;u">
+            <field name="list">matplotlib.pyplot as plt&#10;import matplotlib.font_manager as fm&#10;fontprop = fm.FontProperties(fname='malgun.ttf')</field>
+            <next>
+              <block type="matplotlib_subplot" id="5F5YhbY;My@}D)e+nGhI">
+                <value name="v1">
+                  <shadow type="indata">
+                    <field name="indata1"></field>
+                  </shadow>
+                  <block type="variables_get" id="jx7IQ^*4:_)N[!i`LcZh">
+                    <field name="VAR" id="Ammb]I087G/y|$1ETU!B">plt</field>
+                  </block>
+                </value>
+                <value name="v2">
+                  <shadow type="indata" id="`3`4e;8G1%={w()(#{@f">
+                    <field name="indata1">1</field>
+                  </shadow>
+                </value>
+                <value name="v3">
+                  <shadow type="indata" id="2FOdjk|njM9TL[!=r3p8">
+                    <field name="indata1">2</field>
+                  </shadow>
+                </value>
+                <value name="v4">
+                  <shadow type="indata" id="eF8/bGT/7{qQgM|!X)_6">
+                    <field name="indata1">1</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="dynamic_dragfill_mplplt_3" id="3cC*eg6:w7Im?eL8]}uB">
+                    <field name="func">bar</field>
+                    <value name="v1">
+                      <shadow xmlns="" type="indata">
+                        <field name="indata1"></field>
+                      </shadow>
+                      <block type="variables_get" id="8MSQf4jX*%6p+%J5D$_k">
+                        <field name="VAR" id="Ammb]I087G/y|$1ETU!B">plt</field>
+                      </block>
+                    </value>
+                    <value name="param">
+                      <shadow xmlns="" type="indata">
+                        <field name="indata1">x_data</field>
+                      </shadow>
+                      <block type="variables_get" id="h|oEvU[h]T/$6XX-~],7">
+                        <field name="VAR" id="|NnCSezjX(K`Kkx`[5L5">planet</field>
+                      </block>
+                    </value>
+                    <value name="add1">
+                      <shadow xmlns="" type="indata">
+                        <field name="indata1">y_data</field>
+                      </shadow>
+                      <block type="variables_get" id="%q:/F@@BUH[bdV?pb/Rz">
+                        <field name="VAR" id="2F68R1-t{7+{A6vkAU%2">size</field>
+                      </block>
+                    </value>
+                    <value name="add2">
+                      <shadow type="indata" id="}Z}/r/8q#-/*_@71:NE^">
+                        <field name="indata1">label='행성크기', color='b', width=0.8</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="matplotlib_title_label" id="eM*RmlYYr.[0YvI[DJrF">
+                        <value name="v1">
+                          <shadow type="indata">
+                            <field name="indata1"></field>
+                          </shadow>
+                          <block type="variables_get" id="a65QM5kF7KZ{~50fsZ2%">
+                            <field name="VAR" id="Ammb]I087G/y|$1ETU!B">plt</field>
+                          </block>
+                        </value>
+                        <value name="v3">
+                          <shadow type="indata" id="|($S}^aL/+$g!-ROeO:A">
+                            <field name="indata1">'태양계 행성 크기'</field>
+                          </shadow>
+                        </value>
+                        <value name="v4">
+                          <shadow type="indata" id="*?bmb;$Sc~GK32{j|)14">
+                            <field name="indata1">'행성'</field>
+                          </shadow>
+                        </value>
+                        <value name="v5">
+                          <shadow type="indata" id="o*K;Nm5G{J)|pdmbZm_m">
+                            <field name="indata1">'크기(km)'</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="matplotlib_lim_ticks" id="3;T:{d[Hj*5Yj4e|*=KV">
+                            <value name="v1">
+                              <shadow type="indata">
+                                <field name="indata1"></field>
+                              </shadow>
+                              <block type="variables_get" id="3CS[O$1rV+HsKpoYJ`z!">
+                                <field name="VAR" id="Ammb]I087G/y|$1ETU!B">plt</field>
+                              </block>
+                            </value>
+                            <value name="v2">
+                              <shadow type="indata" id="Gu~QL6Qh]k%H!~+F[#?e">
+                                <field name="indata1"></field>
+                              </shadow>
+                            </value>
+                            <value name="v3">
+                              <shadow type="indata" id="p#6T2Q,;CWFdavb::r65">
+                                <field name="indata1"></field>
+                              </shadow>
+                            </value>
+                            <value name="v4">
+                              <shadow type="indata" id="5m4e;9hf;BsT%z/l$e}]">
+                                <field name="indata1"></field>
+                              </shadow>
+                            </value>
+                            <value name="v5">
+                              <shadow type="indata" id="]!ei.?s(1:1CQXfyMbhv">
+                                <field name="indata1">range(8), labels=planet,fontsize=5</field>
+                              </shadow>
+                            </value>
+                            <value name="v6">
+                              <shadow type="indata" id="D,fYKtqQ6`NF4v0o^maA">
+                                <field name="indata1"></field>
+                              </shadow>
+                            </value>
+                            <next>
+                              <block type="matplotlib_legend" id="_4D4.-*e+]S9XsR+ce`M">
+                                <value name="v1">
+                                  <shadow type="indata">
+                                    <field name="indata1"></field>
+                                  </shadow>
+                                  <block type="variables_get" id=".3t2^KLOktPBVVAL~raE">
+                                    <field name="VAR" id="Ammb]I087G/y|$1ETU!B">plt</field>
+                                  </block>
+                                </value>
+                                <value name="v2">
+                                  <shadow type="indata" id="[w1ggObT;i$|K?Qp7=U1">
+                                    <field name="indata1">'best'</field>
+                                  </shadow>
+                                </value>
+                                <value name="v3">
+                                  <shadow type="indata" id="U{{_l31yL:@8uvQ}HO[w">
+                                    <field name="indata1">10</field>
+                                  </shadow>
+                                </value>
+                                <next>
+                                  <block type="matplotlib_plt_show" id="cp88JY#(B,SmgGjlW34^" disabled="true">
+                                    <next>
+                                      <block type="matplotlib_subplot" id=".PXJ!n*~AkJt*XWnaf47">
+                                        <value name="v1">
+                                          <shadow type="indata">
+                                            <field name="indata1"></field>
+                                          </shadow>
+                                          <block type="variables_get" id="WO7Bd.WYi6!mf4fF/NF8">
+                                            <field name="VAR" id="Ammb]I087G/y|$1ETU!B">plt</field>
+                                          </block>
+                                        </value>
+                                        <value name="v2">
+                                          <shadow type="indata" id="3KSDT5](8n~2f19:{*lu">
+                                            <field name="indata1">1</field>
+                                          </shadow>
+                                        </value>
+                                        <value name="v3">
+                                          <shadow type="indata" id="haBQjv2RsCMrJk?)@%%?">
+                                            <field name="indata1">2</field>
+                                          </shadow>
+                                        </value>
+                                        <value name="v4">
+                                          <shadow type="indata" id="M4`v*6/o}gkRk;j[%$:I">
+                                            <field name="indata1">2</field>
+                                          </shadow>
+                                        </value>
+                                        <next>
+                                          <block type="dynamic_dragfill_mplplt_3" id="]):14Ok;}C{}_J}H!6XT">
+                                            <field name="func">barh</field>
+                                            <value name="v1">
+                                              <shadow xmlns="" type="indata">
+                                                <field name="indata1"></field>
+                                              </shadow>
+                                              <block type="variables_get" id="%|]^3uJ%a.`AmyVC-LD(">
+                                                <field name="VAR" id="Ammb]I087G/y|$1ETU!B">plt</field>
+                                              </block>
+                                            </value>
+                                            <value name="param">
+                                              <shadow type="indata" id="OH`-E$SGx}etc^oP5!=,">
+                                                <field name="indata1">x_data</field>
+                                              </shadow>
+                                              <block type="variables_get" id="FNmgzHn/RDtrD$jQ-+P#">
+                                                <field name="VAR" id="|NnCSezjX(K`Kkx`[5L5">planet</field>
+                                              </block>
+                                            </value>
+                                            <value name="add1">
+                                              <shadow type="indata" id="7g}cfs:XVH2^qmw7DkXf">
+                                                <field name="indata1">y_data</field>
+                                              </shadow>
+                                              <block type="variables_get" id="03biR)C%Dz8,q|N#Y#DW">
+                                                <field name="VAR" id="2F68R1-t{7+{A6vkAU%2">size</field>
+                                              </block>
+                                            </value>
+                                            <value name="add2">
+                                              <shadow type="indata" id="B5s$:p#mK_z(g%Ctt;rg">
+                                                <field name="indata1">label='행성크기', color='b', height=0.8</field>
+                                              </shadow>
+                                            </value>
+                                            <next>
+                                              <block type="matplotlib_title_label" id="F1yYOno`U$=Y`f@J$=@q">
+                                                <value name="v1">
+                                                  <shadow type="indata">
+                                                    <field name="indata1"></field>
+                                                  </shadow>
+                                                  <block type="variables_get" id="YmY.:`5Kp}MLzq:%[oQa">
+                                                    <field name="VAR" id="Ammb]I087G/y|$1ETU!B">plt</field>
+                                                  </block>
+                                                </value>
+                                                <value name="v3">
+                                                  <shadow type="indata" id="in}X?7}$BR`7@P`e4W;=">
+                                                    <field name="indata1">'태양계 행성 크기'</field>
+                                                  </shadow>
+                                                </value>
+                                                <value name="v4">
+                                                  <shadow type="indata" id="hZGnKq10mQKif9DhbIS/">
+                                                    <field name="indata1">'크기(km)'</field>
+                                                  </shadow>
+                                                </value>
+                                                <value name="v5">
+                                                  <shadow type="indata" id="LSQ,(le*t=hK?7wCjsl.">
+                                                    <field name="indata1">'행성'</field>
+                                                  </shadow>
+                                                </value>
+                                                <next>
+                                                  <block type="matplotlib_lim_ticks" id="bYOb;.Mc/mksBx`h1wFw">
+                                                    <value name="v1">
+                                                      <shadow type="indata">
+                                                        <field name="indata1"></field>
+                                                      </shadow>
+                                                      <block type="variables_get" id="7hJ8?e$$rFC-/m5@a*f1">
+                                                        <field name="VAR" id="Ammb]I087G/y|$1ETU!B">plt</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="v2">
+                                                      <shadow type="indata" id="Os_pdwk5MBH[lbNH@[Dx">
+                                                        <field name="indata1"></field>
+                                                      </shadow>
+                                                    </value>
+                                                    <value name="v3">
+                                                      <shadow type="indata" id="`,jqJu.E;WUg_~=Z^Dz7">
+                                                        <field name="indata1"></field>
+                                                      </shadow>
+                                                    </value>
+                                                    <value name="v4">
+                                                      <shadow type="indata" id="O@`|BCG1?t{5St$45FHH">
+                                                        <field name="indata1"></field>
+                                                      </shadow>
+                                                    </value>
+                                                    <value name="v5">
+                                                      <shadow type="indata" id="t-~}6+7V1|5MFaCNrtfZ">
+                                                        <field name="indata1"></field>
+                                                      </shadow>
+                                                    </value>
+                                                    <value name="v6">
+                                                      <shadow type="indata" id="9@=Bdvah7-X/A-L_]a2l">
+                                                        <field name="indata1">range(8), labels=planet,fontsize=5</field>
+                                                      </shadow>
+                                                    </value>
+                                                    <next>
+                                                      <block type="matplotlib_legend" id="l,%SSU^_-v9;Q/Nh[QI-">
+                                                        <value name="v1">
+                                                          <shadow type="indata">
+                                                            <field name="indata1"></field>
+                                                          </shadow>
+                                                          <block type="variables_get" id="/zO4R;mWFDCG%oTUVE~f">
+                                                            <field name="VAR" id="Ammb]I087G/y|$1ETU!B">plt</field>
+                                                          </block>
+                                                        </value>
+                                                        <value name="v2">
+                                                          <shadow type="indata" id="EZEVAEj=dCI0@AKj={uh">
+                                                            <field name="indata1">'best'</field>
+                                                          </shadow>
+                                                        </value>
+                                                        <value name="v3">
+                                                          <shadow type="indata" id="g4tjLUE;?!L%X|F_-wOR">
+                                                            <field name="indata1">10</field>
+                                                          </shadow>
+                                                        </value>
+                                                        <next>
+                                                          <block type="matplotlib_plt_show" id="#/Cg@+uwxa]`KoV4^zN,"></block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

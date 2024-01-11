@@ -1,0 +1,70 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id=",mUecE-8}cnlY0Vb;4HQ">i</variable>
+  </variables>
+  <block type="io_print_empty" id="mnW`t4WjLmJZB^k+uI/]" x="232" y="127">
+    <value name="content1">
+      <shadow type="indata" id=";)_L3KA3p.!Ba^5Iv4MK">
+        <field name="indata1"></field>
+      </shadow>
+      <block type="dynamic_dragfill_control" id="S(Y]^K?QW.XO:7ON3Gc*">
+        <field name="func">sum</field>
+        <value name="param">
+          <shadow type="indata" id="os/]{wbc{%zo(~SrGR/O">
+            <field name="indata1"></field>
+          </shadow>
+          <block type="list_repeat_list_2" id="9L5pGIWoc.Ok/{!fy9=Z">
+            <value name="v1">
+              <shadow type="indata" id="~uwNFUVi:rvENvtxqbdw">
+                <field name="indata1">[</field>
+              </shadow>
+            </value>
+            <value name="v2">
+              <shadow type="indata" id="zS0)DW;!aQ`iaZ9l(dlA">
+                <field name="indata1">리턴</field>
+              </shadow>
+              <block type="variables_get" id="Q:=N|vI{5F)lDo/oF_.D">
+                <field name="VAR" id=",mUecE-8}cnlY0Vb;4HQ">i</field>
+              </block>
+            </value>
+            <value name="v3">
+              <shadow type="indata">
+                <field name="indata1"></field>
+              </shadow>
+              <block type="variables_get" id="v9Q);8NPm=Y_!UCMG5o|">
+                <field name="VAR" id=",mUecE-8}cnlY0Vb;4HQ">i</field>
+              </block>
+            </value>
+            <value name="v4">
+              <shadow type="indata" id="R}.QY,Ngi.ExCSu=_FA,">
+                <field name="indata1">범위</field>
+              </shadow>
+              <block type="repeat_range" id="Ui6xZ^J,PBEwmTx2_)iK">
+                <value name="v1">
+                  <shadow type="indata" id="UM=%A@J}FmNh~Bzr/?j*">
+                    <field name="indata1">1</field>
+                  </shadow>
+                </value>
+                <value name="v2">
+                  <shadow type="indata" id="hJi0uVI`/lvy9I9yrR1I">
+                    <field name="indata1">101</field>
+                  </shadow>
+                </value>
+                <value name="v3">
+                  <shadow type="indata" id="qzz8zyi5VJ-}!@VuY-NR">
+                    <field name="indata1">2</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+            <value name="v5">
+              <shadow type="indata" id="/b@h=XiFAyW.To?12^r;">
+                <field name="indata1">]</field>
+              </shadow>
+            </value>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+</xml>

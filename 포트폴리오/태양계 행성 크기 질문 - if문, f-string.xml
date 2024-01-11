@@ -1,0 +1,199 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="|NnCSezjX(K`Kkx`[5L5">planet</variable>
+    <variable id="2F68R1-t{7+{A6vkAU%2">size</variable>
+    <variable id="3X;f.Bgk~%;qUt,r)_!,">name</variable>
+    <variable id="@B3Z$+3Q%v]+MPBrmOR}">index</variable>
+  </variables>
+  <block type="list_create" id=":[+v|Op%3Q.7-b@I-VG#" x="72" y="117">
+    <value name="list">
+      <shadow type="indata">
+        <field name="indata1"></field>
+      </shadow>
+      <block type="variables_get" id="f?%]D|c{]xqBMvwf+gXo">
+        <field name="VAR" id="|NnCSezjX(K`Kkx`[5L5">planet</field>
+      </block>
+    </value>
+    <value name="text">
+      <shadow type="indata" id="CI/~cOw|(}AI:VO_DX#N">
+        <field name="indata1">'수성','금성','지구','화성','목성','토성','천왕성','해왕성'</field>
+      </shadow>
+    </value>
+    <next>
+      <block type="list_create" id="-rMTb09C,o?shTzDKLbC">
+        <value name="list">
+          <shadow type="indata">
+            <field name="indata1"></field>
+          </shadow>
+          <block type="variables_get" id="+}.?Ywf!RA4fFb{xb`x1">
+            <field name="VAR" id="2F68R1-t{7+{A6vkAU%2">size</field>
+          </block>
+        </value>
+        <value name="text">
+          <shadow type="indata" id="BY9;4Lb/HH0y;_CrD%JH">
+            <field name="indata1">2440,6052,6378,3390,69911,58232,25362,24622</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="math_change" id="8usE=hJhSYm7+DvB.Z@D">
+            <field name="NAME">=</field>
+            <value name="var_name">
+              <shadow xmlns="" type="indata">
+                <field name="indata1">0</field>
+              </shadow>
+              <block type="variables_get" id="jCw1_,96TIcAo9V*%*6i">
+                <field name="VAR" id="3X;f.Bgk~%;qUt,r)_!,">name</field>
+              </block>
+            </value>
+            <value name="DELTA">
+              <shadow type="indata" id="o7plqt#U/|p5@Lxzcy.L">
+                <field name="indata1">0</field>
+              </shadow>
+              <block type="io_input" id="WRc`A^Wx/|8%L+1-8+0r">
+                <value name="content1">
+                  <shadow type="indata" id="|fJm8%V%~0FFlGir.Zbi">
+                    <field name="indata1">"태양계 행성 이름 입력 "</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="controls_if" id="PAh{Q[X_kxov_}}|pr|-">
+                <value name="IF0">
+                  <shadow type="indata" id="B30p(,P,.q~paI_x,fEO">
+                    <field name="indata1"></field>
+                  </shadow>
+                  <block type="oper_membership" id="].+xYtBYd-KD[;;31zO3">
+                    <field name="NAME">in</field>
+                    <value name="v1">
+                      <shadow type="indata" id="zv+Jn!9oM@vKp2zO+ix3">
+                        <field name="indata1">0</field>
+                      </shadow>
+                      <block type="variables_get" id="W^_]6O])%A-m5{/_VMB^">
+                        <field name="VAR" id="3X;f.Bgk~%;qUt,r)_!,">name</field>
+                      </block>
+                    </value>
+                    <value name="v2">
+                      <shadow type="indata">
+                        <field name="indata1"></field>
+                      </shadow>
+                      <block type="variables_get" id="qTEP6!IzJ-USw00Qtx8[">
+                        <field name="VAR" id="|NnCSezjX(K`Kkx`[5L5">planet</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="math_change" id="@p6pU=^Kq7:kB~2~rLi~">
+                    <field name="NAME">=</field>
+                    <value name="var_name">
+                      <shadow xmlns="" type="indata">
+                        <field name="indata1">0</field>
+                      </shadow>
+                      <block type="variables_get" id="F1F+U`1Q!wl0s={a+H7#">
+                        <field name="VAR" id="@B3Z$+3Q%v]+MPBrmOR}">index</field>
+                      </block>
+                    </value>
+                    <value name="DELTA">
+                      <shadow type="indata" id="i,AW4m~Pv!G`#Y@rwm0n">
+                        <field name="indata1">0</field>
+                      </shadow>
+                      <block type="dynamic_dragfill_collection" id="^h|QLKdQ,-?JN#/q7H+~">
+                        <field name="func">index</field>
+                        <value name="v1">
+                          <shadow xmlns="" type="indata">
+                            <field name="indata1">0</field>
+                          </shadow>
+                          <block type="variables_get" id="lGoiP;)bO$BK3f)V4N0q">
+                            <field name="VAR" id="|NnCSezjX(K`Kkx`[5L5">planet</field>
+                          </block>
+                        </value>
+                        <value name="param">
+                          <shadow type="indata" id=":P.$v[Ih;d;_o5[Dglb[">
+                            <field name="indata1">요소값</field>
+                          </shadow>
+                          <block type="variables_get" id="DKvGV`h=Kza9Jv1~!%AZ">
+                            <field name="VAR" id="3X;f.Bgk~%;qUt,r)_!,">name</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="io_print_msg" id="3+^{APz/u`jz~q3-W#h8">
+                        <value name="content1">
+                          <shadow type="indata" id="{CQN;@G;5zg|W[{CnF-v">
+                            <field name="indata1">name, " 크기(km)는 "</field>
+                          </shadow>
+                        </value>
+                        <value name="content2">
+                          <shadow type="indata" id="l:w~nbP!M]g@l?AkQjiD">
+                            <field name="indata1"></field>
+                          </shadow>
+                          <block type="list_index" id="SJ!YlKoYI,1//j$)Rfz2">
+                            <value name="list">
+                              <shadow xmlns="" type="indata">
+                                <field name="indata1"></field>
+                              </shadow>
+                              <block type="variables_get" id="%8.wBB3v{ceCj{rrCH1:">
+                                <field name="VAR" id="2F68R1-t{7+{A6vkAU%2">size</field>
+                              </block>
+                            </value>
+                            <value name="dic1">
+                              <shadow type="indata" id="Ks{9X7X+VLl?.gfi.?qL">
+                                <field name="indata1">0</field>
+                              </shadow>
+                              <block type="variables_get" id="ijSPHBBU~EZyV-d#Efnn">
+                                <field name="VAR" id="@B3Z$+3Q%v]+MPBrmOR}">index</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="io_print_empty" id="Pu5O8-((bX5G$2xU}gPn">
+                            <value name="content1">
+                              <shadow type="indata" id="H!YV%@DOI?y$8pC}dPW?">
+                                <field name="indata1">"Hello, 파이썬! 😍"</field>
+                              </shadow>
+                              <block type="dynamic_dragfill_print" id="(]o=9|POmyJv`2/B?3xj">
+                                <field name="func">{name} 크기는 {size[index]:,} km 입니다.</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="io_print_empty" id="m5@NncOv7vdP`TC,_pH:">
+                                <value name="content1">
+                                  <shadow type="indata">
+                                    <field name="indata1">"Hello, 파이썬! 😍"</field>
+                                  </shadow>
+                                  <block type="dynamic_dragfill_print" id="1x;$$}60NWdMPo?=7^Z(">
+                                    <field name="func">{name} 크기는 지구를 기준으로 {size[index]/size[2]:.2} 배 입니다.</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <next>
+                  <block type="else_statement" id=";y46jR~Da8qmT[f]~G)r">
+                    <statement name="v2">
+                      <block type="io_print_empty" id="uJRI@x0ITGL+L|)5rUtV">
+                        <value name="content1">
+                          <shadow type="indata" id="*25TSM2Lev;pg.v;JdI.">
+                            <field name="indata1">name, "은 태양계에 없습니다"</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

@@ -1,0 +1,123 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="9By/)jd7{zwGj#Epu[Rm">message</variable>
+    <variable id="v8AAT]VE6|`}s2?20-M_">msg</variable>
+    <variable id="+.m;ETF~?O%J:?3T!?l1">a</variable>
+  </variables>
+  <block type="io_print_empty" id=":|;YhPgW-QN$RF{?7-VN" x="172" y="97">
+    <value name="content1">
+      <shadow type="indata" id="2=O=G%(3`ln6+*$tWY4:">
+        <field name="indata1">"Hello"</field>
+      </shadow>
+    </value>
+    <next>
+      <block type="math_change" id="B0OYCgSZelHxCaZ5I[X#">
+        <field name="NAME">=</field>
+        <value name="var_name">
+          <shadow type="indata" id="^g[:kxiPKm*~q9KLmYlM">
+            <field name="indata1">0</field>
+          </shadow>
+          <block type="variables_get" id="6=Ic#y2c?;io]qo[-~{o">
+            <field name="VAR" id="v8AAT]VE6|`}s2?20-M_">msg</field>
+          </block>
+        </value>
+        <value name="DELTA">
+          <shadow type="indata" id="X3ZUlQ6pg0Akh;qu,uLy">
+            <field name="indata1">"Hello"</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="io_print_empty" id="5%*txx[|P9q:ax{r7T/O">
+            <value name="content1">
+              <shadow type="indata">
+                <field name="indata1">"Hello"</field>
+              </shadow>
+              <block type="variables_get" id="wo_HkudMK+7s3FNJzecB">
+                <field name="VAR" id="v8AAT]VE6|`}s2?20-M_">msg</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="math_change" id="^!}lf9F%|E~lj?WI{7cG" disabled="true" x="172" y="277">
+    <field name="NAME">=</field>
+    <value name="var_name">
+      <shadow xmlns="" type="indata">
+        <field name="indata1">0</field>
+      </shadow>
+      <block type="variables_get" id="g}7#dno:RT6_Ypis]Tm=">
+        <field name="VAR" id="9By/)jd7{zwGj#Epu[Rm">message</field>
+      </block>
+    </value>
+    <value name="DELTA">
+      <shadow type="indata" id="x6N=X(|hrCGV/~+Prf+q">
+        <field name="indata1">"철수가 "안녕"이라고 말했습니다."</field>
+      </shadow>
+    </value>
+    <next>
+      <block type="io_print_empty" id="##3_TGkpT4@1L]DZ_9fd" disabled="true">
+        <value name="content1">
+          <shadow type="indata">
+            <field name="indata1">"Hello"</field>
+          </shadow>
+          <block type="variables_get" id="10FZ8on0;0yEo#;l_2F6">
+            <field name="VAR" id="9By/)jd7{zwGj#Epu[Rm">message</field>
+          </block>
+        </value>
+      </block>
+    </next>
+  </block>
+  <block type="math_change" id="@GDeaE+/Ne~Hban@a9bY" x="172" y="412">
+    <field name="NAME">=</field>
+    <value name="var_name">
+      <shadow xmlns="" type="indata">
+        <field name="indata1">0</field>
+      </shadow>
+      <block type="variables_get" id="Fkswdx{t6atX[JF#H@S6">
+        <field name="VAR" id="9By/)jd7{zwGj#Epu[Rm">message</field>
+      </block>
+    </value>
+    <value name="DELTA">
+      <shadow type="indata" id="n8o}=dERB|:7!3iqV[l#">
+        <field name="indata1">"철수가 '안녕'이라고 말했습니다."</field>
+      </shadow>
+    </value>
+    <next>
+      <block type="io_print_empty" id="FUweJx{=ErYsfz%:]ReJ">
+        <value name="content1">
+          <shadow type="indata">
+            <field name="indata1">"Hello"</field>
+          </shadow>
+          <block type="variables_get" id="0jdUh*;u`4k;DGylhfs.">
+            <field name="VAR" id="9By/)jd7{zwGj#Epu[Rm">message</field>
+          </block>
+        </value>
+      </block>
+    </next>
+  </block>
+  <block type="itdata" id="waMbnyW!r:Fc*pgcbSU6" x="172" y="562">
+    <field name="itdata1">a = """TWINKLE, twinkle, little star,&#10;How I wonder what you are!&#10;Up above the world so high,&#10;Like a diamond in the sky."""&#10;</field>
+    <next>
+      <block type="io_print" id="ySDzC#`|lT*~Iqx^o[xf">
+        <value name="content">
+          <shadow type="indata">
+            <field name="indata1"></field>
+          </shadow>
+          <block type="class_func_param" id="T!H~Vq0/u5B8tkBeqlpM">
+            <mutation items="1"></mutation>
+            <value name="ADD0">
+              <shadow type="indata">
+                <field name="indata1"></field>
+              </shadow>
+              <block type="variables_get" id="[LD,:rhw_v%NvUwsjtcv">
+                <field name="VAR" id="+.m;ETF~?O%J:?3T!?l1">a</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </next>
+  </block>
+</xml>

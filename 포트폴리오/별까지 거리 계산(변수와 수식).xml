@@ -1,0 +1,130 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="+q.PoN$J@CW9]c+X}X%-">speed</variable>
+    <variable id="VVWj,Jp)fw!;D:pALhIs">distance</variable>
+    <variable id="QyU)/aW%7`c[S#gZID+V">second</variable>
+    <variable id="+5xlyW*o6z}DG@bC3aHp">light_year</variable>
+  </variables>
+  <block type="math_change" id="]l#t!HlWr~((OPS~m%o@" x="113" y="53">
+    <field name="NAME">=</field>
+    <value name="var_name">
+      <shadow xmlns="" type="indata">
+        <field name="indata1">0</field>
+      </shadow>
+      <block type="variables_get" id="8,Ic:4f`xF~gjXh3,`dT">
+        <field name="VAR" id="+q.PoN$J@CW9]c+X}X%-">speed</field>
+      </block>
+    </value>
+    <value name="DELTA">
+      <shadow type="indata" id="0h^m@ZvL.}:5k%M3aqF9">
+        <field name="indata1">300000.0</field>
+      </shadow>
+    </value>
+    <next>
+      <block type="math_change" id="ERS}BEOsu4qahDZ0d%^W">
+        <field name="NAME">=</field>
+        <value name="var_name">
+          <shadow xmlns="" type="indata">
+            <field name="indata1">0</field>
+          </shadow>
+          <block type="variables_get" id="v4Z3gKY!KzHpt_OfOpY/">
+            <field name="VAR" id="VVWj,Jp)fw!;D:pALhIs">distance</field>
+          </block>
+        </value>
+        <value name="DELTA">
+          <shadow type="indata" id="p7`xkiMCK+!F3-#2iW)`">
+            <field name="indata1">40000000000000.0</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="math_change" id="5wkIWN*6`!q+V0t*^/U%">
+            <field name="NAME">=</field>
+            <value name="var_name">
+              <shadow xmlns="" type="indata">
+                <field name="indata1">0</field>
+              </shadow>
+              <block type="variables_get" id="*Sl%6S(s#BkClYzL[?)F">
+                <field name="VAR" id="QyU)/aW%7`c[S#gZID+V">second</field>
+              </block>
+            </value>
+            <value name="DELTA">
+              <shadow type="indata" id="FQXg/O%d9vX~WX0tO(Kr">
+                <field name="indata1">0</field>
+              </shadow>
+              <block type="oper_arithmetic" id="?dx4U0}F3J_YNASEmjdp">
+                <field name="NAME">/</field>
+                <value name="v1">
+                  <shadow type="indata">
+                    <field name="indata1"></field>
+                  </shadow>
+                  <block type="variables_get" id=",5NyC8@v09@;dRTGui!V">
+                    <field name="VAR" id="VVWj,Jp)fw!;D:pALhIs">distance</field>
+                  </block>
+                </value>
+                <value name="v2">
+                  <shadow type="indata" id="JWVzlxi/*c{27xKZ,M.*">
+                    <field name="indata1">0</field>
+                  </shadow>
+                  <block type="variables_get" id="@Xq?`tqKW@QzF0wcYCUL">
+                    <field name="VAR" id="+q.PoN$J@CW9]c+X}X%-">speed</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="math_change" id="hZ$-Pl6sq8*FCCYNZJ{(">
+                <field name="NAME">=</field>
+                <value name="var_name">
+                  <shadow xmlns="" type="indata">
+                    <field name="indata1">0</field>
+                  </shadow>
+                  <block type="variables_get" id="?T9;YD;w1iUYI`}X=#aN">
+                    <field name="VAR" id="+5xlyW*o6z}DG@bC3aHp">light_year</field>
+                  </block>
+                </value>
+                <value name="DELTA">
+                  <shadow type="indata" id="o[38W=NUuyQW7N5_u33a">
+                    <field name="indata1">0</field>
+                  </shadow>
+                  <block type="oper_arithmetic" id="u_}eh:9T6*}dKpt]3mgU">
+                    <field name="NAME">/</field>
+                    <value name="v1">
+                      <shadow type="indata">
+                        <field name="indata1"></field>
+                      </shadow>
+                      <block type="variables_get" id="~/!le:8Vd-(#_#cF*Ms3">
+                        <field name="VAR" id="QyU)/aW%7`c[S#gZID+V">second</field>
+                      </block>
+                    </value>
+                    <value name="v2">
+                      <shadow type="indata" id="3T#vB*3R7lp11agGQ./X">
+                        <field name="indata1">(60 * 60 * 24 * 365)</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="io_print_msg" id="KHAtTSW#K.UP-_DCwl4X">
+                    <value name="content1">
+                      <shadow type="indata" id="o]gIDB0AR{*5lo3Swo)R">
+                        <field name="indata1">"메시지"</field>
+                      </shadow>
+                      <block type="variables_get" id="0l~6,!U7yy{}eiE3%[OU">
+                        <field name="VAR" id="+5xlyW*o6z}DG@bC3aHp">light_year</field>
+                      </block>
+                    </value>
+                    <value name="content2">
+                      <shadow type="indata" id="=[-GQY%Le|!+77dqq:Mx">
+                        <field name="indata1">"광년"</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

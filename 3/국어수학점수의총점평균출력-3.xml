@@ -1,0 +1,180 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="2l2oQu6.:F?Q)9-c0Njo">kor</variable>
+    <variable id="u1t}$]$4@{$QOYHbXBEA">eng</variable>
+    <variable id="{?^{SCUs-|+*R^#H^)Bk">total</variable>
+    <variable id="DqR#Z?p*A1V|Kvmh8P6+">diff</variable>
+  </variables>
+  <block type="math_change" id="9?3WCm:@nOQ}EfzBYl#H" x="307" y="-233">
+    <field name="NAME">=</field>
+    <value name="var_name">
+      <shadow type="indata" id="J@IFgL$ojA:es]RjMfz5">
+        <field name="indata1">0</field>
+      </shadow>
+      <block type="variables_get" id="`GlhG^DGe`rg!!i^7#4e">
+        <field name="VAR" id="2l2oQu6.:F?Q)9-c0Njo">kor</field>
+      </block>
+    </value>
+    <value name="DELTA">
+      <shadow type="indata" id="=`WPyazDoT+DUsa40UUu">
+        <field name="indata1">80</field>
+      </shadow>
+    </value>
+    <next>
+      <block type="math_change" id="H:0anUOW#tQ[y1-Y.^aD">
+        <field name="NAME">=</field>
+        <value name="var_name">
+          <shadow type="indata" id="*=!Wf~EDKx^IdOPD*z/P">
+            <field name="indata1">0</field>
+          </shadow>
+          <block type="variables_get" id="AZP}S-P[5,l_`Ts0eJwB">
+            <field name="VAR" id="u1t}$]$4@{$QOYHbXBEA">eng</field>
+          </block>
+        </value>
+        <value name="DELTA">
+          <shadow type="indata" id="bfKg9fDgUG3s%S.TK{{Z">
+            <field name="indata1">90</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="math_change" id="rCGX4^sU_uBFA}ou,x*y">
+            <field name="NAME">=</field>
+            <value name="var_name">
+              <shadow xmlns="" type="indata">
+                <field name="indata1">0</field>
+              </shadow>
+              <block type="variables_get" id=")4O^D_Nr`;uZvMS;99Z#">
+                <field name="VAR" id="{?^{SCUs-|+*R^#H^)Bk">total</field>
+              </block>
+            </value>
+            <value name="DELTA">
+              <shadow type="indata" id="_]/I~lssRaM~;!D5wMv(">
+                <field name="indata1">0</field>
+              </shadow>
+              <block type="oper_arithmetic" id="tOW#xKKY~_0SD?}uSJ2n">
+                <field name="NAME">+</field>
+                <value name="v1">
+                  <shadow type="indata" id="CFezXP(pE%V84iT[4Noe">
+                    <field name="indata1">80</field>
+                  </shadow>
+                  <block type="variables_get" id="pMBffLMq~IwKwFzn-b5,">
+                    <field name="VAR" id="2l2oQu6.:F?Q)9-c0Njo">kor</field>
+                  </block>
+                </value>
+                <value name="v2">
+                  <shadow type="indata" id="M_*OZy$G$0Bn6YQ(v%!g">
+                    <field name="indata1">90</field>
+                  </shadow>
+                  <block type="variables_get" id="+vhUi(ItH!?JgKbI{Bos">
+                    <field name="VAR" id="u1t}$]$4@{$QOYHbXBEA">eng</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="io_print_msg" id=",$Vm]I[t9TX%n^s1hs[j">
+                <value name="content1">
+                  <shadow type="indata" id="Oq[sx.9XD}ZeV_WFq:%-">
+                    <field name="indata1">"총점"</field>
+                  </shadow>
+                </value>
+                <value name="content2">
+                  <shadow type="indata" id="+wHRbKcPXvbk-Q-ekGNb">
+                    <field name="indata1"></field>
+                  </shadow>
+                  <block type="variables_get" id=".k[__lI*8kS:h.Ik#40?">
+                    <field name="VAR" id="{?^{SCUs-|+*R^#H^)Bk">total</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="io_print_msg" id="des?(,gv/X/-e7Dl2a/i">
+                    <value name="content1">
+                      <shadow type="indata" id="b8OzCr%f@oezheG.)*tk">
+                        <field name="indata1">"평균"</field>
+                      </shadow>
+                    </value>
+                    <value name="content2">
+                      <shadow type="indata" id="(gLXkXYeETQ`Q{TAsj9@">
+                        <field name="indata1"></field>
+                      </shadow>
+                      <block type="oper_arithmetic" id="@#fzKRb6F:UrU}0k}L@:">
+                        <field name="NAME">//</field>
+                        <value name="v1">
+                          <shadow type="indata">
+                            <field name="indata1"></field>
+                          </shadow>
+                          <block type="variables_get" id=")XzZGLtN)-(nManR;!gY">
+                            <field name="VAR" id="{?^{SCUs-|+*R^#H^)Bk">total</field>
+                          </block>
+                        </value>
+                        <value name="v2">
+                          <shadow type="indata" id="BtE29LV5e/VauvE9.vI[">
+                            <field name="indata1">2</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="math_change" id="ef)27KeLFXi3a~NYUCBZ">
+                        <field name="NAME">=</field>
+                        <value name="var_name">
+                          <shadow xmlns="" type="indata">
+                            <field name="indata1">0</field>
+                          </shadow>
+                          <block type="variables_get" id=";31^.Bjyd[YbG*77*}|t">
+                            <field name="VAR" id="DqR#Z?p*A1V|Kvmh8P6+">diff</field>
+                          </block>
+                        </value>
+                        <value name="DELTA">
+                          <shadow type="indata" id="5/EM#BOcbbN-DP8z3*NZ">
+                            <field name="indata1">0</field>
+                          </shadow>
+                          <block type="oper_arithmetic" id="),ew~kpRiq90b(OHyy`,">
+                            <field name="NAME">-</field>
+                            <value name="v1">
+                              <shadow type="indata">
+                                <field name="indata1">80</field>
+                              </shadow>
+                              <block type="variables_get" id="PzPURA^n1h;yh-$P$bVM">
+                                <field name="VAR" id="2l2oQu6.:F?Q)9-c0Njo">kor</field>
+                              </block>
+                            </value>
+                            <value name="v2">
+                              <shadow type="indata">
+                                <field name="indata1">90</field>
+                              </shadow>
+                              <block type="variables_get" id="v/}g9ogVGi{v}~dgiP6~">
+                                <field name="VAR" id="u1t}$]$4@{$QOYHbXBEA">eng</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="io_print_msg" id="XrOOG,F!h|ci-R4S2|x}">
+                            <value name="content1">
+                              <shadow type="indata" id="iEw$+_LWG1iqxm1JCC#/">
+                                <field name="indata1">"차이"</field>
+                              </shadow>
+                            </value>
+                            <value name="content2">
+                              <shadow type="indata" id=":(3ND#C(23%%JIMNc_@p">
+                                <field name="indata1"></field>
+                              </shadow>
+                              <block type="variables_get" id="m4mw4s|iOW}!AB-6G%a_">
+                                <field name="VAR" id="DqR#Z?p*A1V|Kvmh8P6+">diff</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

@@ -1,0 +1,76 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id=";65}KUyw,?y#0[|(?5U+">s</variable>
+  </variables>
+  <block type="io_print" id="IkpbM11j),p7AE|.+!]Q" x="-23" y="142">
+    <value name="content">
+      <shadow type="indata" id="lU%FFo@vaka}Q4|a4d17">
+        <field name="indata1">"말 한마디로\n천냥빚을 갚는다"</field>
+      </shadow>
+    </value>
+  </block>
+  <block type="math_change" id="*QR.SJ!h:56J([HlYm^l" x="-22" y="247">
+    <field name="NAME">=</field>
+    <value name="var_name">
+      <shadow xmlns="" type="indata">
+        <field name="indata1">0</field>
+      </shadow>
+      <block type="variables_get" id="aGF5B#7sn~eD=oC#2Idw">
+        <field name="VAR" id=";65}KUyw,?y#0[|(?5U+">s</field>
+      </block>
+    </value>
+    <value name="DELTA">
+      <shadow type="indata" id="d}n8vt#/K+=T$T6O|W5,">
+        <field name="indata1">"Hello World"</field>
+      </shadow>
+    </value>
+    <next>
+      <block type="io_print" id="X+T)r[mm?[88gZZ9f*u2">
+        <value name="content">
+          <shadow type="indata" id="8lHRSw,sv}67EgVVRwpJ">
+            <field name="indata1">"말 한마디로\n천냥빚을 갚는다"</field>
+          </shadow>
+          <block type="list_index" id="ElV3N9(!45|rXA,vTw1y">
+            <value name="list">
+              <shadow xmlns="" type="indata">
+                <field name="indata1"></field>
+              </shadow>
+              <block type="variables_get" id="43W(t+%*(rgLi2g^i.1$">
+                <field name="VAR" id=";65}KUyw,?y#0[|(?5U+">s</field>
+              </block>
+            </value>
+            <value name="dic1">
+              <shadow type="indata" id="/LtdX8-p`;uk$iQS-z=5">
+                <field name="indata1">0</field>
+              </shadow>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="io_print" id="AhTU4:ptql^C-_2GUag~">
+            <value name="content">
+              <shadow type="indata">
+                <field name="indata1">"말 한마디로\n천냥빚을 갚는다"</field>
+              </shadow>
+              <block type="list_index" id="!_y1a-um8u)Yt~J@$G;M">
+                <value name="list">
+                  <shadow xmlns="" type="indata">
+                    <field name="indata1"></field>
+                  </shadow>
+                  <block type="variables_get" id="BK8h$hddGrqGID/Mv}+b">
+                    <field name="VAR" id=";65}KUyw,?y#0[|(?5U+">s</field>
+                  </block>
+                </value>
+                <value name="dic1">
+                  <shadow type="indata" id="p7_odASxKU+;:C7Yr=aE">
+                    <field name="indata1">-1</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

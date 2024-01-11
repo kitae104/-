@@ -1,0 +1,150 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="4|76}kUX@YIQ5/n%~0@W">lines</variable>
+    <variable id="_,(USs+{Vc(Ts.ng*upH">song</variable>
+  </variables>
+  <block type="io_print_empty" id="]z*.1]Cok~^Hf}((wyht" x="113" y="68">
+    <value name="content1">
+      <shadow type="indata" id="a%5|;yX)]$MUA-;4fJ@3">
+        <field name="indata1">"Hello, 파이썬! 😍"</field>
+      </shadow>
+      <block type="oper_arithmetic" id="~r:dM$)CIr2mO#QUK^T$">
+        <field name="NAME">+</field>
+        <value name="v1">
+          <shadow type="indata" id="2[6a#0JRP5MYR~d$dLSb">
+            <field name="indata1">"Hello "</field>
+          </shadow>
+        </value>
+        <value name="v2">
+          <shadow type="indata" id="``1tn^Sud548+=Kq42i=">
+            <field name="indata1">"World!"</field>
+          </shadow>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="math_change" id="Z_DCtXI}Gpqoc($Zn;wJ" x="112" y="173">
+    <field name="NAME">=</field>
+    <value name="var_name">
+      <shadow xmlns="" type="indata">
+        <field name="indata1">0</field>
+      </shadow>
+      <block type="variables_get" id="5IpRIXvuJb;n}jv7Q[M2">
+        <field name="VAR" id="4|76}kUX@YIQ5/n%~0@W">lines</field>
+      </block>
+    </value>
+    <value name="DELTA">
+      <shadow type="indata" id="xiFTG,Ra9_Y[{qKd:{Lr">
+        <field name="indata1">0</field>
+      </shadow>
+      <block type="oper_arithmetic" id="gVAKZ^HG:%t,S6N}8EeA">
+        <field name="NAME">*</field>
+        <value name="v1">
+          <shadow type="indata" id="9B_Bt7R%DjhYioiETeMB">
+            <field name="indata1">"-"</field>
+          </shadow>
+        </value>
+        <value name="v2">
+          <shadow type="indata" id="l8L2_^5[T+Jo19I+m8CR">
+            <field name="indata1">30</field>
+          </shadow>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="io_print_empty" id="f$y+_[JI}HoR)iRd#YtC">
+        <value name="content1">
+          <shadow type="indata" id="SjNNQK_dIZ;SpuuPJ7Nd">
+            <field name="indata1">"Hello, 파이썬! 😍"</field>
+          </shadow>
+          <block type="variables_get" id="I;;M!ft55:nU1Rz,6%hE">
+            <field name="VAR" id="4|76}kUX@YIQ5/n%~0@W">lines</field>
+          </block>
+        </value>
+      </block>
+    </next>
+  </block>
+  <block type="math_change" id="mWC}luEufvP[r[BIJWQu" x="113" y="308">
+    <field name="NAME">=</field>
+    <value name="var_name">
+      <shadow xmlns="" type="indata">
+        <field name="indata1">0</field>
+      </shadow>
+      <block type="variables_get" id="Ict$2qZDwWoi,E#%uGvp">
+        <field name="VAR" id="_,(USs+{Vc(Ts.ng*upH">song</field>
+      </block>
+    </value>
+    <value name="DELTA">
+      <shadow type="indata">
+        <field name="indata1">0</field>
+      </shadow>
+      <block type="oper_arithmetic" id="eb2Z}[lym$HKKKh-N:M$">
+        <field name="NAME">*</field>
+        <value name="v1">
+          <shadow type="indata" id="h@MX3?tc?eOb[:jgBPKV">
+            <field name="indata1">"뚜 루루 뚜루 "</field>
+          </shadow>
+        </value>
+        <value name="v2">
+          <shadow type="indata" id="}(jseTq63`mwQe0UZqs=">
+            <field name="indata1">5</field>
+          </shadow>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="io_print_empty" id="AOL5*aqLdkW=rr#OFfE}">
+        <value name="content1">
+          <shadow type="indata">
+            <field name="indata1">"Hello, 파이썬! 😍"</field>
+          </shadow>
+          <block type="variables_get" id="35`Kxk9K#H@vE$hcdS0T">
+            <field name="VAR" id="_,(USs+{Vc(Ts.ng*upH">song</field>
+          </block>
+        </value>
+      </block>
+    </next>
+  </block>
+  <block type="io_print_empty" id="B`gM;C2RVIf7*]!GT;`8" x="112" y="457">
+    <value name="content1">
+      <shadow type="indata" id="0(LBG*Qv=UgDo/3VlBsB">
+        <field name="indata1">"Hello, 파이썬! 😍"</field>
+      </shadow>
+      <block type="oper_arithmetic" id="GcB^L=7%Dx{_/,/*C-D$">
+        <field name="NAME">+</field>
+        <value name="v1">
+          <shadow type="indata" id="(]f#_D:xB(+/g}[y{an0">
+            <field name="indata1">100</field>
+          </shadow>
+        </value>
+        <value name="v2">
+          <shadow type="indata" id="!Pld+YX|SUL1roH-kj9Y">
+            <field name="indata1">200</field>
+          </shadow>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="io_print_empty" id="-j-yD(^M,bM~eE7l|9w?">
+        <value name="content1">
+          <shadow type="indata">
+            <field name="indata1">"Hello, 파이썬! 😍"</field>
+          </shadow>
+          <block type="oper_arithmetic" id="W7z=K/z~@OKj7[n|zFW-">
+            <field name="NAME">+</field>
+            <value name="v1">
+              <shadow type="indata" id="v1/p5p.,i^!]E$n1bHn}">
+                <field name="indata1">"100"</field>
+              </shadow>
+            </value>
+            <value name="v2">
+              <shadow type="indata" id="=ytE=Vp:*4.sm^]d).3g">
+                <field name="indata1">"200"</field>
+              </shadow>
+            </value>
+          </block>
+        </value>
+      </block>
+    </next>
+  </block>
+</xml>

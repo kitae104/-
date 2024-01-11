@@ -1,0 +1,213 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="2l2oQu6.:F?Q)9-c0Njo">kor</variable>
+    <variable id="2_a|kS@e%_#;_E+;aY/[">tot</variable>
+    <variable id="u1t}$]$4@{$QOYHbXBEA">eng</variable>
+    <variable id="`eHE*/}1~u4a^`sjaN:0">avg</variable>
+    <variable id="DqR#Z?p*A1V|Kvmh8P6+">diff</variable>
+  </variables>
+  <block type="math_change" id="z[2|A0{0K=6=j^f@fx%U" x="322" y="-187">
+    <field name="NAME">=</field>
+    <value name="var_name">
+      <shadow type="indata">
+        <field name="indata1">0</field>
+      </shadow>
+      <block type="variables_get" id="8d,`i_(~2MW|$}XjjSvV">
+        <field name="VAR" id="2l2oQu6.:F?Q)9-c0Njo">kor</field>
+      </block>
+    </value>
+    <value name="DELTA">
+      <shadow type="indata">
+        <field name="indata1">80</field>
+      </shadow>
+      <block type="io_trans_for_input" id="aMxC@};lh]m)BGF0pLym">
+        <field name="NAME">int</field>
+        <value name="v1">
+          <shadow type="indata">
+            <field name="indata1"></field>
+          </shadow>
+          <block type="io_input" id="`,92aBo=sddS!R{(FEoI">
+            <value name="content1">
+              <shadow type="indata" id="A0;CQOqkWgx/bUf-ZMho">
+                <field name="indata1">"국어점수"</field>
+              </shadow>
+            </value>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="math_change" id="Go2~J_P^S~SRG^:g@IJY">
+        <field name="NAME">=</field>
+        <value name="var_name">
+          <shadow type="indata">
+            <field name="indata1">0</field>
+          </shadow>
+          <block type="variables_get" id="paD~VOc6yaKi]6=nAQ7_">
+            <field name="VAR" id="u1t}$]$4@{$QOYHbXBEA">eng</field>
+          </block>
+        </value>
+        <value name="DELTA">
+          <shadow type="indata" id=";Yafd}GXA_;2TKw?3Gu[">
+            <field name="indata1">90</field>
+          </shadow>
+          <block type="io_trans_for_input" id=":?ma*.maP[%JBx8pBA@F">
+            <field name="NAME">int</field>
+            <value name="v1">
+              <shadow type="indata">
+                <field name="indata1"></field>
+              </shadow>
+              <block type="io_input" id="Q{U3Mv|w|``|Dm%D+W3/">
+                <value name="content1">
+                  <shadow type="indata" id="KLj`d:RB3?dF]]b$6,mG">
+                    <field name="indata1">"영어점수"</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </next>
+  </block>
+  <block type="math_change" id="rCGX4^sU_uBFA}ou,x*y" x="322" y="-38">
+    <field name="NAME">=</field>
+    <value name="var_name">
+      <shadow xmlns="" type="indata">
+        <field name="indata1">0</field>
+      </shadow>
+      <block type="variables_get" id=")4O^D_Nr`;uZvMS;99Z#">
+        <field name="VAR" id="2_a|kS@e%_#;_E+;aY/[">tot</field>
+      </block>
+    </value>
+    <value name="DELTA">
+      <shadow type="indata" id="_]/I~lssRaM~;!D5wMv(">
+        <field name="indata1">0</field>
+      </shadow>
+      <block type="oper_arithmetic" id="tOW#xKKY~_0SD?}uSJ2n">
+        <field name="NAME">+</field>
+        <value name="v1">
+          <shadow type="indata" id="CFezXP(pE%V84iT[4Noe">
+            <field name="indata1">80</field>
+          </shadow>
+          <block type="variables_get" id="pMBffLMq~IwKwFzn-b5,">
+            <field name="VAR" id="2l2oQu6.:F?Q)9-c0Njo">kor</field>
+          </block>
+        </value>
+        <value name="v2">
+          <shadow type="indata" id="M_*OZy$G$0Bn6YQ(v%!g">
+            <field name="indata1">90</field>
+          </shadow>
+          <block type="variables_get" id="+vhUi(ItH!?JgKbI{Bos">
+            <field name="VAR" id="u1t}$]$4@{$QOYHbXBEA">eng</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="math_change" id=";+e158AtxK_;S%I,hWrt">
+        <field name="NAME">=</field>
+        <value name="var_name">
+          <shadow xmlns="" type="indata">
+            <field name="indata1">0</field>
+          </shadow>
+          <block type="variables_get" id=",8/$@M@`5H;Y7m-2Lj,6">
+            <field name="VAR" id="`eHE*/}1~u4a^`sjaN:0">avg</field>
+          </block>
+        </value>
+        <value name="DELTA">
+          <shadow type="indata" id="erc:e|}jqUpx/$KyE(Y0">
+            <field name="indata1">0</field>
+          </shadow>
+          <block type="oper_arithmetic" id=",o5*GIwz$%zc+rNvsRwS">
+            <field name="NAME">/</field>
+            <value name="v1">
+              <shadow type="indata">
+                <field name="indata1">80</field>
+              </shadow>
+              <block type="variables_get" id="T`T?-+}nR?#,c^5U?Q%b">
+                <field name="VAR" id="2_a|kS@e%_#;_E+;aY/[">tot</field>
+              </block>
+            </value>
+            <value name="v2">
+              <shadow type="indata" id="7d]HCkjrW^a54+w$o.gJ">
+                <field name="indata1">2</field>
+              </shadow>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="math_change" id="rUxu)tGwVhMJW|K(4w^y">
+            <field name="NAME">=</field>
+            <value name="var_name">
+              <shadow xmlns="" type="indata">
+                <field name="indata1">0</field>
+              </shadow>
+              <block type="variables_get" id="tQGm.PPh.Z4Otr(}3-Hx">
+                <field name="VAR" id="DqR#Z?p*A1V|Kvmh8P6+">diff</field>
+              </block>
+            </value>
+            <value name="DELTA">
+              <shadow type="indata" id="jCTaG;F8C?n+{h;g8nAu">
+                <field name="indata1">0</field>
+              </shadow>
+              <block type="oper_arithmetic" id="=Hj#jYg~Gxl2b)HUbr(O">
+                <field name="NAME">-</field>
+                <value name="v1">
+                  <shadow type="indata" id="E]I#:3@b%]}K0vNf.3m?">
+                    <field name="indata1">80</field>
+                  </shadow>
+                  <block type="variables_get" id="3hJ^u@VM}2@9SM3u2YXJ">
+                    <field name="VAR" id="2l2oQu6.:F?Q)9-c0Njo">kor</field>
+                  </block>
+                </value>
+                <value name="v2">
+                  <shadow type="indata">
+                    <field name="indata1">90</field>
+                  </shadow>
+                  <block type="variables_get" id="lV:Fg)b7qb{-cRMvm{l]">
+                    <field name="VAR" id="u1t}$]$4@{$QOYHbXBEA">eng</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="io_print" id="oUq}F=5BoVGV:i;hq%9)" x="322" y="172">
+    <value name="content">
+      <shadow type="indata" id="%gfl%(k(Mz^[J_cuM!P{">
+        <field name="indata1"></field>
+      </shadow>
+      <block type="variables_get" id="T}{qOj@o5RsD5$!pvFk_">
+        <field name="VAR" id="2_a|kS@e%_#;_E+;aY/[">tot</field>
+      </block>
+    </value>
+    <next>
+      <block type="io_print" id="@wx79I.j]Giz+$JoLk?Y">
+        <value name="content">
+          <shadow type="indata" id="J$1}hm!|ANHweGxsl]c0">
+            <field name="indata1"></field>
+          </shadow>
+          <block type="variables_get" id="kE1[{,u*+)3uX^C/73;g">
+            <field name="VAR" id="`eHE*/}1~u4a^`sjaN:0">avg</field>
+          </block>
+        </value>
+        <next>
+          <block type="io_print" id=".p1A(%.y(SOb;]-p~CDh">
+            <value name="content">
+              <shadow type="indata" id="N`_Itu.*J(CQDV^U9zNg">
+                <field name="indata1"></field>
+              </shadow>
+              <block type="variables_get" id="X}gC8jvx,jcc7,R=FTVE">
+                <field name="VAR" id="DqR#Z?p*A1V|Kvmh8P6+">diff</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

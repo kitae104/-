@@ -1,0 +1,247 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="]qzl/v(%MBsI;VPXP2}B">i</variable>
+  </variables>
+  <block type="io_print_empty" id="FORpkFWC+;3GinK.=;[{" x="23" y="-247">
+    <value name="content1">
+      <shadow type="indata" id="^=KAfG.X8-^)TJX9pyUW">
+        <field name="indata1">"알파벳 대문자 유니코드"</field>
+      </shadow>
+    </value>
+    <next>
+      <block type="repeat_for" id="h[2od9V*c:Ybx0/dDB1+">
+        <value name="v1">
+          <shadow type="indata">
+            <field name="indata1"></field>
+          </shadow>
+          <block type="variables_get" id="}KL,JW@3{c+SPnSd)C}A">
+            <field name="VAR" id="]qzl/v(%MBsI;VPXP2}B">i</field>
+          </block>
+        </value>
+        <value name="v2">
+          <shadow type="indata">
+            <field name="indata1"></field>
+          </shadow>
+          <block type="repeat_range" id="M%@Fc`ih_wAF:ml_$Xl)">
+            <value name="v1">
+              <shadow type="indata" id="rG?[TFMSm5I%M|zU-vDV">
+                <field name="indata1">ord('A')</field>
+              </shadow>
+            </value>
+            <value name="v2">
+              <shadow type="indata" id="M.8bX_MOJLN=QXx))/AY">
+                <field name="indata1">ord('Z')+1</field>
+              </shadow>
+            </value>
+            <value name="v3">
+              <shadow type="indata" id="hR!eyc|3=!c_Bk:)D@j1">
+                <field name="indata1">1</field>
+              </shadow>
+            </value>
+          </block>
+        </value>
+        <statement name="v3">
+          <block type="io_print_empty" id="`Bcw+7x]ChEJjWLVr@H(">
+            <value name="content1">
+              <shadow type="indata" id="`_:X1V+6Vh44}lfHmb@n">
+                <field name="indata1">i, chr(i), end=' '</field>
+              </shadow>
+            </value>
+          </block>
+        </statement>
+        <next>
+          <block type="io_print_empty" id="WRM^6@j-B6X)b|06c5H6">
+            <value name="content1">
+              <shadow type="indata" id="tW;0n@UKlN1EnWvc[zG}">
+                <field name="indata1"></field>
+              </shadow>
+            </value>
+            <next>
+              <block type="io_print_empty" id="@904@_!@(t9%]yU|Q+|7">
+                <value name="content1">
+                  <shadow type="indata" id="XjH!.JlwJ6P47*w/%,h/">
+                    <field name="indata1">"알파벳 소문자 유니코드"</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="repeat_for" id="$PAZC%yKnfM,gQMf{tU#">
+                    <value name="v1">
+                      <shadow type="indata">
+                        <field name="indata1"></field>
+                      </shadow>
+                      <block type="variables_get" id="?9A`S,^TisxLI?dS*8nS">
+                        <field name="VAR" id="]qzl/v(%MBsI;VPXP2}B">i</field>
+                      </block>
+                    </value>
+                    <value name="v2">
+                      <shadow type="indata" id="`1.{/oU%#5Ean+x|^r7t">
+                        <field name="indata1"></field>
+                      </shadow>
+                      <block type="repeat_range" id="+,|_dA6rBF$S%pBeh!41">
+                        <value name="v1">
+                          <shadow type="indata" id="S`XgOK64.VGsFg}/MB9d">
+                            <field name="indata1">ord('a')</field>
+                          </shadow>
+                        </value>
+                        <value name="v2">
+                          <shadow type="indata" id="JVW27.bIsT:}#Q/$#$Qf">
+                            <field name="indata1">ord('z')+1</field>
+                          </shadow>
+                        </value>
+                        <value name="v3">
+                          <shadow type="indata" id="j_4fDm!YtLCRYRCQe.PH">
+                            <field name="indata1">1</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="v3">
+                      <block type="io_print_empty" id="95Q_#.Fz^[pjv-6L7t+o">
+                        <value name="content1">
+                          <shadow type="indata" id="Ucz.fg~v6wqZre;X=dVD">
+                            <field name="indata1">i, chr(i), end=' '</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="io_print_empty" id="Whh*+[-m%QIo,mv!oNk0">
+                        <value name="content1">
+                          <shadow type="indata" id="9VC646yF(OKAd+Oce7,m">
+                            <field name="indata1"></field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="io_print_empty" id="!ko~RvbF{tY?2o_D{mCa">
+                            <value name="content1">
+                              <shadow type="indata" id="RGki*+%O)K,sE0KzQ}4y">
+                                <field name="indata1">"이모지 유니코드 https://www.emojiall.com/ko"</field>
+                              </shadow>
+                            </value>
+                            <next>
+                              <block type="repeat_for" id=".f7?;7D6iB7FY{K9aK5M">
+                                <value name="v1">
+                                  <shadow type="indata">
+                                    <field name="indata1"></field>
+                                  </shadow>
+                                  <block type="variables_get" id="fLG:@[{p,Djr*M+vp$~(">
+                                    <field name="VAR" id="]qzl/v(%MBsI;VPXP2}B">i</field>
+                                  </block>
+                                </value>
+                                <value name="v2">
+                                  <shadow type="indata">
+                                    <field name="indata1"></field>
+                                  </shadow>
+                                  <block type="repeat_range" id="|gbP(RQ.}bS}Yj)JH_d`">
+                                    <value name="v1">
+                                      <shadow type="indata" id="KyrV:pMUOYzU#4MKd2V8">
+                                        <field name="indata1">ord('😀')</field>
+                                      </shadow>
+                                    </value>
+                                    <value name="v2">
+                                      <shadow type="indata" id="+ZHkf`Fi,j$gDD}FTR%Z">
+                                        <field name="indata1">ord('😶')+1</field>
+                                      </shadow>
+                                    </value>
+                                    <value name="v3">
+                                      <shadow type="indata" id="-*v5gO%?r$zEgbCAxM!a">
+                                        <field name="indata1">1</field>
+                                      </shadow>
+                                    </value>
+                                  </block>
+                                </value>
+                                <statement name="v3">
+                                  <block type="io_print_empty" id="FaT9F|H*{:K*3|}4d=I{">
+                                    <value name="content1">
+                                      <shadow type="indata" id="3T/Ui87=oRIq*cO712Jr">
+                                        <field name="indata1">i, chr(i), end=' '</field>
+                                      </shadow>
+                                    </value>
+                                  </block>
+                                </statement>
+                                <next>
+                                  <block type="io_print_empty" id="ECS?~lp23%NpP8GELfyt">
+                                    <value name="content1">
+                                      <shadow type="indata" id="[daJyW-oWP*m75dV0[pw">
+                                        <field name="indata1"></field>
+                                      </shadow>
+                                    </value>
+                                    <next>
+                                      <block type="io_print_empty" id="_XS(L-tq3,X|d0T_3+oW">
+                                        <value name="content1">
+                                          <shadow type="indata" id="=va,Vc+{d0VN+q4f?+Tf">
+                                            <field name="indata1">"한글 가 계열 유니코드"</field>
+                                          </shadow>
+                                        </value>
+                                        <next>
+                                          <block type="repeat_for" id="pjTOHO;a@xS/YAf(9NsN">
+                                            <value name="v1">
+                                              <shadow type="indata">
+                                                <field name="indata1"></field>
+                                              </shadow>
+                                              <block type="variables_get" id="*2w^6SX;s`ow:]i.$nvL">
+                                                <field name="VAR" id="]qzl/v(%MBsI;VPXP2}B">i</field>
+                                              </block>
+                                            </value>
+                                            <value name="v2">
+                                              <shadow type="indata">
+                                                <field name="indata1"></field>
+                                              </shadow>
+                                              <block type="repeat_range" id="L0V?kv{QF%sejukxV;tm">
+                                                <value name="v1">
+                                                  <shadow type="indata" id="Xy)~xZ3vz-/`o6wo#X;_">
+                                                    <field name="indata1">ord('가')</field>
+                                                  </shadow>
+                                                </value>
+                                                <value name="v2">
+                                                  <shadow type="indata" id="ASSa.5mR[Rp.J.:!t18R">
+                                                    <field name="indata1">ord('나')+1</field>
+                                                  </shadow>
+                                                </value>
+                                                <value name="v3">
+                                                  <shadow type="indata" id="pebFgH=Dskp,w%[:t2h_">
+                                                    <field name="indata1">1</field>
+                                                  </shadow>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <statement name="v3">
+                                              <block type="io_print_empty" id="6wb3[;_(X6w|R[#|/vWw">
+                                                <value name="content1">
+                                                  <shadow type="indata" id="SUVs7lR|i9zw0t`ai`I%">
+                                                    <field name="indata1">i, chr(i), end=' '</field>
+                                                  </shadow>
+                                                </value>
+                                              </block>
+                                            </statement>
+                                            <next>
+                                              <block type="io_print_empty" id="!xh4)9MStoDjuOKRiL{M">
+                                                <value name="content1">
+                                                  <shadow type="indata" id="*wSH{kXv6n8Vo.K1]!=X">
+                                                    <field name="indata1"></field>
+                                                  </shadow>
+                                                </value>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

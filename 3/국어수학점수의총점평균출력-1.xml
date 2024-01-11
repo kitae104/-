@@ -1,0 +1,81 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="{?^{SCUs-|+*R^#H^)Bk">total</variable>
+  </variables>
+  <block type="math_change" id="rCGX4^sU_uBFA}ou,x*y" x="112" y="-263">
+    <field name="NAME">=</field>
+    <value name="var_name">
+      <shadow xmlns="" type="indata">
+        <field name="indata1">0</field>
+      </shadow>
+      <block type="variables_get" id=")4O^D_Nr`;uZvMS;99Z#">
+        <field name="VAR" id="{?^{SCUs-|+*R^#H^)Bk">total</field>
+      </block>
+    </value>
+    <value name="DELTA">
+      <shadow type="indata" id="_]/I~lssRaM~;!D5wMv(">
+        <field name="indata1">0</field>
+      </shadow>
+      <block type="oper_arithmetic" id="tOW#xKKY~_0SD?}uSJ2n">
+        <field name="NAME">+</field>
+        <value name="v1">
+          <shadow type="indata" id="CFezXP(pE%V84iT[4Noe">
+            <field name="indata1">80</field>
+          </shadow>
+        </value>
+        <value name="v2">
+          <shadow type="indata" id="M_*OZy$G$0Bn6YQ(v%!g">
+            <field name="indata1">90</field>
+          </shadow>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="io_print_msg" id=",$Vm]I[t9TX%n^s1hs[j">
+        <value name="content1">
+          <shadow type="indata" id="Oq[sx.9XD}ZeV_WFq:%-">
+            <field name="indata1">"총점"</field>
+          </shadow>
+        </value>
+        <value name="content2">
+          <shadow type="indata" id="+wHRbKcPXvbk-Q-ekGNb">
+            <field name="indata1"></field>
+          </shadow>
+          <block type="variables_get" id=".k[__lI*8kS:h.Ik#40?">
+            <field name="VAR" id="{?^{SCUs-|+*R^#H^)Bk">total</field>
+          </block>
+        </value>
+        <next>
+          <block type="io_print_msg" id="des?(,gv/X/-e7Dl2a/i">
+            <value name="content1">
+              <shadow type="indata" id="b8OzCr%f@oezheG.)*tk">
+                <field name="indata1">"평균"</field>
+              </shadow>
+            </value>
+            <value name="content2">
+              <shadow type="indata" id="(gLXkXYeETQ`Q{TAsj9@">
+                <field name="indata1"></field>
+              </shadow>
+              <block type="oper_arithmetic" id="@#fzKRb6F:UrU}0k}L@:">
+                <field name="NAME">//</field>
+                <value name="v1">
+                  <shadow type="indata">
+                    <field name="indata1"></field>
+                  </shadow>
+                  <block type="variables_get" id=")XzZGLtN)-(nManR;!gY">
+                    <field name="VAR" id="{?^{SCUs-|+*R^#H^)Bk">total</field>
+                  </block>
+                </value>
+                <value name="v2">
+                  <shadow type="indata" id="BtE29LV5e/VauvE9.vI[">
+                    <field name="indata1">2</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

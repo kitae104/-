@@ -1,0 +1,171 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="lvP?O|q;Sg!o}k3Sf-Q$">p</variable>
+    <variable id="aJkau3l^hOCM#v%pnH@F">q</variable>
+    <variable id="?cz%}2ecSU|t,+:=9uX,">today</variable>
+  </variables>
+  <block type="math_change" id="OtWb8PbL!Sr!KQ8fj)~k" x="98" y="38">
+    <field name="NAME">=</field>
+    <value name="var_name">
+      <shadow xmlns="" type="indata">
+        <field name="indata1">0</field>
+      </shadow>
+      <block type="variables_get" id="VqPb*QEi)J4)+Sy:F$Y)">
+        <field name="VAR" id="lvP?O|q;Sg!o}k3Sf-Q$">p</field>
+      </block>
+    </value>
+    <value name="DELTA">
+      <shadow type="indata" id="XMu%4`r6tMz`P-!jwjuV">
+        <field name="indata1">7</field>
+      </shadow>
+    </value>
+    <next>
+      <block type="math_change" id="TeFLdqWu7:gGgzPyk[{t">
+        <field name="NAME">=</field>
+        <value name="var_name">
+          <shadow xmlns="" type="indata">
+            <field name="indata1">0</field>
+          </shadow>
+          <block type="variables_get" id="CL/lL*Jm!2lD2XT1y68!">
+            <field name="VAR" id="aJkau3l^hOCM#v%pnH@F">q</field>
+          </block>
+        </value>
+        <value name="DELTA">
+          <shadow type="indata" id="|d1R5f+wSnBXegB9306Y">
+            <field name="indata1">4</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="io_print_msg" id="?7Te4jy631iTR2b}{8*,">
+            <value name="content1">
+              <shadow type="indata" id="U0kjgf(98dL6yCpPTKQd">
+                <field name="indata1">"나눗셈의 몫="</field>
+              </shadow>
+            </value>
+            <value name="content2">
+              <shadow type="indata" id="Qu)PArGNz$zs|vP:2MU.">
+                <field name="indata1"></field>
+              </shadow>
+              <block type="oper_arithmetic" id="7EdQayjY45l7YYvC`DZ_">
+                <field name="NAME">//</field>
+                <value name="v1">
+                  <shadow type="indata">
+                    <field name="indata1"></field>
+                  </shadow>
+                  <block type="variables_get" id="c8KogC^4LvHqhjnNc~zY">
+                    <field name="VAR" id="lvP?O|q;Sg!o}k3Sf-Q$">p</field>
+                  </block>
+                </value>
+                <value name="v2">
+                  <shadow type="indata" id="O+6iT*Cze!*_[9!l]Fo3">
+                    <field name="indata1">0</field>
+                  </shadow>
+                  <block type="variables_get" id="0UAWKBbMuCmz=c5v:+v(">
+                    <field name="VAR" id="aJkau3l^hOCM#v%pnH@F">q</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="io_print_msg" id="0~[[fw#2mAvjcp3fnS%i">
+                <value name="content1">
+                  <shadow type="indata" id="96VqmZsjR04X1Q~TSpCl">
+                    <field name="indata1">"나눗셈의 나머지="</field>
+                  </shadow>
+                </value>
+                <value name="content2">
+                  <shadow type="indata" id="IH:(*:)uHhn_(OW9!CZs">
+                    <field name="indata1"></field>
+                  </shadow>
+                  <block type="oper_arithmetic" id="m(g?)Io4E!9ih3PP],t}">
+                    <field name="NAME">%</field>
+                    <value name="v1">
+                      <shadow type="indata" id="u6^)??_.v},+?doQTJGV">
+                        <field name="indata1"></field>
+                      </shadow>
+                      <block type="variables_get" id="V=OO)%5aARuIosFu+q5S">
+                        <field name="VAR" id="lvP?O|q;Sg!o}k3Sf-Q$">p</field>
+                      </block>
+                    </value>
+                    <value name="v2">
+                      <shadow type="indata">
+                        <field name="indata1">0</field>
+                      </shadow>
+                      <block type="variables_get" id="BA[?m+O2Zq!V}:h#Mgne">
+                        <field name="VAR" id="aJkau3l^hOCM#v%pnH@F">q</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="io_comment_dropdown" id="=:zwftNbGmmJ|GxEe{C," x="98" y="307">
+    <field name="NAME">#</field>
+    <value name="v1">
+      <shadow type="indata" id="q.Pv@Gv3$lYovwA+DFc.">
+        <field name="indata1">오늘부터 10일 후는 무슨 요일일까? </field>
+      </shadow>
+    </value>
+    <next>
+      <block type="math_change" id="lKA(QVV+wpor?(Cvz?6x">
+        <field name="NAME">=</field>
+        <value name="var_name">
+          <shadow xmlns="" type="indata">
+            <field name="indata1">0</field>
+          </shadow>
+          <block type="variables_get" id="j)Z^w[Wz6h+jo5n+Mn+G">
+            <field name="VAR" id="?cz%}2ecSU|t,+:=9uX,">today</field>
+          </block>
+        </value>
+        <value name="DELTA">
+          <shadow type="indata" id="a3;O?x:1WS1x#+Keb+;-">
+            <field name="indata1">0</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="io_print" id="cNK~65bj#xv]@yy;MAeZ">
+            <value name="content">
+              <shadow type="indata" id="xnXToR./UtjP}L}xrmA,">
+                <field name="indata1"></field>
+              </shadow>
+              <block type="oper_arithmetic" id="P!2k;4H[!AcR8zLx?NJX">
+                <field name="NAME">%</field>
+                <value name="v1">
+                  <shadow type="indata" id="fef{%:QEA1cf?_/c_1(D">
+                    <field name="indata1"></field>
+                  </shadow>
+                  <block type="oper_arithmetic" id="v~ul`7+*@661Q07BWT(z">
+                    <field name="NAME">+</field>
+                    <value name="v1">
+                      <shadow type="indata">
+                        <field name="indata1"></field>
+                      </shadow>
+                      <block type="variables_get" id="N~/1KJ+y7(b;vr9*36cv">
+                        <field name="VAR" id="?cz%}2ecSU|t,+:=9uX,">today</field>
+                      </block>
+                    </value>
+                    <value name="v2">
+                      <shadow type="indata" id="UgX6]hS*J0VY+hAO^==J">
+                        <field name="indata1">10</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </value>
+                <value name="v2">
+                  <shadow type="indata" id="VhU4n%|$LsBYD74K!,Nz">
+                    <field name="indata1">7</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

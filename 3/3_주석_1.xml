@@ -1,0 +1,137 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="}.wS01=X.g:AR}V{?1)X">ftemp</variable>
+    <variable id="p{d3V1bdFVEnFsuy#6OL">ctemp</variable>
+  </variables>
+  <block type="io_comment_dropdown" id="hnAk]N_f!f;eV2x8-clP" x="68" y="82">
+    <field name="NAME">#</field>
+    <value name="v1">
+      <shadow type="indata" id="*uK6:6BXvjKYWg}D.(]E">
+        <field name="indata1">#</field>
+      </shadow>
+    </value>
+    <next>
+      <block type="io_comment_dropdown" id="w%x!5[{3v?~=NEHT)gNz">
+        <field name="NAME">#</field>
+        <value name="v1">
+          <shadow type="indata" id="00#Dqw%Gk.BVC_D)^QBA">
+            <field name="indata1">이 프로그램은 화씨 온도를 받아서 섭씨 온도로 변환한다.</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="io_comment_dropdown" id="f6-ta~pl+c/5IbEZ?;;h">
+            <field name="NAME">#</field>
+            <value name="v1">
+              <shadow type="indata" id="k*bVfPF9_v{Z*+FD)ozQ">
+                <field name="indata1"></field>
+              </shadow>
+            </value>
+            <next>
+              <block type="math_change" id="wQ0oCnzUUI+j:Ke7p]R(">
+                <field name="NAME">=</field>
+                <value name="var_name">
+                  <shadow xmlns="" type="indata">
+                    <field name="indata1">0</field>
+                  </shadow>
+                  <block type="variables_get" id="M*|BsgI[~wW@=JZ):o_I">
+                    <field name="VAR" id="}.wS01=X.g:AR}V{?1)X">ftemp</field>
+                  </block>
+                </value>
+                <value name="DELTA">
+                  <shadow type="indata" id="JjN|#D%uFXO.dC{JsBO2">
+                    <field name="indata1">100</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="math_change" id="n5Hu,1QTuPX?mS8cIj4u">
+                    <field name="NAME">=</field>
+                    <value name="var_name">
+                      <shadow xmlns="" type="indata">
+                        <field name="indata1">0</field>
+                      </shadow>
+                      <block type="variables_get" id="NRn/rv7n3vrDP`Tz$Dk_">
+                        <field name="VAR" id="p{d3V1bdFVEnFsuy#6OL">ctemp</field>
+                      </block>
+                    </value>
+                    <value name="DELTA">
+                      <shadow type="indata" id="MP%E?[T#-;4g*XzMh*Jy">
+                        <field name="indata1">0</field>
+                      </shadow>
+                      <block type="oper_arithmetic" id="6|pLPYB%e[lLJv7yf/9k">
+                        <field name="NAME">/</field>
+                        <value name="v1">
+                          <shadow type="indata" id="Go5JtI)QTNYM!;-jy?1L">
+                            <field name="indata1"></field>
+                          </shadow>
+                          <block type="oper_arithmetic" id="Brl(z3kQ%KcAv7n}wQwB">
+                            <field name="NAME">*</field>
+                            <value name="v1">
+                              <shadow type="indata" id="Qk:z_6r@szi6|%h?OIS1">
+                                <field name="indata1"></field>
+                              </shadow>
+                              <block type="oper_arithmetic" id="}P#Xu5Hqye:{8TG1=bAe">
+                                <field name="NAME">-</field>
+                                <value name="v1">
+                                  <shadow type="indata" id="2)(T;Y::;j%.{3%}%DIp">
+                                    <field name="indata1"></field>
+                                  </shadow>
+                                  <block type="variables_get" id="B1raH}c)UX|l82bG+}cf">
+                                    <field name="VAR" id="}.wS01=X.g:AR}V{?1)X">ftemp</field>
+                                  </block>
+                                </value>
+                                <value name="v2">
+                                  <shadow type="indata" id="nT,vkV*nC;3lYVp5{L%D">
+                                    <field name="indata1">32.0</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="v2">
+                              <shadow type="indata" id="?Y:,JY5/-pW~jPsRT)Ev">
+                                <field name="indata1">5.0</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="v2">
+                          <shadow type="indata" id="/cpOKAfXIMk+g]TVAX-U">
+                            <field name="indata1">9.0</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="io_print_msg" id="/^noFr-ZOk{pK/yxbu62">
+                        <value name="content1">
+                          <shadow type="indata" id="PwRa8p%E$M*Og?wlTu4q">
+                            <field name="indata1">"섭씨온도:" </field>
+                          </shadow>
+                        </value>
+                        <value name="content2">
+                          <shadow type="indata">
+                            <field name="indata1"></field>
+                          </shadow>
+                          <block type="class_func_param" id="t@6(iwF!sw;)Q9GJmevp">
+                            <mutation items="1"></mutation>
+                            <value name="ADD0">
+                              <shadow type="indata" id="]~A)%t}.BS+0/RAv.Tli">
+                                <field name="indata1"></field>
+                              </shadow>
+                              <block type="variables_get" id="tUZt4{{V^kG`p-R*V3Ck">
+                                <field name="VAR" id="p{d3V1bdFVEnFsuy#6OL">ctemp</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

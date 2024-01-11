@@ -1,0 +1,780 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="%ecQ^,hP6Z{kBk5;n2/!">e</variable>
+    <variable id="*yNWmptz%*t_LlPevrNz">wb</variable>
+    <variable id="pF[K.XPfXVDQo+-^*vyN">i</variable>
+    <variable id="S8D~tC{Ch,LdRC*U}ljT">ws</variable>
+    <variable id="%tZ]NOt#Q=VpZ;eA)^a~">reports</variable>
+    <variable id="xYCb~jlcT/qvh9uPR8}J">shop_list</variable>
+    <variable id="3I@PvEnwo9S7Snr;|/D%">date_list</variable>
+    <variable id="5Sj[ghFTD:KntI^QB.Ex">money_list</variable>
+    <variable id="]]njlUjLMCx0frWi~V4T">report</variable>
+  </variables>
+  <block type="module_bk3" id="XS`*8j?F^M`W%*iRu82I" x="33" y="29">
+    <field name="NAME">os, glob, sys</field>
+    <next>
+      <block type="openpyxl_import" id="N]Alwp(TP:OzVIg(@du.">
+        <next>
+          <block type="dynamic_dragfill_os_glob" id="K?ixH[p+0;v4^=ZV|yC[" disabled="true">
+            <field name="func">glob</field>
+            <value name="param">
+              <shadow type="indata" id="3:$PcMU3+yDU@oSB;XMo">
+                <field name="indata1"></field>
+              </shadow>
+            </value>
+            <next>
+              <block type="math_change" id="n%Jd^xQ)XRPrHPbMAq96">
+                <field name="NAME">=</field>
+                <value name="var_name">
+                  <shadow xmlns="" type="indata">
+                    <field name="indata1">0</field>
+                  </shadow>
+                  <block type="variables_get" id="M8mA@*!oOEeFq6We,|NV">
+                    <field name="VAR" id="%tZ]NOt#Q=VpZ;eA)^a~">reports</field>
+                  </block>
+                </value>
+                <value name="DELTA">
+                  <shadow type="indata" id="l9r,N`k#BG:g0g%~b{J%">
+                    <field name="indata1">glob.glob(r'판매보고_*.xlsx')</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="io_bk2" id="Sf/84Hh@OmE1SR8?BJK$" disabled="true">
+                    <value name="content">
+                      <shadow type="indata">
+                        <field name="indata1"></field>
+                      </shadow>
+                      <block type="variables_get" id="@5K_pWJ7y9BETHn(YTOO">
+                        <field name="VAR" id="%tZ]NOt#Q=VpZ;eA)^a~">reports</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="math_change" id="7cKDbLZfKXP!%tP/1t0|">
+                        <field name="NAME">=</field>
+                        <value name="var_name">
+                          <shadow xmlns="" type="indata">
+                            <field name="indata1">0</field>
+                          </shadow>
+                          <block type="variables_get" id="8z7c][5h2FcFj@Vsso(|">
+                            <field name="VAR" id="xYCb~jlcT/qvh9uPR8}J">shop_list</field>
+                          </block>
+                        </value>
+                        <value name="DELTA">
+                          <shadow type="indata" id="nMdYYiD^SCUQ%DB!:mxj">
+                            <field name="indata1">[]</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="math_change" id="3Z!pIHTOwxC:^tC4BkMw">
+                            <field name="NAME">=</field>
+                            <value name="var_name">
+                              <shadow xmlns="" type="indata">
+                                <field name="indata1">0</field>
+                              </shadow>
+                              <block type="variables_get" id="tZAtmB`Y/Y.9vtGo[N4A">
+                                <field name="VAR" id="3I@PvEnwo9S7Snr;|/D%">date_list</field>
+                              </block>
+                            </value>
+                            <value name="DELTA">
+                              <shadow type="indata" id="1+w$L|D?*!X]1G.`}0`p">
+                                <field name="indata1">[]</field>
+                              </shadow>
+                            </value>
+                            <next>
+                              <block type="math_change" id="6#ve:8Ig?yj@*R:N6$mA">
+                                <field name="NAME">=</field>
+                                <value name="var_name">
+                                  <shadow xmlns="" type="indata">
+                                    <field name="indata1">0</field>
+                                  </shadow>
+                                  <block type="variables_get" id=".:jkaV4!wO*urVBVGctD">
+                                    <field name="VAR" id="5Sj[ghFTD:KntI^QB.Ex">money_list</field>
+                                  </block>
+                                </value>
+                                <value name="DELTA">
+                                  <shadow type="indata" id=";iPojsNh%OiH=.)Q|id6">
+                                    <field name="indata1">[]</field>
+                                  </shadow>
+                                </value>
+                                <next>
+                                  <block type="repeat_bk1" id="e(K~Bxt9?+[WRjR?tXwg">
+                                    <value name="v1">
+                                      <shadow type="indata">
+                                        <field name="indata1"></field>
+                                      </shadow>
+                                      <block type="variables_get" id="u|Rn/BLZ?{6HtmqjJw2h">
+                                        <field name="VAR" id="]]njlUjLMCx0frWi~V4T">report</field>
+                                      </block>
+                                    </value>
+                                    <value name="v2">
+                                      <shadow type="indata" id="-_Kq%lLK/.hF0YSpk2mt">
+                                        <field name="indata1"></field>
+                                      </shadow>
+                                      <block type="variables_get" id="*gw]-G.bm[_k-%--7Fw3">
+                                        <field name="VAR" id="%tZ]NOt#Q=VpZ;eA)^a~">reports</field>
+                                      </block>
+                                    </value>
+                                    <statement name="v3">
+                                      <block type="math_change" id="Q!*^Y=F]7-?OBhVPznTy">
+                                        <field name="NAME">=</field>
+                                        <value name="var_name">
+                                          <shadow xmlns="" type="indata">
+                                            <field name="indata1">0</field>
+                                          </shadow>
+                                          <block type="variables_get" id="[w(rrnjvWP-hk)9s7h.J">
+                                            <field name="VAR" id="*yNWmptz%*t_LlPevrNz">wb</field>
+                                          </block>
+                                        </value>
+                                        <value name="DELTA">
+                                          <shadow type="indata">
+                                            <field name="indata1">0</field>
+                                          </shadow>
+                                          <block type="openpyxl_bk1" id="9T;]]h))(/[1-[21[-Q~">
+                                            <field name="NAME">load_workbook</field>
+                                            <value name="v1">
+                                              <shadow type="indata" id="Gereoi|u~q(:f(+1-(`)">
+                                                <field name="indata1">report, data_only=True</field>
+                                              </shadow>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="math_change" id="2=ZBvUH.hqRCaStTSb#3">
+                                            <field name="NAME">=</field>
+                                            <value name="var_name">
+                                              <shadow xmlns="" type="indata">
+                                                <field name="indata1">0</field>
+                                              </shadow>
+                                              <block type="variables_get" id="[_?=))bg*T-:GOa8(K5:">
+                                                <field name="VAR" id="S8D~tC{Ch,LdRC*U}ljT">ws</field>
+                                              </block>
+                                            </value>
+                                            <value name="DELTA">
+                                              <shadow type="indata">
+                                                <field name="indata1">0</field>
+                                              </shadow>
+                                              <block type="io_chain_no_mutator" id="fqgPdv7;4[KiD%CRiY=D">
+                                                <value name="v1">
+                                                  <shadow type="indata">
+                                                    <field name="indata1"></field>
+                                                  </shadow>
+                                                  <block type="variables_get" id="h?XKM#,b@)EvcM-_Go_7">
+                                                    <field name="VAR" id="*yNWmptz%*t_LlPevrNz">wb</field>
+                                                  </block>
+                                                </value>
+                                                <value name="v2">
+                                                  <shadow type="indata">
+                                                    <field name="indata1"></field>
+                                                  </shadow>
+                                                  <block type="openpyxl_bk2" id="PD#e5ssl%Hz*J.[tGI)5">
+                                                    <field name="NAME">active</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="io_chain_tb" id="bHhoFlV-+Ryd%`?(y]V%">
+                                                <value name="v1">
+                                                  <shadow xmlns="" type="indata">
+                                                    <field name="indata1"></field>
+                                                  </shadow>
+                                                  <block type="variables_get" id="`{MP}`BF;@`5+hy`k4lV">
+                                                    <field name="VAR" id="xYCb~jlcT/qvh9uPR8}J">shop_list</field>
+                                                  </block>
+                                                </value>
+                                                <value name="v2">
+                                                  <shadow type="indata">
+                                                    <field name="indata1"></field>
+                                                  </shadow>
+                                                  <block type="builtin_bk4" id="Hj/Tz$rDe?_1IZDz9o;(">
+                                                    <field name="NAME">append</field>
+                                                    <value name="v1">
+                                                      <shadow type="indata" id="tl/twwX)0^UH8OW;oQpA">
+                                                        <field name="indata1"></field>
+                                                      </shadow>
+                                                      <block type="io_chain_no_mutator" id="+vIuK~tm8jJH},pyYmz;">
+                                                        <value name="v1">
+                                                          <shadow type="indata" id="Sz~m)$5SUAkF-nS0[JvM">
+                                                            <field name="indata1"></field>
+                                                          </shadow>
+                                                          <block type="list_index" id=",tb*k~DqYVN4XW.k)BVd">
+                                                            <value name="list">
+                                                              <shadow xmlns="" type="indata">
+                                                                <field name="indata1"></field>
+                                                              </shadow>
+                                                              <block type="variables_get" id="I!d/%)5ryc{+|b[e,j5n">
+                                                                <field name="VAR" id="S8D~tC{Ch,LdRC*U}ljT">ws</field>
+                                                              </block>
+                                                            </value>
+                                                            <value name="dic1">
+                                                              <shadow type="indata" id="a]x(Jrj}T.5496U9Uamd">
+                                                                <field name="indata1">'B1'</field>
+                                                              </shadow>
+                                                            </value>
+                                                          </block>
+                                                        </value>
+                                                        <value name="v2">
+                                                          <shadow type="indata">
+                                                            <field name="indata1"></field>
+                                                          </shadow>
+                                                          <block type="openpyxl_bk6" id="^5w^09y1DmKOT)FxnXm#">
+                                                            <field name="NAME">value</field>
+                                                          </block>
+                                                        </value>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                                <next>
+                                                  <block type="io_chain_tb" id="@CFc3Lf`VZo]}1?Kj77B">
+                                                    <value name="v1">
+                                                      <shadow xmlns="" type="indata">
+                                                        <field name="indata1"></field>
+                                                      </shadow>
+                                                      <block type="variables_get" id="0FI)QRB3!PUEy+||L#I!">
+                                                        <field name="VAR" id="3I@PvEnwo9S7Snr;|/D%">date_list</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="v2">
+                                                      <shadow type="indata">
+                                                        <field name="indata1"></field>
+                                                      </shadow>
+                                                      <block type="builtin_bk4" id="(TkCEPKVwip?XbggQF,4">
+                                                        <field name="NAME">append</field>
+                                                        <value name="v1">
+                                                          <shadow type="indata">
+                                                            <field name="indata1"></field>
+                                                          </shadow>
+                                                          <block type="io_chain_no_mutator" id="r!_?{p_(!TW9Fo$}d,3y">
+                                                            <value name="v1">
+                                                              <shadow type="indata">
+                                                                <field name="indata1"></field>
+                                                              </shadow>
+                                                              <block type="list_index" id="r@g(6-/GvoWXSEpUpNg~">
+                                                                <value name="list">
+                                                                  <shadow xmlns="" type="indata">
+                                                                    <field name="indata1"></field>
+                                                                  </shadow>
+                                                                  <block type="variables_get" id="zcXP8!7xN^GG._7hmS6J">
+                                                                    <field name="VAR" id="S8D~tC{Ch,LdRC*U}ljT">ws</field>
+                                                                  </block>
+                                                                </value>
+                                                                <value name="dic1">
+                                                                  <shadow type="indata" id="cfG|}SE!4Aec9K62:nm(">
+                                                                    <field name="indata1">'B2'</field>
+                                                                  </shadow>
+                                                                </value>
+                                                              </block>
+                                                            </value>
+                                                            <value name="v2">
+                                                              <shadow type="indata">
+                                                                <field name="indata1"></field>
+                                                              </shadow>
+                                                              <block type="openpyxl_bk6" id="1L;p%|K.P=J/r1f.Kw/0">
+                                                                <field name="NAME">value</field>
+                                                              </block>
+                                                            </value>
+                                                          </block>
+                                                        </value>
+                                                      </block>
+                                                    </value>
+                                                    <next>
+                                                      <block type="io_chain_tb" id="QL1;GZDSaxk/`)kw~}zb">
+                                                        <value name="v1">
+                                                          <shadow xmlns="" type="indata">
+                                                            <field name="indata1"></field>
+                                                          </shadow>
+                                                          <block type="variables_get" id="=*DowtzPChf1qWd{!T2H">
+                                                            <field name="VAR" id="5Sj[ghFTD:KntI^QB.Ex">money_list</field>
+                                                          </block>
+                                                        </value>
+                                                        <value name="v2">
+                                                          <shadow type="indata">
+                                                            <field name="indata1"></field>
+                                                          </shadow>
+                                                          <block type="builtin_bk4" id="{+Vl0-v9tw,RhEw{zp#c">
+                                                            <field name="NAME">append</field>
+                                                            <value name="v1">
+                                                              <shadow type="indata">
+                                                                <field name="indata1"></field>
+                                                              </shadow>
+                                                              <block type="io_chain_no_mutator" id=".|i5Q:/ns11.$xaRT948">
+                                                                <value name="v1">
+                                                                  <shadow type="indata">
+                                                                    <field name="indata1"></field>
+                                                                  </shadow>
+                                                                  <block type="list_index" id="@9_VP.T?(o]#[fR+}|^3">
+                                                                    <value name="list">
+                                                                      <shadow xmlns="" type="indata">
+                                                                        <field name="indata1"></field>
+                                                                      </shadow>
+                                                                      <block type="variables_get" id="akOUY}aF8v5`?xgOCCTQ">
+                                                                        <field name="VAR" id="S8D~tC{Ch,LdRC*U}ljT">ws</field>
+                                                                      </block>
+                                                                    </value>
+                                                                    <value name="dic1">
+                                                                      <shadow type="indata" id="S]XPLxt29WQR_-iN1b90">
+                                                                        <field name="indata1">'B3'</field>
+                                                                      </shadow>
+                                                                    </value>
+                                                                  </block>
+                                                                </value>
+                                                                <value name="v2">
+                                                                  <shadow type="indata">
+                                                                    <field name="indata1"></field>
+                                                                  </shadow>
+                                                                  <block type="openpyxl_bk6" id="hXt$Vd:KnX9`SI/Tixfc">
+                                                                    <field name="NAME">value</field>
+                                                                  </block>
+                                                                </value>
+                                                              </block>
+                                                            </value>
+                                                          </block>
+                                                        </value>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </statement>
+                                    <next>
+                                      <block type="io_bk2" id="_-`+cawBQeRZV9bcYLVw">
+                                        <value name="content">
+                                          <shadow type="indata">
+                                            <field name="indata1"></field>
+                                          </shadow>
+                                          <block type="variables_get" id="!dPWYei19U%RI9d[F2a^">
+                                            <field name="VAR" id="5Sj[ghFTD:KntI^QB.Ex">money_list</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="logic_bk7" id="/oUB7vB95~axt;KscdCK" x="22" y="922">
+    <statement name="val1">
+      <block type="math_change" id="I`7jVEc*F-0Z$bDOJ]gW">
+        <field name="NAME">=</field>
+        <value name="var_name">
+          <shadow xmlns="" type="indata">
+            <field name="indata1">0</field>
+          </shadow>
+          <block type="variables_get" id="z{w9{(B[Ez^xB}Xty4Z~">
+            <field name="VAR" id="*yNWmptz%*t_LlPevrNz">wb</field>
+          </block>
+        </value>
+        <value name="DELTA">
+          <shadow type="indata">
+            <field name="indata1">0</field>
+          </shadow>
+          <block type="openpyxl_bk1" id="cclrT^nKE%l;Rzp`~%/_">
+            <field name="NAME">load_workbook</field>
+            <value name="v1">
+              <shadow type="indata" id="#I[vB(q`NFML|oR~Uzy.">
+                <field name="indata1">r"result.xlsx", data_only=True</field>
+              </shadow>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="math_change" id="QxqdQHw-h~G5pTy[3wt+">
+            <field name="NAME">=</field>
+            <value name="var_name">
+              <shadow xmlns="" type="indata">
+                <field name="indata1">0</field>
+              </shadow>
+              <block type="variables_get" id="6B/=YV.kai/y!ORa27Qg">
+                <field name="VAR" id="S8D~tC{Ch,LdRC*U}ljT">ws</field>
+              </block>
+            </value>
+            <value name="DELTA">
+              <shadow type="indata">
+                <field name="indata1">0</field>
+              </shadow>
+              <block type="io_chain_no_mutator" id="llL`N!dvNr5v:M3w,Fa8">
+                <value name="v1">
+                  <shadow type="indata">
+                    <field name="indata1"></field>
+                  </shadow>
+                  <block type="variables_get" id="C:Sbo06,~w2KX(yjEl(^">
+                    <field name="VAR" id="*yNWmptz%*t_LlPevrNz">wb</field>
+                  </block>
+                </value>
+                <value name="v2">
+                  <shadow type="indata">
+                    <field name="indata1"></field>
+                  </shadow>
+                  <block type="openpyxl_bk2" id="(Aov~js5fdGNJQ?6mGhf">
+                    <field name="NAME">active</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="val2">
+      <shadow type="indata">
+        <field name="indata1"></field>
+      </shadow>
+      <block type="logic_bk10" id="v}0rL[GUHxik/Y`jbyN6">
+        <field name="DROP">FileNotFoundError</field>
+      </block>
+    </value>
+    <value name="v1">
+      <shadow type="indata">
+        <field name="indata1"></field>
+      </shadow>
+      <block type="variables_get" id="^iu,o9EhCho9^r4saLrq">
+        <field name="VAR" id="%ecQ^,hP6Z{kBk5;n2/!">e</field>
+      </block>
+    </value>
+    <statement name="val3">
+      <block type="math_change" id="Z,*kA*splv=.;S?BOV}d">
+        <field name="NAME">=</field>
+        <value name="var_name">
+          <shadow xmlns="" type="indata">
+            <field name="indata1">0</field>
+          </shadow>
+          <block type="variables_get" id="W`=uXx_v6%B7i4H@jA:I">
+            <field name="VAR" id="*yNWmptz%*t_LlPevrNz">wb</field>
+          </block>
+        </value>
+        <value name="DELTA">
+          <shadow type="indata">
+            <field name="indata1">0</field>
+          </shadow>
+          <block type="openpyxl_bk1" id="}U|(-_BOi$3Yk4r=!y9*">
+            <field name="NAME">Workbook</field>
+            <value name="v1">
+              <shadow type="indata" id="+a[(4h1~$ZD8{:L(m+vD">
+                <field name="indata1"></field>
+              </shadow>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="math_change" id="H%sIA?m;P[9,=tv4NDpY">
+            <field name="NAME">=</field>
+            <value name="var_name">
+              <shadow xmlns="" type="indata">
+                <field name="indata1">0</field>
+              </shadow>
+              <block type="variables_get" id="k.?jJJh|-liJI[sTjoRr">
+                <field name="VAR" id="S8D~tC{Ch,LdRC*U}ljT">ws</field>
+              </block>
+            </value>
+            <value name="DELTA">
+              <shadow type="indata">
+                <field name="indata1">0</field>
+              </shadow>
+              <block type="io_chain_no_mutator" id=",!WnZ$O+]$2v67Wta;Mp">
+                <value name="v1">
+                  <shadow type="indata">
+                    <field name="indata1"></field>
+                  </shadow>
+                  <block type="variables_get" id="j`E.LqR:Q_nvXyK5[NgB">
+                    <field name="VAR" id="*yNWmptz%*t_LlPevrNz">wb</field>
+                  </block>
+                </value>
+                <value name="v2">
+                  <shadow type="indata">
+                    <field name="indata1"></field>
+                  </shadow>
+                  <block type="openpyxl_bk2" id="qo@@rXZ%!]nDcP_(n]~1">
+                    <field name="NAME">active</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <next>
+      <block type="repeat_bk1" id="`$:k4`!Vx#=%pBD/CB]U">
+        <value name="v1">
+          <shadow type="indata">
+            <field name="indata1"></field>
+          </shadow>
+          <block type="variables_get" id="FjlfBU%*DBU#i!i)0I@z">
+            <field name="VAR" id="pF[K.XPfXVDQo+-^*vyN">i</field>
+          </block>
+        </value>
+        <value name="v2">
+          <shadow type="indata">
+            <field name="indata1"></field>
+          </shadow>
+          <block type="builtin_bk3" id=")?dcZUHKJhk?ct--z%mN">
+            <field name="NAME">range</field>
+            <value name="v1">
+              <shadow type="indata" id="#n/C|.o400zKzwhXrTDk">
+                <field name="indata1">10</field>
+              </shadow>
+              <block type="builtin_bk3" id="qP;xYhuJI5xXBK$,{/,D">
+                <field name="NAME">len</field>
+                <value name="v1">
+                  <shadow xmlns="" type="indata">
+                    <field name="indata1"></field>
+                  </shadow>
+                  <block type="variables_get" id="{Bcar?|Y0L$7Q@4z}v1L">
+                    <field name="VAR" id="xYCb~jlcT/qvh9uPR8}J">shop_list</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="v3">
+          <block type="math_change" id="a2qmZJyB3RDL;-`m-)?i">
+            <field name="NAME">=</field>
+            <value name="var_name">
+              <shadow type="indata" id="fER|8S?vX?P}H_Qq(s!,">
+                <field name="indata1">0</field>
+              </shadow>
+              <block type="io_chain_no_mutator" id="{%L2!Z[lW5yUl=$}B|IT">
+                <value name="v1">
+                  <shadow type="indata" id="-Ly=iZJLwB442kkZ64?E">
+                    <field name="indata1"></field>
+                  </shadow>
+                  <block type="io_chain_no_mutator" id="vpvjdBrp@5+-siJr;ee$">
+                    <value name="v1">
+                      <shadow type="indata">
+                        <field name="indata1"></field>
+                      </shadow>
+                      <block type="variables_get" id="]K/8KeLAVbnHlEw,DM(_">
+                        <field name="VAR" id="S8D~tC{Ch,LdRC*U}ljT">ws</field>
+                      </block>
+                    </value>
+                    <value name="v2">
+                      <shadow type="indata">
+                        <field name="indata1"></field>
+                      </shadow>
+                      <block type="openpyxl_bk5" id="$v(K}CvgEX[Q}Gqbx)D_">
+                        <field name="NAME">cell</field>
+                        <value name="v1">
+                          <shadow type="indata" id="z[uT093gxu-LZH^acqQd">
+                            <field name="indata1">row=i + 1, column=1</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="v2">
+                  <shadow type="indata">
+                    <field name="indata1"></field>
+                  </shadow>
+                  <block type="openpyxl_bk6" id="|u1xASi{5A~HzV@joI}A">
+                    <field name="NAME">value</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="DELTA">
+              <shadow type="indata" id="Sq8JGkf$KMwGB?axI))E">
+                <field name="indata1">0</field>
+              </shadow>
+              <block type="list_index" id="bC8I}GXGZA`nRbb~_G+z">
+                <value name="list">
+                  <shadow xmlns="" type="indata">
+                    <field name="indata1"></field>
+                  </shadow>
+                  <block type="variables_get" id="V.d(EeX8RYvM30n9uwQ-">
+                    <field name="VAR" id="xYCb~jlcT/qvh9uPR8}J">shop_list</field>
+                  </block>
+                </value>
+                <value name="dic1">
+                  <shadow type="indata" id="91Q:@8uw~e}/GPjMT`%e">
+                    <field name="indata1">i</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="math_change" id="*K-WM|[=T9$zMK-Bp]/I">
+                <field name="NAME">=</field>
+                <value name="var_name">
+                  <shadow type="indata">
+                    <field name="indata1">0</field>
+                  </shadow>
+                  <block type="io_chain_no_mutator" id="B^chlT9m*-w?4LkWRyj.">
+                    <value name="v1">
+                      <shadow type="indata">
+                        <field name="indata1"></field>
+                      </shadow>
+                      <block type="io_chain_no_mutator" id="]D`k:[KkKvHqH=SErpkJ">
+                        <value name="v1">
+                          <shadow type="indata">
+                            <field name="indata1"></field>
+                          </shadow>
+                          <block type="variables_get" id="RyC;Vx6dYef,5fcUSQNP">
+                            <field name="VAR" id="S8D~tC{Ch,LdRC*U}ljT">ws</field>
+                          </block>
+                        </value>
+                        <value name="v2">
+                          <shadow type="indata">
+                            <field name="indata1"></field>
+                          </shadow>
+                          <block type="openpyxl_bk5" id="Wd(oq_qPs/*R|DL(jNtT">
+                            <field name="NAME">cell</field>
+                            <value name="v1">
+                              <shadow type="indata" id="!AxP|OfGG8laJtYC:N[q">
+                                <field name="indata1">row=i + 1, column=2</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="v2">
+                      <shadow type="indata">
+                        <field name="indata1"></field>
+                      </shadow>
+                      <block type="openpyxl_bk6" id="THH@/?awB)tQJ^|8[GkE">
+                        <field name="NAME">value</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="DELTA">
+                  <shadow type="indata">
+                    <field name="indata1">0</field>
+                  </shadow>
+                  <block type="list_index" id="76.a0lXM%y|BhXtmQ{VT">
+                    <value name="list">
+                      <shadow xmlns="" type="indata">
+                        <field name="indata1"></field>
+                      </shadow>
+                      <block type="variables_get" id="ytcDdXPXvt)}nV`T?{kV">
+                        <field name="VAR" id="3I@PvEnwo9S7Snr;|/D%">date_list</field>
+                      </block>
+                    </value>
+                    <value name="dic1">
+                      <shadow type="indata" id=")bx|x=g@C%6_^u.]wM8!">
+                        <field name="indata1">i</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="math_change" id="e^=~uR9Ob^gVnu8K]vU.">
+                    <field name="NAME">=</field>
+                    <value name="var_name">
+                      <shadow type="indata">
+                        <field name="indata1">0</field>
+                      </shadow>
+                      <block type="io_chain_no_mutator" id="x|G`#eG{8m?;v`$e1d!$">
+                        <value name="v1">
+                          <shadow type="indata">
+                            <field name="indata1"></field>
+                          </shadow>
+                          <block type="io_chain_no_mutator" id="$Y5rE|?oPNtiJ-71=#V4">
+                            <value name="v1">
+                              <shadow type="indata">
+                                <field name="indata1"></field>
+                              </shadow>
+                              <block type="variables_get" id="I+MvJ(a/fFNJqLKrwf+1">
+                                <field name="VAR" id="S8D~tC{Ch,LdRC*U}ljT">ws</field>
+                              </block>
+                            </value>
+                            <value name="v2">
+                              <shadow type="indata">
+                                <field name="indata1"></field>
+                              </shadow>
+                              <block type="openpyxl_bk5" id="6E3sH.F%LzDWDxF;X`H#">
+                                <field name="NAME">cell</field>
+                                <value name="v1">
+                                  <shadow type="indata" id="t;G($fzeA%eilb2o4(8!">
+                                    <field name="indata1">row=i + 1, column=3</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="v2">
+                          <shadow type="indata">
+                            <field name="indata1"></field>
+                          </shadow>
+                          <block type="openpyxl_bk6" id="((Q;HkE^W#M#84|.rDPR">
+                            <field name="NAME">value</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="DELTA">
+                      <shadow type="indata">
+                        <field name="indata1">0</field>
+                      </shadow>
+                      <block type="list_index" id="fKoDGh%RDA/nRt$fRI#g">
+                        <value name="list">
+                          <shadow xmlns="" type="indata">
+                            <field name="indata1"></field>
+                          </shadow>
+                          <block type="variables_get" id="G{A;R/-kZP.fz~nBM.`*">
+                            <field name="VAR" id="5Sj[ghFTD:KntI^QB.Ex">money_list</field>
+                          </block>
+                        </value>
+                        <value name="dic1">
+                          <shadow type="indata" id="T7:i-v-AQ%XWHiGB*~w$">
+                            <field name="indata1">i</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="io_chain_tb" id="7_z#B~/lJRq;.]-#;h/W">
+            <value name="v1">
+              <shadow xmlns="" type="indata">
+                <field name="indata1"></field>
+              </shadow>
+              <block type="variables_get" id="`)/`#_e)_Lgn_21mJZM~">
+                <field name="VAR" id="*yNWmptz%*t_LlPevrNz">wb</field>
+              </block>
+            </value>
+            <value name="v2">
+              <shadow type="indata">
+                <field name="indata1"></field>
+              </shadow>
+              <block type="openpyxl_bk1" id=")}]ZQX)65R?G7I-{(5kq">
+                <field name="NAME">save</field>
+                <value name="v1">
+                  <shadow type="indata" id="AlDmyaRdZlebVNUm)l!h">
+                    <field name="indata1">r'result.xlsx'</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

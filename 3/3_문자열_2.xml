@@ -1,0 +1,167 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="0a~O;VU~u]YT38aT)?B[">movie</variable>
+    <variable id="7(RDgJ@C],|N]*_9^8a@">price</variable>
+    <variable id="I;/fQ*i+pk+a)YTY9IuG">PI</variable>
+  </variables>
+  <block type="math_change" id="[c=0B^xtORqYn4QOtfwu" disabled="true" x="143" y="-37">
+    <field name="NAME">=</field>
+    <value name="var_name">
+      <shadow xmlns="" type="indata">
+        <field name="indata1">0</field>
+      </shadow>
+      <block type="variables_get" id="Ok7Y7Hzv=|*Eu@Lm2}t|">
+        <field name="VAR" id="0a~O;VU~u]YT38aT)?B[">movie</field>
+      </block>
+    </value>
+    <value name="DELTA">
+      <shadow type="indata">
+        <field name="indata1">0</field>
+      </shadow>
+      <block type="oper_arithmetic" id="kG|n{+6]TxTRJ3wnYh]?">
+        <field name="NAME">+</field>
+        <value name="v1">
+          <shadow type="indata" id="Ead|_w:]0^{jEDfdH@DE">
+            <field name="indata1">"Terminator"</field>
+          </shadow>
+        </value>
+        <value name="v2">
+          <shadow type="indata" id="F=.PwJ0ze1Pa}b.+3WZb">
+            <field name="indata1">3</field>
+          </shadow>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="io_print_empty" id="*V6H5U/nJ)}-1U})=0k=" disabled="true">
+        <value name="content1">
+          <shadow type="indata">
+            <field name="indata1">"Hello, 파이썬! 😍"</field>
+          </shadow>
+          <block type="variables_get" id="V6l6eTFpb7k?IWA?4V7~">
+            <field name="VAR" id="0a~O;VU~u]YT38aT)?B[">movie</field>
+          </block>
+        </value>
+      </block>
+    </next>
+  </block>
+  <block type="math_change" id="|itpQ)uRi.D0A`hI-y$h" x="142" y="97">
+    <field name="NAME">=</field>
+    <value name="var_name">
+      <shadow xmlns="" type="indata">
+        <field name="indata1">0</field>
+      </shadow>
+      <block type="variables_get" id="wG{~w^P#Z$^G^hWtq7IN">
+        <field name="VAR" id="0a~O;VU~u]YT38aT)?B[">movie</field>
+      </block>
+    </value>
+    <value name="DELTA">
+      <shadow type="indata" id="A24D-}1xyNvBZ)[f]fw)">
+        <field name="indata1">0</field>
+      </shadow>
+      <block type="oper_arithmetic" id="lefjS4^ck[*,EHNEW^Q7">
+        <field name="NAME">+</field>
+        <value name="v1">
+          <shadow type="indata" id="co`-8?=%f%b!ObhJK|Ry">
+            <field name="indata1">"Terminator"</field>
+          </shadow>
+        </value>
+        <value name="v2">
+          <shadow type="indata" id="!{0tIpirO;rRyA=svV;A">
+            <field name="indata1">3</field>
+          </shadow>
+          <block type="dynamic_dragfill_change" id="|rlglkc|j:C%00~v59R/">
+            <field name="func">str</field>
+            <value name="param">
+              <shadow type="indata" id="beyc`Ak`HxiqQ8NJG_Ne">
+                <field name="indata1">3</field>
+              </shadow>
+            </value>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="io_print_empty" id="Ma~Gs_msRUZ^K]jjRS`N">
+        <value name="content1">
+          <shadow type="indata" id="2WVXLHFIS_{m~#B9IUn%">
+            <field name="indata1">"Hello, 파이썬! 😍"</field>
+          </shadow>
+          <block type="variables_get" id="9SX3{A~x+QF=@r4LT3;G">
+            <field name="VAR" id="0a~O;VU~u]YT38aT)?B[">movie</field>
+          </block>
+        </value>
+      </block>
+    </next>
+  </block>
+  <block type="io_comment_dropdown" id="P104*ln:rv~Di?1D3;0$" x="142" y="232">
+    <field name="NAME">#</field>
+    <value name="v1">
+      <shadow type="indata" id="BF{Y8ei/:RW0QpenrL[,">
+        <field name="indata1">price = 100</field>
+      </shadow>
+    </value>
+    <next>
+      <block type="math_change" id="YO^i:%q7M:zXQqE{SyFP">
+        <field name="NAME">=</field>
+        <value name="var_name">
+          <shadow type="indata" id="t4B=D8OdEcq,9Q/i9!48">
+            <field name="indata1">0</field>
+          </shadow>
+          <block type="variables_get" id="m_k+TaB_Xkmr`/Ro9UZ^">
+            <field name="VAR" id="7(RDgJ@C],|N]*_9^8a@">price</field>
+          </block>
+        </value>
+        <value name="DELTA">
+          <shadow type="indata" id="fOpIn*URgiTPX~9F5~:3">
+            <field name="indata1">0</field>
+          </shadow>
+          <block type="dynamic_dragfill_change" id="5b,+xZXHcW4k2Nu)[)c3">
+            <field name="func">int</field>
+            <value name="param">
+              <shadow type="indata" id="Z64wY.}3M~(XDHRbmvf2">
+                <field name="indata1">"100"</field>
+              </shadow>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="io_comment_dropdown" id="Ifud:|fd2h0qUl$h|vus">
+            <field name="NAME">#</field>
+            <value name="v1">
+              <shadow type="indata" id="MzE2*]PZrKATX1$|p{%C">
+                <field name="indata1">PI = 3.14</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="math_change" id="lv|fSR{=w~UAA%|:Hfeq">
+                <field name="NAME">=</field>
+                <value name="var_name">
+                  <shadow xmlns="" type="indata">
+                    <field name="indata1">0</field>
+                  </shadow>
+                  <block type="variables_get" id="|caZaS-aH4+u1Dkt(boX">
+                    <field name="VAR" id="I;/fQ*i+pk+a)YTY9IuG">PI</field>
+                  </block>
+                </value>
+                <value name="DELTA">
+                  <shadow type="indata" id="KBBRc?jEx%CiYQp:PA?J">
+                    <field name="indata1"></field>
+                  </shadow>
+                  <block type="dynamic_dragfill_change" id="`Z=erb`GvC14Y03(aHT}">
+                    <field name="func">float</field>
+                    <value name="param">
+                      <shadow type="indata" id="#T@.+vf.5)ryZc1t`5bD">
+                        <field name="indata1">"3.14"</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

@@ -1,0 +1,110 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="Od-6TO0:w/^kw{$=#R76">price</variable>
+    <variable id="yBOofjTVXtlcO$0a?3y$">tax</variable>
+  </variables>
+  <block type="math_change" id="C2iX(M-Gl}Xs:RYE6b=u" x="142" y="128">
+    <field name="NAME">=</field>
+    <value name="var_name">
+      <shadow xmlns="" type="indata">
+        <field name="indata1">0</field>
+      </shadow>
+      <block type="variables_get" id="Mv*jM-ow/Y[$HE!+tvGV">
+        <field name="VAR" id="Od-6TO0:w/^kw{$=#R76">price</field>
+      </block>
+    </value>
+    <value name="DELTA">
+      <shadow type="indata" id="9(W%q`ml.*tv(gS#Kkae">
+        <field name="indata1">12345</field>
+      </shadow>
+    </value>
+    <next>
+      <block type="math_change" id="2Qyr!,/vr[CoPvz1r_9h">
+        <field name="NAME">=</field>
+        <value name="var_name">
+          <shadow xmlns="" type="indata">
+            <field name="indata1">0</field>
+          </shadow>
+          <block type="variables_get" id="-3{gRl9B(Bd2%xK[mJgP">
+            <field name="VAR" id="yBOofjTVXtlcO$0a?3y$">tax</field>
+          </block>
+        </value>
+        <value name="DELTA">
+          <shadow type="indata" id="v=]RvtHxl{$*A2Ud(~Gc">
+            <field name="indata1">0</field>
+          </shadow>
+          <block type="oper_arithmetic" id="-Ho*SmHTFE7y#4xj^GVw">
+            <field name="NAME">*</field>
+            <value name="v1">
+              <shadow type="indata">
+                <field name="indata1"></field>
+              </shadow>
+              <block type="variables_get" id="Ev_!O(1iWsB6k3RsvK.Q">
+                <field name="VAR" id="Od-6TO0:w/^kw{$=#R76">price</field>
+              </block>
+            </value>
+            <value name="v2">
+              <shadow type="indata" id="7@+y/MkffCXay(y8T5Kf">
+                <field name="indata1">0.075</field>
+              </shadow>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="math_change" id="1d(2]h:Q4HVRr4W3tnDE">
+            <field name="NAME">=</field>
+            <value name="var_name">
+              <shadow xmlns="" type="indata">
+                <field name="indata1">0</field>
+              </shadow>
+              <block type="variables_get" id="R`=hpbIT/Z0VbX8;?SJG">
+                <field name="VAR" id="yBOofjTVXtlcO$0a?3y$">tax</field>
+              </block>
+            </value>
+            <value name="DELTA">
+              <shadow type="indata" id="V;6kf7$:W`Le!N}Tq/tP">
+                <field name="indata1">0</field>
+              </shadow>
+              <block type="dynamic_dragfill_control_2" id="76_lbXj|:2o}efj1=Z%D">
+                <field name="func">round</field>
+                <value name="param">
+                  <shadow type="indata" id="zmY`@:,Z1UsgB}8KPp;3">
+                    <field name="indata1">숫자</field>
+                  </shadow>
+                  <block type="variables_get" id="xc`68+!IHfL%TO4I-odf">
+                    <field name="VAR" id="yBOofjTVXtlcO$0a?3y$">tax</field>
+                  </block>
+                </value>
+                <value name="add1">
+                  <shadow type="indata" id="f~l[VP$_`50z/P,:n{x_">
+                    <field name="indata1">2</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="io_print" id="]vZFyS/h2FeZ{2OId!r4">
+                <value name="content">
+                  <shadow type="indata">
+                    <field name="indata1"></field>
+                  </shadow>
+                  <block type="class_func_param" id="4vJRD?A9g~*@3~XjQ7T8">
+                    <mutation items="1"></mutation>
+                    <value name="ADD0">
+                      <shadow type="indata">
+                        <field name="indata1"></field>
+                      </shadow>
+                      <block type="variables_get" id="wP.CYqSeDT0BK{@c-H0V">
+                        <field name="VAR" id="yBOofjTVXtlcO$0a?3y$">tax</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

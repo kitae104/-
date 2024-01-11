@@ -1,0 +1,235 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="$VDaH6`hirj{dD?!}M=5">gaesu</variable>
+    <variable id="-Z7A+,3]B}P5+fT($Xot">danga</variable>
+    <variable id="I:#$*ksP,H^At!)So1Z+">dis</variable>
+    <variable id="F^UZwv*}F+6se!M=Sjmp">pay</variable>
+    <variable id="S3iB#68Q|F~tMREvvYk.">disPay</variable>
+    <variable id="`fDK/[p!lf9*)*3eZb*g">realPay</variable>
+  </variables>
+  <block type="math_change" id="C{NMG!RRB1f2`Gqa*GO1" x="728" y="-233">
+    <field name="NAME">=</field>
+    <value name="var_name">
+      <shadow xmlns="" type="indata">
+        <field name="indata1">0</field>
+      </shadow>
+      <block type="variables_get" id="{{(zYRQm9,=#kIG9T^N+">
+        <field name="VAR" id="$VDaH6`hirj{dD?!}M=5">gaesu</field>
+      </block>
+    </value>
+    <value name="DELTA">
+      <shadow type="indata" id="Y|k?=m5f|}suELGG)ZAG">
+        <field name="indata1">0</field>
+      </shadow>
+      <block type="io_trans_for_input" id="4k(jZ`.:$5lzY_}WEm3d">
+        <field name="NAME">int</field>
+        <value name="v1">
+          <shadow type="indata">
+            <field name="indata1"></field>
+          </shadow>
+          <block type="io_input" id="3bbsr:Ihx@Ug(#vn.`YZ">
+            <value name="content1">
+              <shadow type="indata" id="aXwMYr;1Q^lRH-(5w-7u">
+                <field name="indata1">"물건 개수"</field>
+              </shadow>
+            </value>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="math_change" id="o6a+Mqr2MTm$b=382qp#">
+        <field name="NAME">=</field>
+        <value name="var_name">
+          <shadow xmlns="" type="indata">
+            <field name="indata1">0</field>
+          </shadow>
+          <block type="variables_get" id="SwE~)0Q3ThHoMZxm,2LZ">
+            <field name="VAR" id="-Z7A+,3]B}P5+fT($Xot">danga</field>
+          </block>
+        </value>
+        <value name="DELTA">
+          <shadow type="indata" id="!#IN`Y)fQ]W_3yMeT4aB">
+            <field name="indata1">0</field>
+          </shadow>
+          <block type="io_trans_for_input" id="P([**BrCh$|PDmRz_|U_">
+            <field name="NAME">int</field>
+            <value name="v1">
+              <shadow type="indata">
+                <field name="indata1"></field>
+              </shadow>
+              <block type="io_input" id="r=bkn[zE66`n`E;]52u4">
+                <value name="content1">
+                  <shadow type="indata" id="j5$BipLmGj0m)[A]Pwdm">
+                    <field name="indata1">"단가"</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="math_change" id="hJ*FzyW@Q[oK0.c=#R@y">
+            <field name="NAME">=</field>
+            <value name="var_name">
+              <shadow xmlns="" type="indata">
+                <field name="indata1">0</field>
+              </shadow>
+              <block type="variables_get" id="NU?jmq/`HqO,)lxvkXP8">
+                <field name="VAR" id="I:#$*ksP,H^At!)So1Z+">dis</field>
+              </block>
+            </value>
+            <value name="DELTA">
+              <shadow type="indata" id="5,1j8G,do/8X(U/yL_81">
+                <field name="indata1">0.25</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="math_change" id="*IhrS%}#CD@8(B!_5AX`">
+                <field name="NAME">=</field>
+                <value name="var_name">
+                  <shadow type="indata" id="k#~P85;vxA}JLc?+y!Pe">
+                    <field name="indata1">0</field>
+                  </shadow>
+                  <block type="variables_get" id="*}Im6^E{=$kK3^45K2.2">
+                    <field name="VAR" id="F^UZwv*}F+6se!M=Sjmp">pay</field>
+                  </block>
+                </value>
+                <value name="DELTA">
+                  <shadow type="indata" id="r%*NMhj(;AJ1k/tG;/5l">
+                    <field name="indata1">0.25</field>
+                  </shadow>
+                  <block type="oper_arithmetic" id="%w}21KiC[k+cVvNA(xH;">
+                    <field name="NAME">*</field>
+                    <value name="v1">
+                      <shadow type="indata">
+                        <field name="indata1"></field>
+                      </shadow>
+                      <block type="variables_get" id="R8aN$.zVWZtGted)s(Om">
+                        <field name="VAR" id="$VDaH6`hirj{dD?!}M=5">gaesu</field>
+                      </block>
+                    </value>
+                    <value name="v2">
+                      <shadow type="indata" id="0M7bQ2]WSh!QN}@zq@d!">
+                        <field name="indata1">0</field>
+                      </shadow>
+                      <block type="variables_get" id="^i]~9U)N#SSWK7P4Ht}H">
+                        <field name="VAR" id="-Z7A+,3]B}P5+fT($Xot">danga</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="math_change" id=",OgS;[}p74C~058XPueI">
+                    <field name="NAME">=</field>
+                    <value name="var_name">
+                      <shadow type="indata">
+                        <field name="indata1">0</field>
+                      </shadow>
+                      <block type="variables_get" id="NqwcKmUG:LsSU)3az+i/">
+                        <field name="VAR" id="S3iB#68Q|F~tMREvvYk.">disPay</field>
+                      </block>
+                    </value>
+                    <value name="DELTA">
+                      <shadow type="indata">
+                        <field name="indata1">0.25</field>
+                      </shadow>
+                      <block type="oper_arithmetic" id="Ey]REx.EW9^(a(m6eS(=">
+                        <field name="NAME">*</field>
+                        <value name="v1">
+                          <shadow type="indata">
+                            <field name="indata1"></field>
+                          </shadow>
+                          <block type="variables_get" id="$.gXh`wVG/@f[{o,HAJ~">
+                            <field name="VAR" id="F^UZwv*}F+6se!M=Sjmp">pay</field>
+                          </block>
+                        </value>
+                        <value name="v2">
+                          <shadow type="indata" id="lc56t!r;Dan3cg3Vogi_">
+                            <field name="indata1">0.25</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="math_change" id="FNscCTJ{ySXB9n(P^G1K">
+                        <field name="NAME">=</field>
+                        <value name="var_name">
+                          <shadow type="indata">
+                            <field name="indata1">0</field>
+                          </shadow>
+                          <block type="variables_get" id="8Nr{fZO@9{9p1J_8@_.p">
+                            <field name="VAR" id="`fDK/[p!lf9*)*3eZb*g">realPay</field>
+                          </block>
+                        </value>
+                        <value name="DELTA">
+                          <shadow type="indata">
+                            <field name="indata1">0.25</field>
+                          </shadow>
+                          <block type="oper_arithmetic" id="SmN6tnkq0^{S3%;Y,ePV">
+                            <field name="NAME">-</field>
+                            <value name="v1">
+                              <shadow type="indata">
+                                <field name="indata1"></field>
+                              </shadow>
+                              <block type="variables_get" id="]$~gE687Hh|[.Xl1O[%-">
+                                <field name="VAR" id="F^UZwv*}F+6se!M=Sjmp">pay</field>
+                              </block>
+                            </value>
+                            <value name="v2">
+                              <shadow type="indata">
+                                <field name="indata1">0.25</field>
+                              </shadow>
+                              <block type="variables_get" id="3@nxwDJd#OiJVwGOYzc|">
+                                <field name="VAR" id="S3iB#68Q|F~tMREvvYk.">disPay</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="io_print_msg" id="z3UL]C68UY-6LGJxx,X`">
+                            <value name="content1">
+                              <shadow type="indata" id="K:6%3cf|ltBG}M]:m.{n">
+                                <field name="indata1">"메시지"</field>
+                              </shadow>
+                              <block type="variables_get" id="us*hhf0a[CD^iJmGebfb">
+                                <field name="VAR" id="F^UZwv*}F+6se!M=Sjmp">pay</field>
+                              </block>
+                            </value>
+                            <value name="content2">
+                              <shadow type="indata" id="c=;.3qd?!Oo5=hF~uT]t">
+                                <field name="indata1"></field>
+                              </shadow>
+                              <block type="io_comma" id=".vy=)Yz%LgQZTYtoOj_;">
+                                <value name="v1">
+                                  <shadow xmlns="" type="indata">
+                                    <field name="indata1"></field>
+                                  </shadow>
+                                  <block type="variables_get" id="fJL6_I]m1cj}~!jYq+#N">
+                                    <field name="VAR" id="S3iB#68Q|F~tMREvvYk.">disPay</field>
+                                  </block>
+                                </value>
+                                <value name="v2">
+                                  <shadow xmlns="" type="indata">
+                                    <field name="indata1"></field>
+                                  </shadow>
+                                  <block type="variables_get" id="f/w$oq2KX#_n46ULTaT8">
+                                    <field name="VAR" id="`fDK/[p!lf9*)*3eZb*g">realPay</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

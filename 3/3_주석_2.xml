@@ -1,0 +1,143 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="hkHwGGe!})C`(cRn=Nb9">x</variable>
+    <variable id="2{oD3W)!:XtJRewqTqYv">y</variable>
+    <variable id="_[w,eVWWNDtrBUeN]x.(">sum</variable>
+  </variables>
+  <block type="io_comment_dropdown" id="JV4IjP#m-siQrp/:.sgC" x="38" y="23">
+    <field name="NAME">#</field>
+    <value name="v1">
+      <shadow type="indata" id="5jQ%$Xo~SaIFkb$ps),:">
+        <field name="indata1">#</field>
+      </shadow>
+    </value>
+    <next>
+      <block type="io_comment_dropdown" id="iANUC$mE#eVP35C,=J-[">
+        <field name="NAME">#</field>
+        <value name="v1">
+          <shadow type="indata" id="iJp(?VlCsLm/7;fax8G:">
+            <field name="indata1">이 프로그램은 정수들의 합을 계산한다.</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="io_comment_dropdown" id="[=%Ws]Nl0Vo|.V)C-|6l">
+            <field name="NAME">#</field>
+            <value name="v1">
+              <shadow type="indata" id="6G/;ab#])Jq2(LPM,Arf">
+                <field name="indata1"></field>
+              </shadow>
+            </value>
+            <next>
+              <block type="math_change" id="QJ)xZm#A5b^}VZt_x(qs">
+                <field name="NAME">=</field>
+                <value name="var_name">
+                  <shadow xmlns="" type="indata">
+                    <field name="indata1">0</field>
+                  </shadow>
+                  <block type="variables_get" id="{Gf^%~4xt+6401$nr,{9">
+                    <field name="VAR" id="hkHwGGe!})C`(cRn=Nb9">x</field>
+                  </block>
+                </value>
+                <value name="DELTA">
+                  <shadow type="indata" id="-lqrOm`EG[-F~u568;:]">
+                    <field name="indata1">100</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="math_change" id="[G[;sFV;Qvj$^{vY`^Ld">
+                    <field name="NAME">=</field>
+                    <value name="var_name">
+                      <shadow xmlns="" type="indata">
+                        <field name="indata1">0</field>
+                      </shadow>
+                      <block type="variables_get" id="n9zl[Pe!Pl05,^^=5#8t">
+                        <field name="VAR" id="2{oD3W)!:XtJRewqTqYv">y</field>
+                      </block>
+                    </value>
+                    <value name="DELTA">
+                      <shadow type="indata" id=":.cXC,]/UY8R%bddaq5z">
+                        <field name="indata1">200</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="math_change" id="x2J+8rtk!BdyP5-p8DuW">
+                        <field name="NAME">=</field>
+                        <value name="var_name">
+                          <shadow xmlns="" type="indata">
+                            <field name="indata1">0</field>
+                          </shadow>
+                          <block type="variables_get" id="G^CU=6|K/}hV/?`6*3,g">
+                            <field name="VAR" id="_[w,eVWWNDtrBUeN]x.(">sum</field>
+                          </block>
+                        </value>
+                        <value name="DELTA">
+                          <shadow type="indata" id="E1hY@MHFZ-_VwH#7L0r`">
+                            <field name="indata1">0</field>
+                          </shadow>
+                          <block type="oper_arithmetic" id="1p^Kp?is=OF8Nm9IrNK3">
+                            <field name="NAME">+</field>
+                            <value name="v1">
+                              <shadow type="indata">
+                                <field name="indata1"></field>
+                              </shadow>
+                              <block type="variables_get" id=",-{J^(;ZIuAOS.;AjiP}">
+                                <field name="VAR" id="hkHwGGe!})C`(cRn=Nb9">x</field>
+                              </block>
+                            </value>
+                            <value name="v2">
+                              <shadow type="indata" id="Z~n`4KBnb*3/A@sh`N^5">
+                                <field name="indata1">0</field>
+                              </shadow>
+                              <block type="variables_get" id="6}`r]@?XJDqm|)}ShL4`">
+                                <field name="VAR" id="2{oD3W)!:XtJRewqTqYv">y</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="io_comment_dropdown" id="hI^vMbftJQ+W$3ADox:x">
+                            <field name="NAME">#</field>
+                            <value name="v1">
+                              <shadow type="indata" id="vKw:4LXBX|B/@-zn-q$b">
+                                <field name="indata1">diff = x - y</field>
+                              </shadow>
+                            </value>
+                            <next>
+                              <block type="io_print_msg" id="SX(UXZSl;f^9u{c$S-Zy">
+                                <value name="content1">
+                                  <shadow type="indata" id="z%Iqqtb]?}`E4(l#_@Em">
+                                    <field name="indata1">"합은 "</field>
+                                  </shadow>
+                                </value>
+                                <value name="content2">
+                                  <shadow type="indata">
+                                    <field name="indata1"></field>
+                                  </shadow>
+                                  <block type="class_func_param" id="19nZEebPrOPJ)lm:J/sZ">
+                                    <mutation items="1"></mutation>
+                                    <value name="ADD0">
+                                      <shadow type="indata">
+                                        <field name="indata1"></field>
+                                      </shadow>
+                                      <block type="variables_get" id="XyjPm?jy~`D@ON~e9hG@">
+                                        <field name="VAR" id="_[w,eVWWNDtrBUeN]x.(">sum</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

@@ -1,0 +1,238 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="jk?V0P2~TJd4jhMzb!$L">img</variable>
+    <variable id="UBr``D+In34J*`F5[aXR">plt</variable>
+    <variable id="ml)RAziL_lBBB=S?UJKP">classifier</variable>
+    <variable id="vKYhgx9aDs.Np]YU$nik">faces</variable>
+    <variable id="jwZ|%YjNJ*tiIWJguAy#">cv2</variable>
+  </variables>
+  <block type="opencv_import" id="Evn:q.frDs:OFzyYfkzO" x="82" y="23">
+    <next>
+      <block type="cv2_imread_1" id="nGCa.O_:#_^FlQ6f_kWW">
+        <field name="flag">IMREAD_COLOR</field>
+        <value name="img_bgr">
+          <shadow type="indata">
+            <field name="indata1"></field>
+          </shadow>
+          <block type="variables_get" id="$w+tPV)dDinw~mwyMW0b">
+            <field name="VAR" id="jk?V0P2~TJd4jhMzb!$L">img</field>
+          </block>
+        </value>
+        <value name="fileName">
+          <shadow type="indata">
+            <field name="indata1"></field>
+          </shadow>
+          <block type="fileopen" id="77H=)I]TDPhnL0YgUSTe">
+            <field name="file_path">"Lenna.png"</field>
+          </block>
+        </value>
+        <next>
+          <block type="opencv_cvtcolor" id="t8|Z%+8/Ts!HN4aZ/%Uf">
+            <field name="cvtColor">cv2.COLOR_BGR2RGB</field>
+            <value name="img_rgb">
+              <shadow type="indata">
+                <field name="indata1"></field>
+              </shadow>
+              <block type="variables_get" id="[VwqBb2#cCEORYt0OFA_">
+                <field name="VAR" id="jk?V0P2~TJd4jhMzb!$L">img</field>
+              </block>
+            </value>
+            <value name="fileName">
+              <shadow type="indata" id="nZJN`C^CY_S=Xa`U?m{!">
+                <field name="indata1">'Lenna.png'</field>
+              </shadow>
+              <block type="variables_get" id="Ki*}lee7p!ed`Q:kqlff">
+                <field name="VAR" id="jk?V0P2~TJd4jhMzb!$L">img</field>
+              </block>
+            </value>
+            <next>
+              <block type="import_matplotlib_list" id="lq1.f.i)|c@E5Rpl!T/u">
+                <field name="list">matplotlib.pyplot as plt&#10;import matplotlib.font_manager as fm&#10;fontprop = fm.FontProperties(fname='malgun.ttf')</field>
+                <next>
+                  <block type="dynamic_dragfill_mplplt" id="jP`**,PxYu;iQ?$1CRzS">
+                    <field name="func">imshow</field>
+                    <value name="v1">
+                      <shadow xmlns="" type="indata">
+                        <field name="indata1"></field>
+                      </shadow>
+                      <block type="variables_get" id="4fKu6O075[iAtdCI#Lg+">
+                        <field name="VAR" id="UBr``D+In34J*`F5[aXR">plt</field>
+                      </block>
+                    </value>
+                    <value name="param">
+                      <shadow xmlns="" type="indata">
+                        <field name="indata1">var</field>
+                      </shadow>
+                      <block type="variables_get" id="%xG#=~czU$YUz|fL37EW">
+                        <field name="VAR" id="jk?V0P2~TJd4jhMzb!$L">img</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="opencv_cvtcolor" id="Zj^SG6KU.S%Mb*e}-a4*">
+                        <field name="cvtColor">cv2.COLOR_BGR2GRAY</field>
+                        <value name="img_rgb">
+                          <shadow type="indata">
+                            <field name="indata1"></field>
+                          </shadow>
+                          <block type="variables_get" id="bH++I35qIxD1-E3-UGOj">
+                            <field name="VAR" id="jk?V0P2~TJd4jhMzb!$L">img</field>
+                          </block>
+                        </value>
+                        <value name="fileName">
+                          <shadow type="indata">
+                            <field name="indata1">'Lenna.png'</field>
+                          </shadow>
+                          <block type="variables_get" id="5WdS}1(yB1z_:E.=3k?$">
+                            <field name="VAR" id="jk?V0P2~TJd4jhMzb!$L">img</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="opencv_cv2_cascadeclassifier" id="!)tduS7?pS/PT+I,%#w7">
+                            <field name="xml_file">haarcascade_frontalface_default.xml</field>
+                            <value name="val">
+                              <shadow type="indata">
+                                <field name="indata1"></field>
+                              </shadow>
+                              <block type="variables_get" id="iLDk-t{fT:4}`OkKy:a]">
+                                <field name="VAR" id="ml)RAziL_lBBB=S?UJKP">classifier</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="math_change" id="0G9qlu;FdmavLY.z6jo@">
+                                <field name="NAME">=</field>
+                                <value name="var_name">
+                                  <shadow xmlns="" type="indata">
+                                    <field name="indata1">0</field>
+                                  </shadow>
+                                  <block type="variables_get" id="b4V?1fcosnxo!l3qvuYI">
+                                    <field name="VAR" id="vKYhgx9aDs.Np]YU$nik">faces</field>
+                                  </block>
+                                </value>
+                                <value name="DELTA">
+                                  <shadow type="indata" id="C7b]^,F=[{7Ur~}DQmiT">
+                                    <field name="indata1">0</field>
+                                  </shadow>
+                                  <block type="dynamic_dragfill_opencv_2" id="s!y7*=*!t7,O83EelgD$">
+                                    <field name="func">detectMultiScale</field>
+                                    <value name="v1">
+                                      <shadow xmlns="" type="indata">
+                                        <field name="indata1"></field>
+                                      </shadow>
+                                      <block type="variables_get" id="N(IPj~]qb|jx|]0384iQ">
+                                        <field name="VAR" id="ml)RAziL_lBBB=S?UJKP">classifier</field>
+                                      </block>
+                                    </value>
+                                    <value name="param">
+                                      <shadow xmlns="" type="indata">
+                                        <field name="indata1">img</field>
+                                      </shadow>
+                                      <block type="variables_get" id="ZLo,e6[f76V@r[;-LF~;">
+                                        <field name="VAR" id="jk?V0P2~TJd4jhMzb!$L">img</field>
+                                      </block>
+                                    </value>
+                                    <value name="add1">
+                                      <shadow type="indata" id="${N@8-OF?wq5MCkA];|D">
+                                        <field name="indata1">scaleFactor=1.3, minNeighbors=5</field>
+                                      </shadow>
+                                    </value>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="io_print" id="j.@#LEn9S]jDEV!yiT5l">
+                                    <value name="content">
+                                      <shadow type="indata">
+                                        <field name="indata1"></field>
+                                      </shadow>
+                                      <block type="variables_get" id="US#bVEMFYl~5K)BU!ha@">
+                                        <field name="VAR" id="vKYhgx9aDs.Np]YU$nik">faces</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="repeat_for" id="RWoI_-{9vXg-E:v.Rz$P">
+                                        <value name="v1">
+                                          <shadow type="indata" id="EXIj,kL/v0nHRgC!JqjA">
+                                            <field name="indata1">x,y,w,h</field>
+                                          </shadow>
+                                        </value>
+                                        <value name="v2">
+                                          <shadow type="indata" id="uI%(6naU-tbh46VU_t-I">
+                                            <field name="indata1"></field>
+                                          </shadow>
+                                          <block type="variables_get" id=":N${dOZBJ^2C9B6(ztEi">
+                                            <field name="VAR" id="vKYhgx9aDs.Np]YU$nik">faces</field>
+                                          </block>
+                                        </value>
+                                        <statement name="v3">
+                                          <block type="io_empty" id="A1WUPLqYxD--:1/zm(Nd">
+                                            <value name="v1">
+                                              <shadow type="indata" id="q)vO37;MW+H(i[lj)DlR">
+                                                <field name="indata1"></field>
+                                              </shadow>
+                                              <block type="dynamic_dragfill_opencv_2" id="}xyN9LJV{_^uYAwVzV#l">
+                                                <field name="func">rectangle</field>
+                                                <value name="v1">
+                                                  <shadow xmlns="" type="indata">
+                                                    <field name="indata1"></field>
+                                                  </shadow>
+                                                  <block type="variables_get" id="VQtT}qg^^D3{V~6df1tG">
+                                                    <field name="VAR" id="jwZ|%YjNJ*tiIWJguAy#">cv2</field>
+                                                  </block>
+                                                </value>
+                                                <value name="param">
+                                                  <shadow xmlns="" type="indata">
+                                                    <field name="indata1">img</field>
+                                                  </shadow>
+                                                  <block type="variables_get" id="rXPP4CIpL8!Y?DF_K;S8">
+                                                    <field name="VAR" id="jk?V0P2~TJd4jhMzb!$L">img</field>
+                                                  </block>
+                                                </value>
+                                                <value name="add1">
+                                                  <shadow type="indata" id="N[dPTG$OSf1pn!8nw;zU">
+                                                    <field name="indata1">(x, y), (x+w, y+h), (0,255,0), 2</field>
+                                                  </shadow>
+                                                </value>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </statement>
+                                        <next>
+                                          <block type="dynamic_dragfill_mplplt" id="Ng64Mdip4K!E8xh;@{J`" disabled="true">
+                                            <field name="func">imshow</field>
+                                            <value name="v1">
+                                              <shadow xmlns="" type="indata">
+                                                <field name="indata1"></field>
+                                              </shadow>
+                                              <block type="variables_get" id="|g!y(m-/(XEp.7%M?OQ,">
+                                                <field name="VAR" id="UBr``D+In34J*`F5[aXR">plt</field>
+                                              </block>
+                                            </value>
+                                            <value name="param">
+                                              <shadow xmlns="" type="indata">
+                                                <field name="indata1">var</field>
+                                              </shadow>
+                                              <block type="variables_get" id="|-^n*h^v@wjz3rl+![_b">
+                                                <field name="VAR" id="jk?V0P2~TJd4jhMzb!$L">img</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

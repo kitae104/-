@@ -1,0 +1,44 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <block type="io_print" id="`yrMtP;RuFIk!|N}c2Lu" x="68" y="82">
+    <value name="content">
+      <shadow type="indata" id="^`Yc,!,HzL5X[~,HYNBS">
+        <field name="indata1">10 + 20 /2</field>
+      </shadow>
+    </value>
+    <next>
+      <block type="io_print" id="U4dq5`p1+)E[-oDV[t9Z">
+        <value name="content">
+          <shadow type="indata" id="[Qc$YHW$r@T^@`=T`u|^">
+            <field name="indata1"></field>
+          </shadow>
+          <block type="oper_arithmetic" id="(UYK5~+Q!}0|=0Zi5[gK">
+            <field name="NAME">/</field>
+            <value name="v1">
+              <shadow type="indata" id="fQ!dac%OMd1lOlfeb6wg">
+                <field name="indata1"></field>
+              </shadow>
+              <block type="oper_arithmetic" id="89chQnwE1%CNB-iUw.VM">
+                <field name="NAME">+</field>
+                <value name="v1">
+                  <shadow type="indata" id="2=RrST,?zIV6R:2cHcub">
+                    <field name="indata1">10</field>
+                  </shadow>
+                </value>
+                <value name="v2">
+                  <shadow type="indata" id="Z?0X/q7dJRxVg.4?|Guc">
+                    <field name="indata1">20</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+            <value name="v2">
+              <shadow type="indata" id="21jZ9u|#OcXc8hsiR8C8">
+                <field name="indata1">2</field>
+              </shadow>
+            </value>
+          </block>
+        </value>
+      </block>
+    </next>
+  </block>
+</xml>

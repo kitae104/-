@@ -1,0 +1,160 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="B)@^:%SLjt*YwafG^7=W">x</variable>
+    <variable id="$dI3LpX15Z7SGKVefZpU">z</variable>
+    <variable id="0`aD6KrdCgcM|PA3(GSP">y</variable>
+  </variables>
+  <block type="math_change" id=".Zye%Ur4lPsM0q5E#qxa" x="-8" y="173">
+    <field name="NAME">=</field>
+    <value name="var_name">
+      <shadow type="indata" id="R.wy{[i)=u6Vp@XgW)7h">
+        <field name="indata1">0</field>
+      </shadow>
+      <block type="class_func_param" id="Nq]W]06X_)Znn8R@gc:B">
+        <mutation items="3"></mutation>
+        <value name="ADD0">
+          <block type="variables_get" id="DJ~6${)9#-N-35AQjp+(">
+            <field name="VAR" id="B)@^:%SLjt*YwafG^7=W">x</field>
+          </block>
+        </value>
+        <value name="ADD1">
+          <block type="variables_get" id="c;=95(}z)BlaGx#cEy*4">
+            <field name="VAR" id="0`aD6KrdCgcM|PA3(GSP">y</field>
+          </block>
+        </value>
+        <value name="ADD2">
+          <block type="variables_get" id="H:2QC`K+%|$J~nEck_|u">
+            <field name="VAR" id="$dI3LpX15Z7SGKVefZpU">z</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <value name="DELTA">
+      <shadow type="indata" id="w3sz[21:V0fD92b`32c;">
+        <field name="indata1">0</field>
+      </shadow>
+    </value>
+    <next>
+      <block type="io_comment_dropdown" id=")s|;t1BrGO~Kp%-k(AL(">
+        <field name="NAME">#</field>
+        <value name="v1">
+          <shadow type="indata" id="nR~SsOEd`[_3$fXf2VyG">
+            <field name="indata1">한번에 여러 개의 변수 초기화</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="math_change" id=";{5R[wY{OQe)LLY*h,~8">
+            <field name="NAME">=</field>
+            <value name="var_name">
+              <shadow type="indata">
+                <field name="indata1">0</field>
+              </shadow>
+              <block type="class_func_param" id="I1=$]RXhFw/RjQgz@@!G">
+                <mutation items="3"></mutation>
+                <value name="ADD0">
+                  <block type="variables_get" id="=g.EWK*f7*~02V9Hz{`k">
+                    <field name="VAR" id="B)@^:%SLjt*YwafG^7=W">x</field>
+                  </block>
+                </value>
+                <value name="ADD1">
+                  <block type="variables_get" id="Y*I3d*0j0!b_L#i|QohY">
+                    <field name="VAR" id="0`aD6KrdCgcM|PA3(GSP">y</field>
+                  </block>
+                </value>
+                <value name="ADD2">
+                  <block type="variables_get" id=")N78$sz{^L[H#7aV1d#e">
+                    <field name="VAR" id="$dI3LpX15Z7SGKVefZpU">z</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="DELTA">
+              <shadow type="indata" id="Q)XU|m]hXn/%W*[R_9^/">
+                <field name="indata1">0</field>
+              </shadow>
+              <block type="class_func_param" id="{GI[NvbS^[WvlCYa!R[v">
+                <mutation items="3"></mutation>
+                <value name="ADD0">
+                  <shadow type="indata" id="*FD7fpfzIK8$/KcXc8h0">
+                    <field name="indata1">10</field>
+                  </shadow>
+                </value>
+                <value name="ADD1">
+                  <shadow type="indata" id="}~^9+Zc|8kWk^uT342*u">
+                    <field name="indata1">20</field>
+                  </shadow>
+                </value>
+                <value name="ADD2">
+                  <shadow type="indata" id="Ng,8WbjU`o/M]hrVXCuB">
+                    <field name="indata1">30</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="io_comment_dropdown" id="V~zB=ZgHu{?k{H+q$bgk">
+                <field name="NAME">#</field>
+                <value name="v1">
+                  <shadow type="indata" id="mPZ*mA|cwAv:#JgOevH!">
+                    <field name="indata1">x와 y의 값을 서로 교환한다. </field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="math_change" id="-c+5^=%OfNJoc|F[x9z{">
+                    <field name="NAME">=</field>
+                    <value name="var_name">
+                      <shadow type="indata" id="OAf;!YSM7u{fpbsDt:bm">
+                        <field name="indata1">0</field>
+                      </shadow>
+                      <block type="io_comma" id="t0B[-9@(N-jV[^3+g}hd">
+                        <value name="v1">
+                          <shadow xmlns="" type="indata">
+                            <field name="indata1"></field>
+                          </shadow>
+                          <block type="variables_get" id="]|9mT?Qg{bl./8[uoeF@">
+                            <field name="VAR" id="B)@^:%SLjt*YwafG^7=W">x</field>
+                          </block>
+                        </value>
+                        <value name="v2">
+                          <shadow xmlns="" type="indata">
+                            <field name="indata1"></field>
+                          </shadow>
+                          <block type="variables_get" id="n*[DEeE,L4a}mNj`#HU0">
+                            <field name="VAR" id="0`aD6KrdCgcM|PA3(GSP">y</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="DELTA">
+                      <shadow type="indata" id="f08(^dn7r{+7B(GxKw6(">
+                        <field name="indata1">0</field>
+                      </shadow>
+                      <block type="io_comma" id="MI(L8]^.In6A0R%H5es^">
+                        <value name="v1">
+                          <shadow type="indata" id="1JDJ}1MAKnes^gw1j@Pp">
+                            <field name="indata1"></field>
+                          </shadow>
+                          <block type="variables_get" id="rxYW:(D%Hu1stdiKuz)|">
+                            <field name="VAR" id="0`aD6KrdCgcM|PA3(GSP">y</field>
+                          </block>
+                        </value>
+                        <value name="v2">
+                          <shadow type="indata" id="Bn`Ano_d8Vfi2@E]gH%m">
+                            <field name="indata1"></field>
+                          </shadow>
+                          <block type="variables_get" id="arXLRiv[|!_nx=m2N;7e">
+                            <field name="VAR" id="B)@^:%SLjt*YwafG^7=W">x</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

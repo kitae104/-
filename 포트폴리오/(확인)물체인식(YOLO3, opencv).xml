@@ -1,0 +1,262 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="Q`~whvjk!P1p04%P~Znl">img</variable>
+    <variable id=")8!S$|tJt[QnH:o:Uqk-">plt</variable>
+    <variable id="ePEVr`3t$_?;HTM:Lds[">net</variable>
+    <variable id="D~Cp)#BZ{Lyplc]UGr_Y">classes</variable>
+    <variable id="7/FP^-?YG}X4H125J0z!">layer_names</variable>
+    <variable id="4P:)1!oo|6i8BmCcqPiI">output_layers</variable>
+    <variable id="Ioj2Q(3{Av=,TkQ3qp+,">blob</variable>
+    <variable id="ZW~2nCd+vHJXu87u?g4#">outs</variable>
+  </variables>
+  <block type="numpy_library" id="e/WD]VGdry}?BaE.^7)(" x="68" y="7">
+    <next>
+      <block type="opencv_import" id="#!)7TNya}i`w+R`hQ|L6">
+        <next>
+          <block type="cv2_imread_1" id="2]${m#sF`]*bHjzNYHUp">
+            <field name="flag">IMREAD_COLOR</field>
+            <value name="img_bgr">
+              <shadow type="indata">
+                <field name="indata1"></field>
+              </shadow>
+              <block type="variables_get" id="TpPI83rY|#,d%Hbt09o|">
+                <field name="VAR" id="Q`~whvjk!P1p04%P~Znl">img</field>
+              </block>
+            </value>
+            <value name="fileName">
+              <shadow type="indata">
+                <field name="indata1"></field>
+              </shadow>
+              <block type="fileopen" id="*m{(mR0-2+b8VBy4t%YQ">
+                <field name="file_path">"과일.png"</field>
+              </block>
+            </value>
+            <next>
+              <block type="opencv_cvtcolor" id="D,pk9R2e/n`+Fgih=%J1">
+                <field name="cvtColor">cv2.COLOR_BGR2RGB</field>
+                <value name="img_rgb">
+                  <shadow type="indata">
+                    <field name="indata1"></field>
+                  </shadow>
+                  <block type="variables_get" id="`d|=J+Z!3w1QI*9WldZ}">
+                    <field name="VAR" id="Q`~whvjk!P1p04%P~Znl">img</field>
+                  </block>
+                </value>
+                <value name="fileName">
+                  <shadow type="indata">
+                    <field name="indata1"></field>
+                  </shadow>
+                  <block type="variables_get" id="#GyJ*j5H7VlQN56)8*^p">
+                    <field name="VAR" id="Q`~whvjk!P1p04%P~Znl">img</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="opencv_imshow" id="w%dV2$bRjyK:=trcVF;)">
+                    <value name="v1">
+                      <shadow type="indata">
+                        <field name="indata1"></field>
+                      </shadow>
+                      <block type="variables_get" id="y~#)@?Hsg9A-azU}b*$D">
+                        <field name="VAR" id=")8!S$|tJt[QnH:o:Uqk-">plt</field>
+                      </block>
+                    </value>
+                    <value name="v2">
+                      <shadow type="indata">
+                        <field name="indata1"></field>
+                      </shadow>
+                      <block type="variables_get" id="2=ZCBldkjPz+Wq=x|_S!">
+                        <field name="VAR" id="Q`~whvjk!P1p04%P~Znl">img</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="math_change" id="DB]-75Xr_dMuh!L5(jJe">
+                        <field name="NAME">=</field>
+                        <value name="var_name">
+                          <shadow type="indata">
+                            <field name="indata1"></field>
+                          </shadow>
+                          <block type="variables_get" id="O:Rj1-Q#?YAlI51A7H1t">
+                            <field name="VAR" id="ePEVr`3t$_?;HTM:Lds[">net</field>
+                          </block>
+                        </value>
+                        <value name="DELTA">
+                          <shadow type="indata">
+                            <field name="indata1"></field>
+                          </shadow>
+                          <block type="opencv_dnn_readnet" id="JzJ}iLGPhNiD=+Qtr7KO">
+                            <value name="v1">
+                              <shadow type="indata" id="a[P46qMyx[frvz-JNgP=">
+                                <field name="indata1">"yolov3.weights", "yolov3.cfg"</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="math_change" id="[]1s[`d5$Et(C2`YodxP">
+                            <field name="NAME">=</field>
+                            <value name="var_name">
+                              <shadow type="indata">
+                                <field name="indata1"></field>
+                              </shadow>
+                              <block type="variables_get" id="b(9fkw_p9eeL%7JFVYzD">
+                                <field name="VAR" id="D~Cp)#BZ{Lyplc]UGr_Y">classes</field>
+                              </block>
+                            </value>
+                            <value name="DELTA">
+                              <shadow type="indata" id="B5Fj/j|KGbTYB/2HS?9Y">
+                                <field name="indata1">open('coco.names').read().strip().split('\&#10;')</field>
+                              </shadow>
+                            </value>
+                            <next>
+                              <block type="math_change" id="[XBa451Y_Mg,6LM)?s}^">
+                                <field name="NAME">=</field>
+                                <value name="var_name">
+                                  <shadow type="indata">
+                                    <field name="indata1"></field>
+                                  </shadow>
+                                  <block type="variables_get" id="(P,KiL.svc[j[9JQ$;fW">
+                                    <field name="VAR" id="7/FP^-?YG}X4H125J0z!">layer_names</field>
+                                  </block>
+                                </value>
+                                <value name="DELTA">
+                                  <shadow type="indata" id="5r?YxO,u:MSm!bg;x{ex">
+                                    <field name="indata1">net.getLayerNames()</field>
+                                  </shadow>
+                                </value>
+                                <next>
+                                  <block type="math_change" id=")*Lb?~pn@TRl#v(iiz[t">
+                                    <field name="NAME">=</field>
+                                    <value name="var_name">
+                                      <shadow type="indata">
+                                        <field name="indata1"></field>
+                                      </shadow>
+                                      <block type="variables_get" id="_GpB(u,=PRn6J*M~hc|S">
+                                        <field name="VAR" id="4P:)1!oo|6i8BmCcqPiI">output_layers</field>
+                                      </block>
+                                    </value>
+                                    <value name="DELTA">
+                                      <shadow type="indata" id="-1/F$:K6Nz.!UiX$z!:b">
+                                        <field name="indata1">[layer_names[i - 1] for i in net.getUnconnectedOutLayers()]</field>
+                                      </shadow>
+                                    </value>
+                                    <next>
+                                      <block type="math_change" id="({L[0}|iFJnmqi!22p=z">
+                                        <field name="NAME">=</field>
+                                        <value name="var_name">
+                                          <shadow type="indata">
+                                            <field name="indata1"></field>
+                                          </shadow>
+                                          <block type="variables_get" id="O~MjeH}Tk;I:6H2VuVm:">
+                                            <field name="VAR" id="Ioj2Q(3{Av=,TkQ3qp+,">blob</field>
+                                          </block>
+                                        </value>
+                                        <value name="DELTA">
+                                          <shadow type="indata">
+                                            <field name="indata1"></field>
+                                          </shadow>
+                                          <block type="opencv_dnn_blobfromimage" id="@q}y4J@zB:ecntAd(0}x">
+                                            <value name="v1">
+                                              <shadow type="indata">
+                                                <field name="indata1"></field>
+                                              </shadow>
+                                              <block type="variables_get" id="h.k81:{p[Sm:pWgSor]a">
+                                                <field name="VAR" id="Q`~whvjk!P1p04%P~Znl">img</field>
+                                              </block>
+                                            </value>
+                                            <value name="v2">
+                                              <shadow type="indata" id="qSgx9vSp$sn$K{y#c:wG">
+                                                <field name="indata1">0.00392, (416, 416), (0, 0, 0), True, crop=False</field>
+                                              </shadow>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="opencv_dnn_setinput" id="aD)+R=]JKoU/^D:Nfv:I">
+                                            <value name="v1">
+                                              <shadow type="indata">
+                                                <field name="indata1"></field>
+                                              </shadow>
+                                              <block type="variables_get" id="lPxFD#a=*li1iwCcAB.(">
+                                                <field name="VAR" id="ePEVr`3t$_?;HTM:Lds[">net</field>
+                                              </block>
+                                            </value>
+                                            <value name="v2">
+                                              <shadow type="indata">
+                                                <field name="indata1"></field>
+                                              </shadow>
+                                              <block type="variables_get" id="vaes:4W6T/fN}5mJ|@M=">
+                                                <field name="VAR" id="Ioj2Q(3{Av=,TkQ3qp+,">blob</field>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="math_change" id="%w7gL1Kln:uvaY.4Vk,q">
+                                                <field name="NAME">=</field>
+                                                <value name="var_name">
+                                                  <shadow type="indata">
+                                                    <field name="indata1"></field>
+                                                  </shadow>
+                                                  <block type="variables_get" id="k(f_u8zF*HLdn[pzT$3F">
+                                                    <field name="VAR" id="ZW~2nCd+vHJXu87u?g4#">outs</field>
+                                                  </block>
+                                                </value>
+                                                <value name="DELTA">
+                                                  <shadow type="indata">
+                                                    <field name="indata1"></field>
+                                                  </shadow>
+                                                  <block type="opencv_dnn_forward" id="22Bw3i/bbksq*31cniHk">
+                                                    <value name="v1">
+                                                      <shadow type="indata">
+                                                        <field name="indata1"></field>
+                                                      </shadow>
+                                                      <block type="variables_get" id="3maTKC4=yF#.aTNahQ(N">
+                                                        <field name="VAR" id="ePEVr`3t$_?;HTM:Lds[">net</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="v2">
+                                                      <shadow type="indata">
+                                                        <field name="indata1"></field>
+                                                      </shadow>
+                                                      <block type="variables_get" id="]rIENHjDgi.g[EM05ZS.">
+                                                        <field name="VAR" id="4P:)1!oo|6i8BmCcqPiI">output_layers</field>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                                <next>
+                                                  <block type="itdata_udf" id="!rQG-fe(=UKy2u1avLJJ" collapsed="true">
+                                                    <field name="itdata1">&#10;def imgBoxLabeling(img, outs, classes, color, font, threadhold=0.5):&#10;  height, width, channels = img.shape&#10;  class_ids = [ ]&#10;  confidences = [ ]&#10;  boxes = [ ]&#10;  for out in outs:&#10;      for detection in out:&#10;          scores = detection[5:]&#10;          class_id = np.argmax(scores)&#10;          confidence = scores[class_id]  &#10;          if confidence &gt; threadhold:&#10;            center_x = int(detection[0] * width)&#10;            center_y = int(detection[1] * height)&#10;            w= int(detection[2] * width)&#10;            h = int(detection[3] * height)            &#10;            x = int(center_x - w / 2)&#10;            y = int(center_y - h / 2)&#10;            boxes.append([x, y, w, h])&#10;            confidences.append(float(confidence))&#10;            class_ids.append(class_id)&#10;  indexes = cv2.dnn.NMSBoxes(boxes, confidences, 0.5, 0.4)&#10;  for i in range(len(boxes)):&#10;    if i in indexes:&#10;        x, y, w, h = boxes[i]&#10;        label = str(classes[class_ids[i]])&#10;        cv2.rectangle(img, (x, y), (x + w, y + h), color, 2)&#10;        cv2.putText(img, label, (x, y + 30), font, 3, color, 3)&#10;  return img&#10;  </field>
+                                                    <next>
+                                                      <block type="io_empty" id="a[22NGP5h?!;|7LG}rQ^">
+                                                        <value name="v1">
+                                                          <shadow type="indata" id="wSO)Y*6N?fy)vP,GOcJl">
+                                                            <field name="indata1">imgBoxLabeling(img, outs, classes, color, font, threadhold=0.5 )</field>
+                                                          </shadow>
+                                                        </value>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

@@ -1,0 +1,432 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="rSl,#z}tS-+R$x,Ii}]v">pd</variable>
+    <variable id="lK/{*OHup,BikyFa!H`7">df</variable>
+  </variables>
+  <block type="pandas_library" id="Vk8brwSz;|!X1TOq_@0+" x="23" y="8">
+    <field name="var_name" id="rSl,#z}tS-+R$x,Ii}]v">pd</field>
+    <next>
+      <block type="pandas_dataframe" id="fh/P%Q$W+7:#hru?FM}s">
+        <value name="v1">
+          <shadow type="indata">
+            <field name="indata1"></field>
+          </shadow>
+          <block type="variables_get" id="V=F}[;qB~v#=.F9pfKnE">
+            <field name="VAR" id="lK/{*OHup,BikyFa!H`7">df</field>
+          </block>
+        </value>
+        <value name="v2">
+          <shadow type="indata" id="`DA7rC{AkXB(ubdnN)F-">
+            <field name="indata1">[[11,'Lee',97,8],[12,None,91,6],[13,'Pak',None,2],[14,'Yoo',93,4]]</field>
+          </shadow>
+        </value>
+        <value name="v3">
+          <shadow type="indata" id="g-0-KW@v(NdBFV87c^=[">
+            <field name="indata1">['번호','이름','성적','시간']</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="io_print" id=":xv~lJwp!Ct]pTLDj8]K">
+            <value name="content">
+              <shadow type="indata">
+                <field name="indata1"></field>
+              </shadow>
+              <block type="class_func_param" id="Zv6g`dQC?3rT$f}F*qb?">
+                <mutation items="1"></mutation>
+                <value name="ADD0">
+                  <shadow type="indata">
+                    <field name="indata1"></field>
+                  </shadow>
+                  <block type="variables_get" id="Dk|rshEX_cOwm/%fcJWP">
+                    <field name="VAR" id="lK/{*OHup,BikyFa!H`7">df</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="io_print_empty" id="EkP`T}^q+#[t.!Y[q6}c">
+                <value name="content1">
+                  <shadow type="indata" id="s3h0Vnum^O.|)~#=T7@i">
+                    <field name="indata1">"Hello, 파이썬! 😍"</field>
+                  </shadow>
+                  <block type="dynamic_dragfill_pandas" id="gWn_y}6bFGuBuVvy%~2{">
+                    <field name="func">info</field>
+                    <value name="v1">
+                      <shadow xmlns="" type="indata">
+                        <field name="indata1">0</field>
+                      </shadow>
+                      <block type="variables_get" id="P(S;Uv0PGe^$mzS831{J">
+                        <field name="VAR" id="lK/{*OHup,BikyFa!H`7">df</field>
+                      </block>
+                    </value>
+                    <value name="param">
+                      <shadow type="indata" id="L_h7j+0QzV`$1Y:%xyMY">
+                        <field name="indata1"></field>
+                      </shadow>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="io_print_empty" id="xnVLUlib@GKB]vYMV66o">
+                    <value name="content1">
+                      <shadow type="indata">
+                        <field name="indata1">"Hello, 파이썬! 😍"</field>
+                      </shadow>
+                      <block type="dynamic_dragfill_pandas" id="_5%kKO(VFUb~)RpT$Gon">
+                        <field name="func">describe</field>
+                        <value name="v1">
+                          <shadow xmlns="" type="indata">
+                            <field name="indata1">0</field>
+                          </shadow>
+                          <block type="variables_get" id="kk]o?Im@W:stqG~}e9yW">
+                            <field name="VAR" id="lK/{*OHup,BikyFa!H`7">df</field>
+                          </block>
+                        </value>
+                        <value name="param">
+                          <shadow type="indata" id="Pn8vFJQ!b$DS;C]uMy*i">
+                            <field name="indata1"></field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="io_print_empty" id="oDZ-op3(be:yViDVjEKl">
+                        <value name="content1">
+                          <shadow type="indata">
+                            <field name="indata1">"Hello, 파이썬! 😍"</field>
+                          </shadow>
+                          <block type="dynamic_dragfill_pandas" id="(w?tEG@GY@+at9:l_P|E">
+                            <field name="func">isna</field>
+                            <value name="v1">
+                              <shadow xmlns="" type="indata">
+                                <field name="indata1">0</field>
+                              </shadow>
+                              <block type="variables_get" id="Bdb6J5YUw*[trN0Yf?V`">
+                                <field name="VAR" id="lK/{*OHup,BikyFa!H`7">df</field>
+                              </block>
+                            </value>
+                            <value name="param">
+                              <shadow type="indata" id="8/0N~GM6`dTLBsPHE3:_">
+                                <field name="indata1"></field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="math_change" id="|vOR}{%[yz8%*CVa`~X;" disabled="true">
+                            <field name="NAME">=</field>
+                            <value name="var_name">
+                              <shadow type="indata">
+                                <field name="indata1">0</field>
+                              </shadow>
+                              <block type="list_index" id="{8+nGmyU!5=:G$V^J78R">
+                                <value name="list">
+                                  <shadow xmlns="" type="indata">
+                                    <field name="indata1"></field>
+                                  </shadow>
+                                  <block type="variables_get" id="gFF?I9Z^^Mx,HpW#*];=">
+                                    <field name="VAR" id="lK/{*OHup,BikyFa!H`7">df</field>
+                                  </block>
+                                </value>
+                                <value name="dic1">
+                                  <shadow type="indata" id="vc|4mu^hP92d/+w`6$2F">
+                                    <field name="indata1">'성적'</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="DELTA">
+                              <shadow type="indata">
+                                <field name="indata1">0</field>
+                              </shadow>
+                              <block type="dynamic_dragfill_pandas" id="o~lbM`ZLK`EU^*f:Im[)">
+                                <field name="func">fillna</field>
+                                <value name="v1">
+                                  <shadow type="indata">
+                                    <field name="indata1">0</field>
+                                  </shadow>
+                                  <block type="list_index" id="?3Xas];X(m0#:)^O*]g|">
+                                    <value name="list">
+                                      <shadow xmlns="" type="indata">
+                                        <field name="indata1"></field>
+                                      </shadow>
+                                      <block type="variables_get" id="hzb+t%E156IVYpBZ.kQU">
+                                        <field name="VAR" id="lK/{*OHup,BikyFa!H`7">df</field>
+                                      </block>
+                                    </value>
+                                    <value name="dic1">
+                                      <shadow type="indata" id="K=qRaD8!gTv`8lMmEI+X">
+                                        <field name="indata1">'성적'</field>
+                                      </shadow>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="param">
+                                  <shadow type="indata" id="2pMd^b$V7#w$HR2HjOO?">
+                                    <field name="indata1">0</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="math_change" id="4~c.WI);Mh2qD5^^4s$[">
+                                <field name="NAME">=</field>
+                                <value name="var_name">
+                                  <shadow type="indata" id="Ys+?v(I8C5AqA)v,y0z@">
+                                    <field name="indata1">0</field>
+                                  </shadow>
+                                  <block type="list_index" id="hN)Fu((8cB/]crxP^LoI">
+                                    <value name="list">
+                                      <shadow xmlns="" type="indata">
+                                        <field name="indata1"></field>
+                                      </shadow>
+                                      <block type="variables_get" id="!1(m!cCUUweKD8;lJ1}n">
+                                        <field name="VAR" id="lK/{*OHup,BikyFa!H`7">df</field>
+                                      </block>
+                                    </value>
+                                    <value name="dic1">
+                                      <shadow type="indata" id="HlIN!,)XUZlPh4!ir%FP">
+                                        <field name="indata1">'성적'</field>
+                                      </shadow>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="DELTA">
+                                  <shadow type="indata" id="[T6i=s-503AG543Ebgoj">
+                                    <field name="indata1">0</field>
+                                  </shadow>
+                                  <block type="dynamic_dragfill_pandas" id="r2ZM/LZW%!wT#omv}VZ#">
+                                    <field name="func">fillna</field>
+                                    <value name="v1">
+                                      <shadow type="indata" id="LlCahOqAE|_(4N!pc%sn">
+                                        <field name="indata1">0</field>
+                                      </shadow>
+                                      <block type="list_index" id="x`cO.%~MF7tf~?Fd)p,@">
+                                        <value name="list">
+                                          <shadow xmlns="" type="indata">
+                                            <field name="indata1"></field>
+                                          </shadow>
+                                          <block type="variables_get" id="[vvyi0H6OET*j+4%*VN~">
+                                            <field name="VAR" id="lK/{*OHup,BikyFa!H`7">df</field>
+                                          </block>
+                                        </value>
+                                        <value name="dic1">
+                                          <shadow type="indata" id="mmVjjlOqN/U=d|?CZ_IU">
+                                            <field name="indata1">'성적'</field>
+                                          </shadow>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <value name="param">
+                                      <shadow type="indata" id="4;8V6V`:+w:mZAx.[hIb">
+                                        <field name="indata1">0</field>
+                                      </shadow>
+                                      <block type="dynamic_dragfill_pandas" id="DEw.Jq*qbccb9*@[+a@B">
+                                        <field name="func">mean</field>
+                                        <value name="v1">
+                                          <shadow type="indata" id="3dSE:@.a8i;qUyQN7o4$">
+                                            <field name="indata1">0</field>
+                                          </shadow>
+                                          <block type="list_index" id="/0+#R`g52xw1`aYXh{bn">
+                                            <value name="list">
+                                              <shadow xmlns="" type="indata">
+                                                <field name="indata1"></field>
+                                              </shadow>
+                                              <block type="variables_get" id="3[R=44|@s]=.}PsW+?fB">
+                                                <field name="VAR" id="lK/{*OHup,BikyFa!H`7">df</field>
+                                              </block>
+                                            </value>
+                                            <value name="dic1">
+                                              <shadow type="indata" id="Zj_@;sJ0n-|7k$,W968,">
+                                                <field name="indata1">'성적'</field>
+                                              </shadow>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <value name="param">
+                                          <shadow type="indata" id="@bUgtC=g5CC,:@d]fkTR">
+                                            <field name="indata1"></field>
+                                          </shadow>
+                                        </value>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="math_change" id=":mQ8xcIYypZ!pcfz^h_6">
+                                    <field name="NAME">=</field>
+                                    <value name="var_name">
+                                      <shadow type="indata">
+                                        <field name="indata1">0</field>
+                                      </shadow>
+                                      <block type="list_index" id="JX0ha(hx(CI)18;G139!">
+                                        <value name="list">
+                                          <shadow xmlns="" type="indata">
+                                            <field name="indata1"></field>
+                                          </shadow>
+                                          <block type="variables_get" id="nkEjBml)*)}A!-;ChOMF">
+                                            <field name="VAR" id="lK/{*OHup,BikyFa!H`7">df</field>
+                                          </block>
+                                        </value>
+                                        <value name="dic1">
+                                          <shadow type="indata" id="J7m.u`plp](3w1Dz]A~4">
+                                            <field name="indata1">'이름'</field>
+                                          </shadow>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <value name="DELTA">
+                                      <shadow type="indata">
+                                        <field name="indata1">0</field>
+                                      </shadow>
+                                      <block type="dynamic_dragfill_pandas" id="6@.W?U*?l,?kfg?Tg,-[">
+                                        <field name="func">fillna</field>
+                                        <value name="v1">
+                                          <shadow type="indata">
+                                            <field name="indata1">0</field>
+                                          </shadow>
+                                          <block type="list_index" id="kp!$[R@}N0E/^sjgx|jE">
+                                            <value name="list">
+                                              <shadow xmlns="" type="indata">
+                                                <field name="indata1"></field>
+                                              </shadow>
+                                              <block type="variables_get" id="7i`$)^vXTe{D~PO+0=_N">
+                                                <field name="VAR" id="lK/{*OHup,BikyFa!H`7">df</field>
+                                              </block>
+                                            </value>
+                                            <value name="dic1">
+                                              <shadow type="indata" id=")$ulNS9XZGACJsb=noaQ">
+                                                <field name="indata1">'이름'</field>
+                                              </shadow>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <value name="param">
+                                          <shadow type="indata" id="5T.sK#g9A,(e2vNIf+;3">
+                                            <field name="indata1">'None'</field>
+                                          </shadow>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="io_print" id=",g6uxOd6BNgp(jD6k@6+">
+                                        <value name="content">
+                                          <shadow type="indata">
+                                            <field name="indata1"></field>
+                                          </shadow>
+                                          <block type="class_func_param" id="A5fQil2gHV|DO}h.~_lZ">
+                                            <mutation items="1"></mutation>
+                                            <value name="ADD0">
+                                              <shadow type="indata">
+                                                <field name="indata1"></field>
+                                              </shadow>
+                                              <block type="variables_get" id="1g+bJ2$A;Bx.er6)]oWQ">
+                                                <field name="VAR" id="lK/{*OHup,BikyFa!H`7">df</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="io_print_msg" id="M*JtmM3G(s=DN,$/M0kE">
+                                            <value name="content1">
+                                              <shadow type="indata" id="e+T76.NIQ8jm{_}G6m4S">
+                                                <field name="indata1">"성적 평균 "</field>
+                                              </shadow>
+                                            </value>
+                                            <value name="content2">
+                                              <shadow type="indata">
+                                                <field name="indata1"></field>
+                                              </shadow>
+                                              <block type="dynamic_dragfill_pandas" id="DO7}]eDit@MBeY)2R{J6">
+                                                <field name="func">mean</field>
+                                                <value name="v1">
+                                                  <shadow type="indata">
+                                                    <field name="indata1">0</field>
+                                                  </shadow>
+                                                  <block type="list_index" id="9p!`~~tGTarXvD#31R%O">
+                                                    <value name="list">
+                                                      <shadow xmlns="" type="indata">
+                                                        <field name="indata1"></field>
+                                                      </shadow>
+                                                      <block type="variables_get" id="iQCM]EwY,Y:)+}7{JCdp">
+                                                        <field name="VAR" id="lK/{*OHup,BikyFa!H`7">df</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="dic1">
+                                                      <shadow type="indata" id="1vnU90w]jh5Ije(5g8:_">
+                                                        <field name="indata1">'성적'</field>
+                                                      </shadow>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                                <value name="param">
+                                                  <shadow type="indata" id="Z3}o-.EVkc8o9~d36F?:">
+                                                    <field name="indata1"></field>
+                                                  </shadow>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="io_print_msg" id="h!Ts0^/RO!yIEQd/3|{}">
+                                                <value name="content1">
+                                                  <shadow type="indata" id="6o#@}0+^L85Y-iP/byH)">
+                                                    <field name="indata1">"성적 표준편차 "</field>
+                                                  </shadow>
+                                                </value>
+                                                <value name="content2">
+                                                  <shadow type="indata" id="9iCN4DxR^M{tbiL=|_O#">
+                                                    <field name="indata1"></field>
+                                                  </shadow>
+                                                  <block type="dynamic_dragfill_pandas" id=";ldi{ZfRbEx{fzNDSk66">
+                                                    <field name="func">std</field>
+                                                    <value name="v1">
+                                                      <shadow type="indata" id="vQi5y3*]t8kAz:]kF*~;">
+                                                        <field name="indata1">0</field>
+                                                      </shadow>
+                                                      <block type="list_index" id="3,~Xl!V*^l6sUZ._ZN})">
+                                                        <value name="list">
+                                                          <shadow xmlns="" type="indata">
+                                                            <field name="indata1"></field>
+                                                          </shadow>
+                                                          <block type="variables_get" id="jzA$:Gg`BxK#qj0hZrlc">
+                                                            <field name="VAR" id="lK/{*OHup,BikyFa!H`7">df</field>
+                                                          </block>
+                                                        </value>
+                                                        <value name="dic1">
+                                                          <shadow type="indata" id="@UtI;#H:z}h@aBJIvoQ|">
+                                                            <field name="indata1">'성적'</field>
+                                                          </shadow>
+                                                        </value>
+                                                      </block>
+                                                    </value>
+                                                    <value name="param">
+                                                      <shadow type="indata" id="w@_=g4(IvMus`F~IaB(L">
+                                                        <field name="indata1"></field>
+                                                      </shadow>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

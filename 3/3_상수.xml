@@ -1,0 +1,116 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="V-v{hwD^Eb~NC/TZa)o]">INCOME</variable>
+    <variable id="E81K|A@1wP|p~R*!RV#C">TAX_RATE</variable>
+    <variable id="sf)Zn#}}{I%$Q]{[dRbf">tax</variable>
+    <variable id=";cePpWKg_DfC]dkH!T?8">net_income</variable>
+  </variables>
+  <block type="math_change" id="X,}T~.?2[:rLm=KXcw%z" x="59" y="96">
+    <field name="NAME">=</field>
+    <value name="var_name">
+      <shadow xmlns="" type="indata">
+        <field name="indata1">0</field>
+      </shadow>
+      <block type="variables_get" id="W9t`~,x+96uGAbAjrSYE">
+        <field name="VAR" id="V-v{hwD^Eb~NC/TZa)o]">INCOME</field>
+      </block>
+    </value>
+    <value name="DELTA">
+      <shadow type="indata" id="*A/t0wCFlKS7hJ89t|5?">
+        <field name="indata1">1000</field>
+      </shadow>
+    </value>
+    <next>
+      <block type="math_change" id="J}]!=O@W-.$Z!5{1|b=u">
+        <field name="NAME">=</field>
+        <value name="var_name">
+          <shadow xmlns="" type="indata">
+            <field name="indata1">0</field>
+          </shadow>
+          <block type="variables_get" id="I/;x%MTlnf|[?|eqqPyv">
+            <field name="VAR" id="E81K|A@1wP|p~R*!RV#C">TAX_RATE</field>
+          </block>
+        </value>
+        <value name="DELTA">
+          <shadow type="indata" id="%|XuP;!Vr@J]r=J6ui8K">
+            <field name="indata1">0.35</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="math_change" id="sQWxqii/O}Oo[B2}A8p5">
+            <field name="NAME">=</field>
+            <value name="var_name">
+              <shadow type="indata" id="Q@afbIjNzm|u[uN0i;aF">
+                <field name="indata1">0</field>
+              </shadow>
+              <block type="variables_get" id=",86?q=R[W;0eW)fe~vhJ">
+                <field name="VAR" id="sf)Zn#}}{I%$Q]{[dRbf">tax</field>
+              </block>
+            </value>
+            <value name="DELTA">
+              <shadow type="indata" id="Si6LJQI[#DpEd@zX-s!W">
+                <field name="indata1">0</field>
+              </shadow>
+              <block type="oper_arithmetic" id="YP}p?2`(kU6hi+PQmU}r">
+                <field name="NAME">*</field>
+                <value name="v1">
+                  <shadow type="indata">
+                    <field name="indata1"></field>
+                  </shadow>
+                  <block type="variables_get" id="_|N[[/f^KP$PXg5PPYR4">
+                    <field name="VAR" id="V-v{hwD^Eb~NC/TZa)o]">INCOME</field>
+                  </block>
+                </value>
+                <value name="v2">
+                  <shadow type="indata" id="TqiJNkYTy:_BU,gPr9To">
+                    <field name="indata1">0</field>
+                  </shadow>
+                  <block type="variables_get" id="%HOeAM@+18Fva/F`}^#[">
+                    <field name="VAR" id="E81K|A@1wP|p~R*!RV#C">TAX_RATE</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="math_change" id="sBmzwAG23;Q-Y)R`V6UR">
+                <field name="NAME">=</field>
+                <value name="var_name">
+                  <shadow xmlns="" type="indata">
+                    <field name="indata1">0</field>
+                  </shadow>
+                  <block type="variables_get" id="wxj%akfif#RYQRk3.!h4">
+                    <field name="VAR" id=";cePpWKg_DfC]dkH!T?8">net_income</field>
+                  </block>
+                </value>
+                <value name="DELTA">
+                  <shadow type="indata" id="Vo8I[rINlbAhuc5ERaTU">
+                    <field name="indata1">0</field>
+                  </shadow>
+                  <block type="oper_arithmetic" id="E7Pl~dO5kn6)~|ooA`MM">
+                    <field name="NAME">-</field>
+                    <value name="v1">
+                      <shadow type="indata">
+                        <field name="indata1"></field>
+                      </shadow>
+                      <block type="variables_get" id="Hn?S-{PzC?uXNmmN:cs5">
+                        <field name="VAR" id="V-v{hwD^Eb~NC/TZa)o]">INCOME</field>
+                      </block>
+                    </value>
+                    <value name="v2">
+                      <shadow type="indata">
+                        <field name="indata1">0</field>
+                      </shadow>
+                      <block type="variables_get" id="N7r~9r}g3@F~B/h8y;Dp">
+                        <field name="VAR" id="sf)Zn#}}{I%$Q]{[dRbf">tax</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
