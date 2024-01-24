@@ -1,0 +1,685 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="Ck$eBY/a)zy-%I.oH#Fz">df</variable>
+    <variable id="tG[KwA_BE./5;VR1pZi:">pd</variable>
+    <variable id="T@33Y2(C*|l$EvLO|~1-">X</variable>
+    <variable id="6(A,:O$U,BqWRL-{YBMr">y</variable>
+  </variables>
+  <block type="pandas_library" id="l@:O7/wUjX7KZ+?9PC*f" x="-262" y="158">
+    <field name="NAME">import pandas as pd</field>
+    <next>
+      <block type="math_change" id="*tbB^J.3Rl?(L|Muua}_">
+        <field name="NAME">=</field>
+        <value name="var_name">
+          <shadow xmlns="" type="indata">
+            <field name="indata1">0</field>
+          </shadow>
+          <block type="variables_get" id="o~Iok]`!EK{v8ByqT@v?">
+            <field name="VAR" id="Ck$eBY/a)zy-%I.oH#Fz">df</field>
+          </block>
+        </value>
+        <value name="DELTA">
+          <shadow type="indata">
+            <field name="indata1">0</field>
+          </shadow>
+          <block type="io_chain_no_mutator" id="C_a:CkoMmmN|qhxoK%X0">
+            <value name="v1">
+              <shadow xmlns="" type="indata">
+                <field name="indata1"></field>
+              </shadow>
+              <block type="variables_get" id="Z^RnE@RU-x~)=oZv3{aO">
+                <field name="VAR" id="tG[KwA_BE./5;VR1pZi:">pd</field>
+              </block>
+            </value>
+            <value name="v2">
+              <shadow type="indata">
+                <field name="indata1"></field>
+              </shadow>
+              <block type="pandas_bk1" id="e{TC*HcV(Sgh9)B1^Fm6">
+                <field name="NAME">read_csv</field>
+                <value name="v1">
+                  <shadow type="indata" id="vqqi6FWlspJ)+N|yBvdq">
+                    <field name="indata1">'exam.csv'</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="io_bk1" id="RU1oBeOfOE!QS:+J0|}$">
+            <value name="content1">
+              <shadow type="indata">
+                <field name="indata1"></field>
+              </shadow>
+              <block type="pandas_print_dataframe" id="$U-^kur*L_2C)s,G%y]O">
+                <value name="v1">
+                  <shadow type="indata">
+                    <field name="indata1"></field>
+                  </shadow>
+                  <block type="io_chain_no_mutator" id="hWY=42MTrieWc*}`~)/%">
+                    <value name="v1">
+                      <shadow xmlns="" type="indata">
+                        <field name="indata1"></field>
+                      </shadow>
+                      <block type="variables_get" id="wZuoSLT(2!e4kH:tx]ic">
+                        <field name="VAR" id="Ck$eBY/a)zy-%I.oH#Fz">df</field>
+                      </block>
+                    </value>
+                    <value name="v2">
+                      <shadow type="indata">
+                        <field name="indata1"></field>
+                      </shadow>
+                      <block type="pandas_bk6" id=".slcb5XcdKq5K~T]ay$v">
+                        <field name="NAME">head</field>
+                        <value name="v1">
+                          <shadow type="indata" id="=v-VXL:3UHLa5KuvMqU{">
+                            <field name="indata1">3</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="v2">
+                  <shadow type="indata" id="tFwD3y_c|R3L:g#EPz{(">
+                    <field name="indata1"></field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="io_bk1" id="oxuUwC|ph};}.jv1!TC~">
+                <value name="content1">
+                  <shadow type="indata" id="b/vTk/(,KP[OnHW#s)vi">
+                    <field name="indata1"></field>
+                  </shadow>
+                  <block type="io_chain_no_mutator" id="I^/V%t*VH}ju@h6NJc}*">
+                    <value name="v1">
+                      <shadow xmlns="" type="indata">
+                        <field name="indata1"></field>
+                      </shadow>
+                      <block type="variables_get" id="*^)gJ,9sKlKh?29oxO4C">
+                        <field name="VAR" id="Ck$eBY/a)zy-%I.oH#Fz">df</field>
+                      </block>
+                    </value>
+                    <value name="v2">
+                      <shadow type="indata">
+                        <field name="indata1"></field>
+                      </shadow>
+                      <block type="pandas_bk6" id="f^uK.n:$8=Q|$iL_|WwZ">
+                        <field name="NAME">info</field>
+                        <value name="v1">
+                          <shadow type="indata" id="W6lVCRIN[lck|Q5dhn;/">
+                            <field name="indata1"></field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="io_bk1" id="ce-ahE+98mlY*U0^{N-C">
+                    <value name="content1">
+                      <shadow type="indata">
+                        <field name="indata1"></field>
+                      </shadow>
+                      <block type="pandas_print_dataframe" id="@j_Qk)0KRxO_Mh[2ArK?">
+                        <value name="v1">
+                          <shadow type="indata">
+                            <field name="indata1"></field>
+                          </shadow>
+                          <block type="io_chain_no_mutator" id="j:Kr*,92oB{[cU;48_Uy">
+                            <value name="v1">
+                              <shadow xmlns="" type="indata">
+                                <field name="indata1"></field>
+                              </shadow>
+                              <block type="variables_get" id="KS4)caU{]j!^l_]Z0h:t">
+                                <field name="VAR" id="Ck$eBY/a)zy-%I.oH#Fz">df</field>
+                              </block>
+                            </value>
+                            <value name="v2">
+                              <shadow type="indata">
+                                <field name="indata1"></field>
+                              </shadow>
+                              <block type="pandas_bk6" id="rFxr~cWg9nW6^2K#dPsd">
+                                <field name="NAME">describe</field>
+                                <value name="v1">
+                                  <shadow type="indata" id="QA9,XY*sQC3K8/^L:6T=">
+                                    <field name="indata1"></field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="v2">
+                          <shadow type="indata" id="*E}x@,{-zc:`8Nm`!VhZ">
+                            <field name="indata1"></field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="math_change" id="|FGs,)CfUri)72tq00vu">
+                        <field name="NAME">=</field>
+                        <value name="var_name">
+                          <shadow xmlns="" type="indata">
+                            <field name="indata1">0</field>
+                          </shadow>
+                          <block type="variables_get" id="4`bjcTk(}KKN-?S2,ln+">
+                            <field name="VAR" id="Ck$eBY/a)zy-%I.oH#Fz">df</field>
+                          </block>
+                        </value>
+                        <value name="DELTA">
+                          <shadow type="indata" id="$#$qPy*/mJ0MItTs$9Yb">
+                            <field name="indata1">0</field>
+                          </shadow>
+                          <block type="io_chain_no_mutator" id="yQF$ka#01w%H}DO1O8n9">
+                            <value name="v1">
+                              <shadow xmlns="" type="indata">
+                                <field name="indata1"></field>
+                              </shadow>
+                              <block type="variables_get" id=")%%D@`,~gIPQ3FFaY8y1">
+                                <field name="VAR" id="Ck$eBY/a)zy-%I.oH#Fz">df</field>
+                              </block>
+                            </value>
+                            <value name="v2">
+                              <shadow type="indata">
+                                <field name="indata1"></field>
+                              </shadow>
+                              <block type="pandas_bk7" id="+FY`*uIs@zD:B[ABdS#q">
+                                <field name="NAME">fillna</field>
+                                <value name="v1">
+                                  <shadow type="indata" id="H5u-NrIJ5LsGW.x(*JNb">
+                                    <field name="indata1">0</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="io_bk1" id="%Xpn6=so(;471u(JbY9Y">
+                            <value name="content1">
+                              <shadow type="indata" id="::xnD=uVbS7C}]E3XG$u">
+                                <field name="indata1"></field>
+                              </shadow>
+                              <block type="io_chain_no_mutator" id="-X1Fz2t:DeI6HPE0=,QF">
+                                <value name="v1">
+                                  <shadow xmlns="" type="indata">
+                                    <field name="indata1"></field>
+                                  </shadow>
+                                  <block type="variables_get" id=",:{=tz8*amVy;TGasDI5">
+                                    <field name="VAR" id="Ck$eBY/a)zy-%I.oH#Fz">df</field>
+                                  </block>
+                                </value>
+                                <value name="v2">
+                                  <shadow type="indata">
+                                    <field name="indata1"></field>
+                                  </shadow>
+                                  <block type="pandas_bk4" id="ogk2|DZT^?nH[7s?r[Bi">
+                                    <field name="NAME">query</field>
+                                    <value name="v1">
+                                      <shadow type="indata" id="%^7KT+?${E%CuyN``ipH">
+                                        <field name="indata1">'math &gt; 60 and science &gt; 60'</field>
+                                      </shadow>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="io_bk1" id="d{MOA!!L:G,t9WSvX.ci">
+                                <value name="content1">
+                                  <shadow type="indata" id="x$s-5i5/FyARneHQV2pu">
+                                    <field name="indata1"></field>
+                                  </shadow>
+                                  <block type="io_chain_no_mutator" id="`shIIh$M(6T^,h+}v!SS">
+                                    <value name="v1">
+                                      <shadow type="indata" id="11Xl3G5H1LXg=G:MVcmD">
+                                        <field name="indata1"></field>
+                                      </shadow>
+                                      <block type="io_chain_no_mutator" id="CUI:c]q3hx}+~QY,,,*H">
+                                        <value name="v1">
+                                          <shadow xmlns="" type="indata">
+                                            <field name="indata1"></field>
+                                          </shadow>
+                                          <block type="variables_get" id="?1^:L{z;M.4HJdUSUD)J">
+                                            <field name="VAR" id="Ck$eBY/a)zy-%I.oH#Fz">df</field>
+                                          </block>
+                                        </value>
+                                        <value name="v2">
+                                          <shadow type="indata">
+                                            <field name="indata1"></field>
+                                          </shadow>
+                                          <block type="pandas_bk5" id="UW5[;Q8O5H/qp4y61Z@G">
+                                            <field name="NAME">groupby</field>
+                                            <value name="v1">
+                                              <shadow type="indata" id="f%fYF$Au8yP:=Do%HPKc">
+                                                <field name="indata1">'class', as_index=False</field>
+                                              </shadow>
+                                            </value>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <value name="v2">
+                                      <shadow type="indata">
+                                        <field name="indata1"></field>
+                                      </shadow>
+                                      <block type="pandas_bk6" id="sfKLP3TWh{qCR;#KG,46">
+                                        <field name="NAME">mean</field>
+                                        <value name="v1">
+                                          <shadow type="indata" id="h#K?f]EQm}u!xf+8M1oE">
+                                            <field name="indata1"></field>
+                                          </shadow>
+                                        </value>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="math_change" id="us=RTiS-5(],$%gGH]B{">
+                                    <field name="NAME">=</field>
+                                    <value name="var_name">
+                                      <shadow type="indata" id="%s|(u;TFpcJt]GT!zaL_">
+                                        <field name="indata1">df.avg</field>
+                                      </shadow>
+                                      <block type="list_index" id="I2@Ru(no1:lLcv}ZQYJ~">
+                                        <value name="list">
+                                          <shadow xmlns="" type="indata">
+                                            <field name="indata1"></field>
+                                          </shadow>
+                                          <block type="variables_get" id=";9k]!|uqlbjaauXfVfDR">
+                                            <field name="VAR" id="Ck$eBY/a)zy-%I.oH#Fz">df</field>
+                                          </block>
+                                        </value>
+                                        <value name="dic1">
+                                          <shadow type="indata" id="0@9|xj90BBnS*Muk1g$V">
+                                            <field name="indata1">'avg'</field>
+                                          </shadow>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <value name="DELTA">
+                                      <shadow type="indata" id="0zu%3#j)maB8SDQs6V7_">
+                                        <field name="indata1">(df.math + df.eng + df.science) / 3</field>
+                                      </shadow>
+                                    </value>
+                                    <next>
+                                      <block type="io_bk1" id="+g7V%ha$uB@FVr%ql%1#">
+                                        <value name="content1">
+                                          <shadow type="indata">
+                                            <field name="indata1"></field>
+                                          </shadow>
+                                          <block type="pandas_print_dataframe" id="zOz$fV?0B?dw0IN]7fn}">
+                                            <value name="v1">
+                                              <shadow type="indata">
+                                                <field name="indata1"></field>
+                                              </shadow>
+                                              <block type="io_chain_no_mutator" id="M;T)we0,;71FY^*m4O|I">
+                                                <value name="v1">
+                                                  <shadow xmlns="" type="indata">
+                                                    <field name="indata1"></field>
+                                                  </shadow>
+                                                  <block type="variables_get" id="3GVj?6G|H750ilH(c:m1">
+                                                    <field name="VAR" id="Ck$eBY/a)zy-%I.oH#Fz">df</field>
+                                                  </block>
+                                                </value>
+                                                <value name="v2">
+                                                  <shadow type="indata">
+                                                    <field name="indata1"></field>
+                                                  </shadow>
+                                                  <block type="pandas_bk6" id="TcWa8qr6eB^W(NGKA%7.">
+                                                    <field name="NAME">head</field>
+                                                    <value name="v1">
+                                                      <shadow type="indata" id="?*U_^8dL-,`fM6+i$TxJ">
+                                                        <field name="indata1">3</field>
+                                                      </shadow>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <value name="v2">
+                                              <shadow type="indata" id="%0S*oJwy)E:x)j7HJnvG">
+                                                <field name="indata1"></field>
+                                              </shadow>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="math_change" id="yOi658b,qEsqy7?W2Z/G">
+                                            <field name="NAME">=</field>
+                                            <value name="var_name">
+                                              <shadow xmlns="" type="indata">
+                                                <field name="indata1">0</field>
+                                              </shadow>
+                                              <block type="variables_get" id="n?LJ/QL_tR`a{.nO]cvd">
+                                                <field name="VAR" id="T@33Y2(C*|l$EvLO|~1-">X</field>
+                                              </block>
+                                            </value>
+                                            <value name="DELTA">
+                                              <shadow type="indata">
+                                                <field name="indata1">0</field>
+                                              </shadow>
+                                              <block type="list_index" id="#RD)I)iRq:Df9WA*s*Iv">
+                                                <value name="list">
+                                                  <shadow xmlns="" type="indata">
+                                                    <field name="indata1"></field>
+                                                  </shadow>
+                                                  <block type="variables_get" id="rx5g#Ek]3NRPz/YdJv$E">
+                                                    <field name="VAR" id="Ck$eBY/a)zy-%I.oH#Fz">df</field>
+                                                  </block>
+                                                </value>
+                                                <value name="dic1">
+                                                  <shadow type="indata" id="9|LmLElK!}yBmvpZBT|^">
+                                                    <field name="indata1">'hours'</field>
+                                                  </shadow>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="math_change" id="Lh..X0#Y|e#S~e(cfmh8">
+                                                <field name="NAME">=</field>
+                                                <value name="var_name">
+                                                  <shadow xmlns="" type="indata">
+                                                    <field name="indata1">0</field>
+                                                  </shadow>
+                                                  <block type="variables_get" id="Yp)`t!pdgSo3t8kq1dgA">
+                                                    <field name="VAR" id="6(A,:O$U,BqWRL-{YBMr">y</field>
+                                                  </block>
+                                                </value>
+                                                <value name="DELTA">
+                                                  <shadow type="indata">
+                                                    <field name="indata1">0</field>
+                                                  </shadow>
+                                                  <block type="list_index" id="(=@qVR[ATt6x*Z}M2Wnp">
+                                                    <value name="list">
+                                                      <shadow xmlns="" type="indata">
+                                                        <field name="indata1"></field>
+                                                      </shadow>
+                                                      <block type="variables_get" id="~(Z2DRLsysvFc-@+`#*D">
+                                                        <field name="VAR" id="Ck$eBY/a)zy-%I.oH#Fz">df</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="dic1">
+                                                      <shadow type="indata" id="=8UI0464]?l~(=ZY3,X]">
+                                                        <field name="indata1">'tot'</field>
+                                                      </shadow>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                                <next>
+                                                  <block type="import_matplotlib_list" id="z.=-aKY8GA+zq8pQ~]mZ">
+                                                    <field name="list">matplotlib.pyplot as plt&#10;import matplotlib.font_manager as fm&#10;fontprop = fm.FontProperties(fname='malgun.ttf')</field>
+                                                    <next>
+                                                      <block type="matplotlib_sub_bk2" id="wt]6tY#XAjcxi+{~2~tz">
+                                                        <value name="v1">
+                                                          <shadow type="indata">
+                                                            <field name="indata1"></field>
+                                                          </shadow>
+                                                          <block type="matplotlib_bk5" id=":;Vz=$}t1*]!?AA$w(.s">
+                                                            <field name="NAME">scatter</field>
+                                                            <value name="v1">
+                                                              <shadow type="indata" id="syyVIGS,a~/I[?q{HSL*">
+                                                                <field name="indata1"></field>
+                                                              </shadow>
+                                                              <block type="io_chain_2" id="harRK[d|dC58B!H1|r|H">
+                                                                <mutation items="2"></mutation>
+                                                                <value name="ADD0">
+                                                                  <shadow type="indata" id="g4FH=Qx.5aW6`T~4$_/7">
+                                                                    <field name="indata1"></field>
+                                                                  </shadow>
+                                                                  <block type="variables_get" id="g{+Z.cH1}j3#_I[B]qkT">
+                                                                    <field name="VAR" id="T@33Y2(C*|l$EvLO|~1-">X</field>
+                                                                  </block>
+                                                                </value>
+                                                                <value name="ADD1">
+                                                                  <shadow xmlns="" type="indata">
+                                                                    <field name="indata1"></field>
+                                                                  </shadow>
+                                                                  <block type="variables_get" id="e/9gQp%=H{n$wzE(W^)$">
+                                                                    <field name="VAR" id="6(A,:O$U,BqWRL-{YBMr">y</field>
+                                                                  </block>
+                                                                </value>
+                                                              </block>
+                                                            </value>
+                                                            <value name="v2">
+                                                              <shadow type="indata" id="9U/,GbtJtLDK?Ls@e-78">
+                                                                <field name="indata1">label='Label',c='b',marker='o',s=20</field>
+                                                              </shadow>
+                                                            </value>
+                                                          </block>
+                                                        </value>
+                                                        <next>
+                                                          <block type="matplotlib_sub_bk2" id="h_qa#H+_ab*-`.$_H1Ay">
+                                                            <value name="v1">
+                                                              <shadow type="indata">
+                                                                <field name="indata1"></field>
+                                                              </shadow>
+                                                              <block type="matplotlib_bk6" id="FDy{-j6Z6#dOp1UBr^kR">
+                                                                <field name="NAME">xlabel</field>
+                                                                <value name="v1">
+                                                                  <shadow type="indata" id="XP$VS7@dy=_WXtNkM^Zy">
+                                                                    <field name="indata1">'공부시간'</field>
+                                                                  </shadow>
+                                                                </value>
+                                                              </block>
+                                                            </value>
+                                                            <next>
+                                                              <block type="matplotlib_sub_bk2" id="Ir/?lWJ^GoT1HbHzHtGd">
+                                                                <value name="v1">
+                                                                  <shadow type="indata">
+                                                                    <field name="indata1"></field>
+                                                                  </shadow>
+                                                                  <block type="matplotlib_bk6" id="beOq97g*fD~r[7o=cbUp">
+                                                                    <field name="NAME">ylabel</field>
+                                                                    <value name="v1">
+                                                                      <shadow type="indata" id="FU6=SG|*b-H|:R6jz=Z.">
+                                                                        <field name="indata1">'총점'</field>
+                                                                      </shadow>
+                                                                    </value>
+                                                                  </block>
+                                                                </value>
+                                                                <next>
+                                                                  <block type="matplotlib_sub_bk2" id="vqyKG0|FiVe;#u[%M!YZ">
+                                                                    <value name="v1">
+                                                                      <shadow type="indata">
+                                                                        <field name="indata1"></field>
+                                                                      </shadow>
+                                                                      <block type="matplotlib_bk8" id="^)Q=%{|^z!*DV/C)XZ;A">
+                                                                        <field name="NAME">show</field>
+                                                                        <value name="v1">
+                                                                          <shadow type="indata" id="9rBcg8u`j_,q!Hs~|%RI">
+                                                                            <field name="indata1"></field>
+                                                                          </shadow>
+                                                                        </value>
+                                                                      </block>
+                                                                    </value>
+                                                                    <next>
+                                                                      <block type="matplotlib_sub_bk2" id="CUf!ee,tE@pU4L`yZrMd">
+                                                                        <value name="v1">
+                                                                          <shadow type="indata">
+                                                                            <field name="indata1"></field>
+                                                                          </shadow>
+                                                                          <block type="matplotlib_bk5" id=";tm*@QBBI~`75Pm=g8Cy">
+                                                                            <field name="NAME">bar</field>
+                                                                            <value name="v1">
+                                                                              <shadow type="indata">
+                                                                                <field name="indata1"></field>
+                                                                              </shadow>
+                                                                              <block type="io_chain_2" id="9NBt?J#494ulajtv,z~p">
+                                                                                <mutation items="2"></mutation>
+                                                                                <value name="ADD0">
+                                                                                  <shadow type="indata">
+                                                                                    <field name="indata1"></field>
+                                                                                  </shadow>
+                                                                                  <block type="variables_get" id=",1_(8?YRkaU;eLKmU(98">
+                                                                                    <field name="VAR" id="T@33Y2(C*|l$EvLO|~1-">X</field>
+                                                                                  </block>
+                                                                                </value>
+                                                                                <value name="ADD1">
+                                                                                  <shadow xmlns="" type="indata">
+                                                                                    <field name="indata1"></field>
+                                                                                  </shadow>
+                                                                                  <block type="variables_get" id="d@Z{3{XkixA/6kM6^:Ia">
+                                                                                    <field name="VAR" id="6(A,:O$U,BqWRL-{YBMr">y</field>
+                                                                                  </block>
+                                                                                </value>
+                                                                              </block>
+                                                                            </value>
+                                                                            <value name="v2">
+                                                                              <shadow type="indata" id="=F=jq9BR~U,k-.7]?Kkn">
+                                                                                <field name="indata1">label='Label',color='b',width=0.8</field>
+                                                                              </shadow>
+                                                                            </value>
+                                                                          </block>
+                                                                        </value>
+                                                                        <next>
+                                                                          <block type="matplotlib_sub_bk2" id="nKS/9Vd]%oGG]s}K4+h2">
+                                                                            <value name="v1">
+                                                                              <shadow type="indata">
+                                                                                <field name="indata1"></field>
+                                                                              </shadow>
+                                                                              <block type="matplotlib_bk6" id="C,0F]+/lY+A2@i_hACk/">
+                                                                                <field name="NAME">xlabel</field>
+                                                                                <value name="v1">
+                                                                                  <shadow type="indata" id="Bl6yn^f(vQ?Hv~pqcU9^">
+                                                                                    <field name="indata1">'공부시간'</field>
+                                                                                  </shadow>
+                                                                                </value>
+                                                                              </block>
+                                                                            </value>
+                                                                            <next>
+                                                                              <block type="matplotlib_sub_bk2" id="9[6?RxjvBOSXtB32Z+He">
+                                                                                <value name="v1">
+                                                                                  <shadow type="indata">
+                                                                                    <field name="indata1"></field>
+                                                                                  </shadow>
+                                                                                  <block type="matplotlib_bk6" id="/S:mW4R]BQd;]hz{0?!z">
+                                                                                    <field name="NAME">ylabel</field>
+                                                                                    <value name="v1">
+                                                                                      <shadow type="indata" id="*YpoyZYqLEdq3*iJnLTP">
+                                                                                        <field name="indata1">'총점'</field>
+                                                                                      </shadow>
+                                                                                    </value>
+                                                                                  </block>
+                                                                                </value>
+                                                                                <next>
+                                                                                  <block type="matplotlib_sub_bk2" id="Ay-e_:S_u?n24Le}S^p@">
+                                                                                    <value name="v1">
+                                                                                      <shadow type="indata">
+                                                                                        <field name="indata1"></field>
+                                                                                      </shadow>
+                                                                                      <block type="matplotlib_bk8" id="Kx{FsiZDQ?v~.O6fu)nd">
+                                                                                        <field name="NAME">show</field>
+                                                                                        <value name="v1">
+                                                                                          <shadow type="indata" id="HGb{sg~c+Lr(T@E0o.)6">
+                                                                                            <field name="indata1"></field>
+                                                                                          </shadow>
+                                                                                        </value>
+                                                                                      </block>
+                                                                                    </value>
+                                                                                    <next>
+                                                                                      <block type="matplotlib_sub_bk2" id="QYV6-CxLZ}RCk/h,9Sw@">
+                                                                                        <value name="v1">
+                                                                                          <shadow type="indata">
+                                                                                            <field name="indata1"></field>
+                                                                                          </shadow>
+                                                                                          <block type="matplotlib_bk5" id="jpmbP|j.Qfnx~_rKJ~mN">
+                                                                                            <field name="NAME">hist</field>
+                                                                                            <value name="v1">
+                                                                                              <shadow type="indata" id="=86mR0qOWs]41jd?.fI-">
+                                                                                                <field name="indata1"></field>
+                                                                                              </shadow>
+                                                                                              <block type="variables_get" id="FDnnhw!^~lHz-GI,C`|!">
+                                                                                                <field name="VAR" id="T@33Y2(C*|l$EvLO|~1-">X</field>
+                                                                                              </block>
+                                                                                            </value>
+                                                                                            <value name="v2">
+                                                                                              <shadow type="indata" id="UZ[]NBt}pdkK7rL%_]%X">
+                                                                                                <field name="indata1">label=['공부시간'], bins=10, orientation='vertical', histtype='barstacked'</field>
+                                                                                              </shadow>
+                                                                                            </value>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                        <next>
+                                                                                          <block type="matplotlib_sub_bk2" id="H)Xo8AP1FW*?aE,(2Jin">
+                                                                                            <value name="v1">
+                                                                                              <shadow type="indata">
+                                                                                                <field name="indata1"></field>
+                                                                                              </shadow>
+                                                                                              <block type="matplotlib_bk6" id="10t/JwCb0c#,-B4;R{C%">
+                                                                                                <field name="NAME">xlabel</field>
+                                                                                                <value name="v1">
+                                                                                                  <shadow type="indata" id="C3;D+iHorI/oabDAd_zy">
+                                                                                                    <field name="indata1">'공부시간'</field>
+                                                                                                  </shadow>
+                                                                                                </value>
+                                                                                              </block>
+                                                                                            </value>
+                                                                                            <next>
+                                                                                              <block type="matplotlib_sub_bk2" id="2%Orbz)j,ikmOu^N?.T9">
+                                                                                                <value name="v1">
+                                                                                                  <shadow type="indata">
+                                                                                                    <field name="indata1"></field>
+                                                                                                  </shadow>
+                                                                                                  <block type="matplotlib_bk8" id="Rju;ha=NIZ{|J%3h9uno">
+                                                                                                    <field name="NAME">show</field>
+                                                                                                    <value name="v1">
+                                                                                                      <shadow type="indata" id="771c_T~AkwZP8Kgg;ztT">
+                                                                                                        <field name="indata1"></field>
+                                                                                                      </shadow>
+                                                                                                    </value>
+                                                                                                  </block>
+                                                                                                </value>
+                                                                                              </block>
+                                                                                            </next>
+                                                                                          </block>
+                                                                                        </next>
+                                                                                      </block>
+                                                                                    </next>
+                                                                                  </block>
+                                                                                </next>
+                                                                              </block>
+                                                                            </next>
+                                                                          </block>
+                                                                        </next>
+                                                                      </block>
+                                                                    </next>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
