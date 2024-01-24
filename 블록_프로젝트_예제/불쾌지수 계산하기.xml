@@ -1,0 +1,287 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="g+YTRLZ~{Evv70(2DSX%">temp</variable>
+    <variable id="]~q]*Yv7#_4cnzWq8dq^">humidity</variable>
+    <variable id="wKmj;E7sU8!0tp[N!ZZL">discomfort</variable>
+  </variables>
+  <block type="io_comment_dropdown" id=";$9#rkuT-=Z+yYLSGtgv" x="338" y="-7">
+    <field name="NAME">#</field>
+    <value name="v1">
+      <shadow type="indata" id="A^YqY{pFWh{P7a#mK?28">
+        <field name="indata1">기온 30, 습도 80을 입력하면 불쾌지수 82.92가 나온다.</field>
+      </shadow>
+    </value>
+    <next>
+      <block type="math_change" id="FE5{mBP$-)%i!6J?D7UZ">
+        <field name="NAME">=</field>
+        <value name="var_name">
+          <shadow xmlns="" type="indata">
+            <field name="indata1">0</field>
+          </shadow>
+          <block type="variables_get" id="i}MM1Ei+PdsEgAM{zJhN">
+            <field name="VAR" id="g+YTRLZ~{Evv70(2DSX%">temp</field>
+          </block>
+        </value>
+        <value name="DELTA">
+          <shadow type="indata" id="(u2(y6@6p,Qh6^}~7Vph">
+            <field name="indata1">0</field>
+          </shadow>
+          <block type="builtin_bk1" id="=2^DHj#tfvgx!8!rWV)i">
+            <field name="NAME">float</field>
+            <value name="v1">
+              <shadow type="indata">&#10;    </shadow>
+              <block type="io_input" id="Ik?5KJ}gh._?aI:d)yeo">
+                <value name="content1">
+                  <shadow type="indata" id="j@7kfw_2MTyqCUPm27o.">
+                    <field name="indata1">"기온을 입력하세요."</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="math_change" id="nP:}CV/_mGA*P*]$YjZ(">
+            <field name="NAME">=</field>
+            <value name="var_name">
+              <shadow xmlns="" type="indata">
+                <field name="indata1">0</field>
+              </shadow>
+              <block type="variables_get" id=";`[IDLdujV6*gkBcRmt?">
+                <field name="VAR" id="]~q]*Yv7#_4cnzWq8dq^">humidity</field>
+              </block>
+            </value>
+            <value name="DELTA">
+              <shadow type="indata">
+                <field name="indata1">0</field>
+              </shadow>
+              <block type="builtin_bk1" id="b^7frKmAZ2;da#0FKF?z">
+                <field name="NAME">float</field>
+                <value name="v1">
+                  <shadow type="indata">&#10;    </shadow>
+                  <block type="io_input" id="yEd{j3v7=rqt%Z@c=_tD">
+                    <value name="content1">
+                      <shadow type="indata" id="8eL(4zjxZ#|ma7JihU$7">
+                        <field name="indata1">"습도를 입력하세요."</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="math_change" id="`FQsA7MC$Q3G_#}5EcJ]">
+                <field name="NAME">=</field>
+                <value name="var_name">
+                  <shadow xmlns="" type="indata">
+                    <field name="indata1">0</field>
+                  </shadow>
+                  <block type="variables_get" id="V6gR!`F!A@Vb@d=sS(;V">
+                    <field name="VAR" id="]~q]*Yv7#_4cnzWq8dq^">humidity</field>
+                  </block>
+                </value>
+                <value name="DELTA">
+                  <shadow type="indata" id="[uCLw-$936%j1#iKPatf">
+                    <field name="indata1">0</field>
+                  </shadow>
+                  <block type="oper_arithmetic" id="Ifcev+lyjCTq(ej9/}W7">
+                    <field name="NAME">/</field>
+                    <value name="v1">
+                      <shadow type="indata">
+                        <field name="indata1"></field>
+                      </shadow>
+                      <block type="variables_get" id="4/ApPL/ePX}Lm[lwJ.|B">
+                        <field name="VAR" id="]~q]*Yv7#_4cnzWq8dq^">humidity</field>
+                      </block>
+                    </value>
+                    <value name="v2">
+                      <shadow type="indata" id="Izeqa]uernuG,!B/^vA6">
+                        <field name="indata1">100</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="io_comment_dropdown" id="p8X)ULy8Uq}ud$|uWp!g">
+                    <field name="NAME">#</field>
+                    <value name="v1">
+                      <shadow type="indata" id="1js9YtfV$COt8t~d?:Od">
+                        <field name="indata1">불괘지수 계산법 : 1.8 * temp - 0.55 * (1 - humidity) * (1.8 * temp - 26) + 32</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="math_change" id="/o]8rmh}]mYf{y7Ahj*3">
+                        <field name="NAME">=</field>
+                        <value name="var_name">
+                          <shadow xmlns="" type="indata">
+                            <field name="indata1">0</field>
+                          </shadow>
+                          <block type="variables_get" id="Tx5((ozoHG1U3-=oEE2Y">
+                            <field name="VAR" id="wKmj;E7sU8!0tp[N!ZZL">discomfort</field>
+                          </block>
+                        </value>
+                        <value name="DELTA">
+                          <shadow type="indata" id="m..o%$[2L:.zZ[Q.c`s_">
+                            <field name="indata1">0</field>
+                          </shadow>
+                          <block type="oper_arithmetic" id="5NsHO-qZl6M;oXJ8HRG_">
+                            <field name="NAME">+</field>
+                            <value name="v1">
+                              <shadow type="indata" id="OXVOu:~j-^7).Xj$KNhF">
+                                <field name="indata1"></field>
+                              </shadow>
+                              <block type="oper_arithmetic" id="lvYl%!H@^%~t[aO=^}mf">
+                                <field name="NAME">-</field>
+                                <value name="v1">
+                                  <shadow type="indata" id="LBAZ?bWWb,TOycx#}rg9">
+                                    <field name="indata1"></field>
+                                  </shadow>
+                                  <block type="oper_arithmetic" id="`a2S}($c7hgAKaPgd#YY">
+                                    <field name="NAME">*</field>
+                                    <value name="v1">
+                                      <shadow type="indata" id="Lq8bwF#oMI0**1UTEBM8">
+                                        <field name="indata1">1.8</field>
+                                      </shadow>
+                                    </value>
+                                    <value name="v2">
+                                      <shadow type="indata" id="bnR7bk84:Q(I7f^NkNen">
+                                        <field name="indata1">0</field>
+                                      </shadow>
+                                      <block type="variables_get" id="r$Ne0/n*@pnV}sxYP[VN">
+                                        <field name="VAR" id="g+YTRLZ~{Evv70(2DSX%">temp</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="v2">
+                                  <shadow type="indata" id="B@Cufx,d:4*XOaz[-L{O">
+                                    <field name="indata1"></field>
+                                  </shadow>
+                                  <block type="oper_arithmetic" id="%h{hd?^?j4Qd~Dk_}5o6">
+                                    <field name="NAME">*</field>
+                                    <value name="v1">
+                                      <shadow type="indata" id="[4(W|}FCVr1U+-HW!#_K">
+                                        <field name="indata1"></field>
+                                      </shadow>
+                                      <block type="oper_arithmetic" id="KYwSTI(Cd:f*()a*j[j=">
+                                        <field name="NAME">*</field>
+                                        <value name="v1">
+                                          <shadow type="indata" id="jECk(8cFcXR:YtPURmyd">
+                                            <field name="indata1">0.55</field>
+                                          </shadow>
+                                        </value>
+                                        <value name="v2">
+                                          <shadow type="indata" id="z4KRVlY7hfoKDn$mZbVq">
+                                            <field name="indata1">0</field>
+                                          </shadow>
+                                          <block type="oper_arithmetic" id="pbgEv~hx9=NT4w?u}9+C">
+                                            <field name="NAME">-</field>
+                                            <value name="v1">
+                                              <shadow type="indata" id="/nQ;XDcf{`3kvgRFY-yg">
+                                                <field name="indata1">1</field>
+                                              </shadow>
+                                            </value>
+                                            <value name="v2">
+                                              <shadow type="indata" id="3Nv%lPv1{PE6zp)|wrod">
+                                                <field name="indata1">0</field>
+                                              </shadow>
+                                              <block type="variables_get" id="2:,ybo3Tx7K!e.@kc].:">
+                                                <field name="VAR" id="]~q]*Yv7#_4cnzWq8dq^">humidity</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <value name="v2">
+                                      <shadow type="indata" id="CXGrv?/MpL~3s3J7JIF1">
+                                        <field name="indata1"></field>
+                                      </shadow>
+                                      <block type="oper_arithmetic" id="Z2kh+5_hg-J5#bMGK86v">
+                                        <field name="NAME">-</field>
+                                        <value name="v1">
+                                          <shadow type="indata" id="+$mJI/L5`Dh`2C4gmr!(">
+                                            <field name="indata1"></field>
+                                          </shadow>
+                                          <block type="oper_arithmetic" id="q|E17w?@r$:?RCC+X2`[">
+                                            <field name="NAME">*</field>
+                                            <value name="v1">
+                                              <shadow type="indata" id="S6@mILwe1l%oTzKE@+da">
+                                                <field name="indata1">1.8</field>
+                                              </shadow>
+                                            </value>
+                                            <value name="v2">
+                                              <shadow type="indata" id="cWm*ba3eRkf=~5/rY;/(">
+                                                <field name="indata1">0</field>
+                                              </shadow>
+                                              <block type="variables_get" id="QRB)JR!j7!4P73dhJ{h%">
+                                                <field name="VAR" id="g+YTRLZ~{Evv70(2DSX%">temp</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <value name="v2">
+                                          <shadow type="indata" id="cR1aCXDMCRs`*#eKpEGt">
+                                            <field name="indata1">26</field>
+                                          </shadow>
+                                        </value>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="v2">
+                              <shadow type="indata" id="OoW-x[pyYHfsUu^M@,?T">
+                                <field name="indata1">32</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="math_change" id="I8z%{e0d|FGQGIBqqNw:" disabled="true">
+                            <field name="NAME">=</field>
+                            <value name="var_name">
+                              <shadow xmlns="" type="indata">
+                                <field name="indata1">0</field>
+                              </shadow>
+                              <block type="variables_get" id="G#[C(lJc3pKMy;yBlD1H">
+                                <field name="VAR" id="wKmj;E7sU8!0tp[N!ZZL">discomfort</field>
+                              </block>
+                            </value>
+                            <value name="DELTA">
+                              <shadow type="indata" id="F3r:lupr/D6f$5wEtd]Z">
+                                <field name="indata1">1.8 * temp - 0.55 * (1 - humidity) * (1.8 * temp - 26) + 32</field>
+                              </shadow>
+                            </value>
+                            <next>
+                              <block type="io_bk1" id="?DG?}nn1s;p8^m=@wTwM">
+                                <value name="content1">
+                                  <shadow type="indata" id="o3:Us.VYEQFncEK|xKK-">
+                                    <field name="indata1"></field>
+                                  </shadow>
+                                  <block type="io_bk4" id=",9UJk6d-2])[?%xL*9Oc">
+                                    <field name="NAME">{var:.2f}</field>
+                                    <value name="v1">
+                                      <shadow type="indata" id="T-{4mn^EVw]=|d}~(m9p">
+                                        <field name="indata1">현재 불쾌지수는 {discomfort: .2f}</field>
+                                      </shadow>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
