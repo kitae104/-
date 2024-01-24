@@ -1,0 +1,426 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="-o2DAA@@h@:%x$Gw2.m$">con</variable>
+    <variable id="!xkw0_e(I8Qm/SH/gzK?">cur</variable>
+    <variable id="V(L93.bZJO9rar:d;f+U">sql</variable>
+    <variable id="g*l^VH`].?:dFrW.L8iK">students</variable>
+    <variable id="A[@cKPnnKL4iv]BH4H$e">data</variable>
+    <variable id="^#BZ[R#l0x^*|BBVv(?f">rows</variable>
+    <variable id="2^OJSuj#bd|t4U6$8ba/">row</variable>
+  </variables>
+  <block type="database_bk1" id="i^OX,na]oFBtQ*^AN_;H" x="113" y="8">
+    <next>
+      <block type="math_change" id="fVe-I|~UKxk5x$+B5Hd|">
+        <field name="NAME">=</field>
+        <value name="var_name">
+          <shadow xmlns="" type="indata">
+            <field name="indata1">0</field>
+          </shadow>
+          <block type="variables_get" id=")]5Hj*p6%j^,:idr@zlm">
+            <field name="VAR" id="-o2DAA@@h@:%x$Gw2.m$">con</field>
+          </block>
+        </value>
+        <value name="DELTA">
+          <shadow type="indata">
+            <field name="indata1">0</field>
+          </shadow>
+          <block type="database_bk2" id="y-zuHHH_=v{pjyQG4P#v">
+            <value name="va">
+              <shadow type="indata" id="csF=DdLv5=*L*WJPfdSs">
+                <field name="indata1">"test.db"</field>
+              </shadow>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="math_change" id="}()cRX8)yy69oc8hw%h-">
+            <field name="NAME">=</field>
+            <value name="var_name">
+              <shadow xmlns="" type="indata">
+                <field name="indata1">0</field>
+              </shadow>
+              <block type="variables_get" id="/LJtt9_sN2W$UH[n)D#[">
+                <field name="VAR" id="!xkw0_e(I8Qm/SH/gzK?">cur</field>
+              </block>
+            </value>
+            <value name="DELTA">
+              <shadow type="indata">
+                <field name="indata1">0</field>
+              </shadow>
+              <block type="io_chain_no_mutator" id="d3G1EkWKc1m{:A8:/ws{">
+                <value name="v1">
+                  <shadow xmlns="" type="indata">
+                    <field name="indata1"></field>
+                  </shadow>
+                  <block type="variables_get" id="{g;XL/l_5bZllJc%tvB-">
+                    <field name="VAR" id="-o2DAA@@h@:%x$Gw2.m$">con</field>
+                  </block>
+                </value>
+                <value name="v2">
+                  <shadow type="indata">
+                    <field name="indata1"></field>
+                  </shadow>
+                  <block type="database_bk3" id="A9{p|3ij!NS[S?(^RfR/">
+                    <field name="NAME">cursor</field>
+                    <value name="v1">
+                      <shadow type="indata" id="*YqwpjRGB1voesr2ky!~">
+                        <field name="indata1"></field>
+                      </shadow>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="db_create" id="jl/V%;H}qHJbus`B@U-Z">
+                <field name="list1" id="V(L93.bZJO9rar:d;f+U">sql</field>
+                <value name="d1">
+                  <shadow type="indata" id="r7,R_YBW#P!m3VH2+mKV">
+                    <field name="indata1">students</field>
+                  </shadow>
+                  <block type="variables_get" id="Sr!gK+dFBdC9?GEtYEG|">
+                    <field name="VAR" id="g*l^VH`].?:dFrW.L8iK">students</field>
+                  </block>
+                </value>
+                <value name="d2">
+                  <shadow type="indata" id="330@u4fx_;Sinig9JQad">
+                    <field name="indata1">id int, name str, grade int</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="io_chain_tb" id="HYHzIn1*B3!.11:;1:[X">
+                    <value name="v1">
+                      <shadow type="indata">
+                        <field name="indata1"></field>
+                      </shadow>
+                      <block type="variables_get" id="l:7W|NGo)3y4zl1[a|u6">
+                        <field name="VAR" id="!xkw0_e(I8Qm/SH/gzK?">cur</field>
+                      </block>
+                    </value>
+                    <value name="v2">
+                      <shadow type="indata">
+                        <field name="indata1"></field>
+                      </shadow>
+                      <block type="database_bk4" id="8s_#XC[Xe{Gf+60CdNE3">
+                        <field name="NAME">execute</field>
+                        <value name="v1">
+                          <shadow type="indata" id="fP1.~b`D(2Ken6M]@-qL">
+                            <field name="indata1">sql</field>
+                          </shadow>
+                          <block type="variables_get" id=";v0(j}R-Wd8!GQrcwBg|">
+                            <field name="VAR" id="V(L93.bZJO9rar:d;f+U">sql</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="math_change" id="_@hljw+*XK?JR%A]G$rQ">
+                        <field name="NAME">=</field>
+                        <value name="var_name">
+                          <shadow xmlns="" type="indata">
+                            <field name="indata1">0</field>
+                          </shadow>
+                          <block type="variables_get" id="[)]6JZfLagoH]G2VL[/V">
+                            <field name="VAR" id="V(L93.bZJO9rar:d;f+U">sql</field>
+                          </block>
+                        </value>
+                        <value name="DELTA">
+                          <shadow type="indata" id="NEwM(=X)?Jcn3Tgn9i5!">
+                            <field name="indata1">"INSERT INTO students VALUES (1001, '홍길동', 1)"</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="io_chain_tb" id="ntssI=cUuM?k5W9;Xyba">
+                            <value name="v1">
+                              <shadow type="indata">
+                                <field name="indata1"></field>
+                              </shadow>
+                              <block type="variables_get" id="*OQYZ8L0sB1?Mdpi*ez6">
+                                <field name="VAR" id="!xkw0_e(I8Qm/SH/gzK?">cur</field>
+                              </block>
+                            </value>
+                            <value name="v2">
+                              <shadow type="indata">
+                                <field name="indata1"></field>
+                              </shadow>
+                              <block type="database_bk4" id="r|=C+maF;q?4kL?l,%B!">
+                                <field name="NAME">execute</field>
+                                <value name="v1">
+                                  <shadow type="indata" id="G{lEzDi~I|m@E6GDKrPf">
+                                    <field name="indata1">sql</field>
+                                  </shadow>
+                                  <block type="variables_get" id=":4|7G)lt5M@6{@=Yqz_j">
+                                    <field name="VAR" id="V(L93.bZJO9rar:d;f+U">sql</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="math_change" id="MIyD}3Agve2BURWwrq![">
+                                <field name="NAME">=</field>
+                                <value name="var_name">
+                                  <shadow xmlns="" type="indata">
+                                    <field name="indata1">0</field>
+                                  </shadow>
+                                  <block type="variables_get" id="YJ?5zlRgbUqnlA8cuy1.">
+                                    <field name="VAR" id="A[@cKPnnKL4iv]BH4H$e">data</field>
+                                  </block>
+                                </value>
+                                <value name="DELTA">
+                                  <shadow type="indata" id="6;$I[uutLDv0?5S,v5RJ">
+                                    <field name="indata1">((1002, '김길동', 2), (1003, '최길동', 1), (1004, '이길동', 3))</field>
+                                  </shadow>
+                                </value>
+                                <next>
+                                  <block type="math_change" id="%HHCdb{gDOjsMgqxwzQ;">
+                                    <field name="NAME">=</field>
+                                    <value name="var_name">
+                                      <shadow xmlns="" type="indata">
+                                        <field name="indata1">0</field>
+                                      </shadow>
+                                      <block type="variables_get" id="k!H]=yO2vER_/,y6-Ck0">
+                                        <field name="VAR" id="V(L93.bZJO9rar:d;f+U">sql</field>
+                                      </block>
+                                    </value>
+                                    <value name="DELTA">
+                                      <shadow type="indata" id="h@~f6=*#*5B.i-ex`{{y">
+                                        <field name="indata1">"INSERT INTO students VALUES (?, ?, ?)"</field>
+                                      </shadow>
+                                    </value>
+                                    <next>
+                                      <block type="io_chain_tb" id="tm89!:*%lG([@Xp2(mNX">
+                                        <value name="v1">
+                                          <shadow type="indata">
+                                            <field name="indata1"></field>
+                                          </shadow>
+                                          <block type="variables_get" id="jyryW)b]oqq|SOcJBV*:">
+                                            <field name="VAR" id="!xkw0_e(I8Qm/SH/gzK?">cur</field>
+                                          </block>
+                                        </value>
+                                        <value name="v2">
+                                          <shadow type="indata">
+                                            <field name="indata1"></field>
+                                          </shadow>
+                                          <block type="database_bk4" id="{9b_9)}x1]H^JJ[o^Bf{">
+                                            <field name="NAME">executemany</field>
+                                            <value name="v1">
+                                              <shadow type="indata" id="Wzi!CUP/=8-k^i#_pKs+">
+                                                <field name="indata1">sql</field>
+                                              </shadow>
+                                              <block type="io_chain_2" id="`5`HUIq%.-PV!9A2@=jx">
+                                                <mutation items="2"></mutation>
+                                                <value name="ADD0">
+                                                  <shadow type="indata" id="W}mS;gfd-S@U+sFYW.Ub">
+                                                    <field name="indata1"></field>
+                                                  </shadow>
+                                                  <block type="variables_get" id="|(C1Pd-E3A;MJifTWAx`">
+                                                    <field name="VAR" id="V(L93.bZJO9rar:d;f+U">sql</field>
+                                                  </block>
+                                                </value>
+                                                <value name="ADD1">
+                                                  <shadow xmlns="" type="indata">
+                                                    <field name="indata1"></field>
+                                                  </shadow>
+                                                  <block type="variables_get" id="nd9y0@(sI#o~k;+,,/Q#">
+                                                    <field name="VAR" id="A[@cKPnnKL4iv]BH4H$e">data</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="db_select6" id="{zUHCf)24c%Dg($Yar_7">
+                                            <field name="list1" id="V(L93.bZJO9rar:d;f+U">sql</field>
+                                            <field name="NAME">ORDER BY</field>
+                                            <value name="SET0">
+                                              <shadow type="indata" id="/(umynYmI}X3^J2ZVk#`">
+                                                <field name="indata1">*</field>
+                                              </shadow>
+                                            </value>
+                                            <value name="SET1">
+                                              <shadow type="indata" id="#hL;y~B)CHBFGO.LuEL@">
+                                                <field name="indata1">table</field>
+                                              </shadow>
+                                              <block type="variables_get" id="$xP:!7$fLp-=TI1%1zI,">
+                                                <field name="VAR" id="g*l^VH`].?:dFrW.L8iK">students</field>
+                                              </block>
+                                            </value>
+                                            <value name="SET2">
+                                              <shadow type="indata" id="9y__SD5fk4[piYN9$uwp">
+                                                <field name="indata1">id</field>
+                                              </shadow>
+                                            </value>
+                                            <next>
+                                              <block type="io_chain_tb" id="K7;8S1RH0qndcZ[E(J3K">
+                                                <value name="v1">
+                                                  <shadow type="indata">
+                                                    <field name="indata1"></field>
+                                                  </shadow>
+                                                  <block type="variables_get" id="eQ!wf0GFy5TznEcK[oD#">
+                                                    <field name="VAR" id="!xkw0_e(I8Qm/SH/gzK?">cur</field>
+                                                  </block>
+                                                </value>
+                                                <value name="v2">
+                                                  <shadow type="indata">
+                                                    <field name="indata1"></field>
+                                                  </shadow>
+                                                  <block type="database_bk4" id="|}w3F;[i4x0tY+`QDJ*#">
+                                                    <field name="NAME">execute</field>
+                                                    <value name="v1">
+                                                      <shadow type="indata">
+                                                        <field name="indata1">sql</field>
+                                                      </shadow>
+                                                      <block type="variables_get" id="/3oJIG5H*Srf3S8Fn~Q+">
+                                                        <field name="VAR" id="V(L93.bZJO9rar:d;f+U">sql</field>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                                <next>
+                                                  <block type="math_change" id="G1Y[Df]sb6ti{+soBM.D">
+                                                    <field name="NAME">=</field>
+                                                    <value name="var_name">
+                                                      <shadow xmlns="" type="indata">
+                                                        <field name="indata1">0</field>
+                                                      </shadow>
+                                                      <block type="variables_get" id="r;PCi,+?@lZ?vAN|B=+.">
+                                                        <field name="VAR" id="^#BZ[R#l0x^*|BBVv(?f">rows</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="DELTA">
+                                                      <shadow type="indata">
+                                                        <field name="indata1">0</field>
+                                                      </shadow>
+                                                      <block type="io_chain_no_mutator" id="8-5.+}0GOlZ0?azx,_A]">
+                                                        <value name="v1">
+                                                          <shadow xmlns="" type="indata">
+                                                            <field name="indata1"></field>
+                                                          </shadow>
+                                                          <block type="variables_get" id="$MS9Le]sV!s6T*hS.~GS">
+                                                            <field name="VAR" id="!xkw0_e(I8Qm/SH/gzK?">cur</field>
+                                                          </block>
+                                                        </value>
+                                                        <value name="v2">
+                                                          <shadow type="indata">
+                                                            <field name="indata1"></field>
+                                                          </shadow>
+                                                          <block type="database_bk5" id="09U=+NsK8wV/wm4u|^W}">
+                                                            <field name="NAME">fetchall</field>
+                                                            <value name="v1">
+                                                              <shadow type="indata" id="]pX@eDv#19txvm,qtL8z">
+                                                                <field name="indata1"></field>
+                                                              </shadow>
+                                                            </value>
+                                                          </block>
+                                                        </value>
+                                                      </block>
+                                                    </value>
+                                                    <next>
+                                                      <block type="repeat_bk1" id="dwaLL1$KQE8E,4`[=v#j">
+                                                        <value name="v1">
+                                                          <shadow type="indata">
+                                                            <field name="indata1"></field>
+                                                          </shadow>
+                                                          <block type="variables_get" id="G5=WG1*ph*8=Y$)(;iJz">
+                                                            <field name="VAR" id="2^OJSuj#bd|t4U6$8ba/">row</field>
+                                                          </block>
+                                                        </value>
+                                                        <value name="v2">
+                                                          <shadow type="indata" id="m%^6|#kX?I9|e|7$D%Yv">
+                                                            <field name="indata1"></field>
+                                                          </shadow>
+                                                          <block type="variables_get" id="FD*O6K5@HECR$s[N^O,,">
+                                                            <field name="VAR" id="^#BZ[R#l0x^*|BBVv(?f">rows</field>
+                                                          </block>
+                                                        </value>
+                                                        <statement name="v3">
+                                                          <block type="io_bk2" id="?e{lDyq%0NX_}2DCDRx@">
+                                                            <value name="content">
+                                                              <shadow type="indata">
+                                                                <field name="indata1"></field>
+                                                              </shadow>
+                                                              <block type="variables_get" id="$19G%:dK)d{(1[;^Z77X">
+                                                                <field name="VAR" id="2^OJSuj#bd|t4U6$8ba/">row</field>
+                                                              </block>
+                                                            </value>
+                                                          </block>
+                                                        </statement>
+                                                        <next>
+                                                          <block type="io_chain_tb" id="]{GP75}w7*F*t.@_/#[C">
+                                                            <value name="v1">
+                                                              <shadow type="indata">
+                                                                <field name="indata1"></field>
+                                                              </shadow>
+                                                              <block type="variables_get" id="AQ^h,uE=,$WT5C|FJJy9">
+                                                                <field name="VAR" id="-o2DAA@@h@:%x$Gw2.m$">con</field>
+                                                              </block>
+                                                            </value>
+                                                            <value name="v2">
+                                                              <shadow type="indata">
+                                                                <field name="indata1"></field>
+                                                              </shadow>
+                                                              <block type="database_bk3" id="PuG:o+NZs0F2bn#dbw;`">
+                                                                <field name="NAME">commit</field>
+                                                                <value name="v1">
+                                                                  <shadow type="indata" id="|g`22KePlAIMWAng+g![">
+                                                                    <field name="indata1"></field>
+                                                                  </shadow>
+                                                                </value>
+                                                              </block>
+                                                            </value>
+                                                            <next>
+                                                              <block type="io_chain_tb" id="6q(L-|yH=7DdI2yRQ-2{">
+                                                                <value name="v1">
+                                                                  <shadow type="indata">
+                                                                    <field name="indata1"></field>
+                                                                  </shadow>
+                                                                  <block type="variables_get" id="_/(4bEP~e7fSSYiZwK^W">
+                                                                    <field name="VAR" id="-o2DAA@@h@:%x$Gw2.m$">con</field>
+                                                                  </block>
+                                                                </value>
+                                                                <value name="v2">
+                                                                  <shadow type="indata">
+                                                                    <field name="indata1"></field>
+                                                                  </shadow>
+                                                                  <block type="database_bk3" id="7sHAaAALK6fD~:)lQ(g.">
+                                                                    <field name="NAME">close</field>
+                                                                    <value name="v1">
+                                                                      <shadow type="indata" id="MImFDf|DUgkfcN%ap|p#">
+                                                                        <field name="indata1"></field>
+                                                                      </shadow>
+                                                                    </value>
+                                                                  </block>
+                                                                </value>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

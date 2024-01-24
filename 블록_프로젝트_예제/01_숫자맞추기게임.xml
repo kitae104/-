@@ -1,0 +1,372 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="xS;Sn-27|o@#y,!!}=jV">number</variable>
+    <variable id="Fi`7uJZk]JP/rE;i[zt5">cnt</variable>
+    <variable id="oUA5K6QBrggw=-IpT12]">guess_list</variable>
+    <variable id="]+tMM($=;x(o.+X!5!Wf">msg</variable>
+    <variable id="xuDOv/`*7F(ipycs(SN!">guess</variable>
+    <variable id="Zq--5LH]p7i%O=W9AnAI">True</variable>
+  </variables>
+  <block type="module_bk3" id="zxGa[t{og%w/KJPGWr2]" x="218" y="67">
+    <field name="NAME">math, random, statistics, datetime</field>
+    <next>
+      <block type="math_change" id="$S.4Jy-=ykux/rKn}$#B">
+        <field name="NAME">=</field>
+        <value name="var_name">
+          <shadow xmlns="" type="indata">
+            <field name="indata1">0</field>
+          </shadow>
+          <block type="variables_get" id="563a(z`qIcYJf,n;vd1D">
+            <field name="VAR" id="xS;Sn-27|o@#y,!!}=jV">number</field>
+          </block>
+        </value>
+        <value name="DELTA">
+          <shadow type="indata" id="KqYxA8|I2!=vY!a@Mroi">
+            <field name="indata1">0</field>
+          </shadow>
+          <block type="module_bk4" id="M{?u2Kx!LJN@8q06+YW+">
+            <field name="NAME">randint</field>
+            <value name="v1">
+              <shadow type="indata" id="[+1jli]0oRlw;tOm7T5]">
+                <field name="indata1">0, 100</field>
+              </shadow>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="math_change" id="tSNgs$yF|u7!=LttKTG8">
+            <field name="NAME">=</field>
+            <value name="var_name">
+              <shadow xmlns="" type="indata">
+                <field name="indata1">0</field>
+              </shadow>
+              <block type="variables_get" id="ZO5@=39K^Z5P=[0S-,2U">
+                <field name="VAR" id="Fi`7uJZk]JP/rE;i[zt5">cnt</field>
+              </block>
+            </value>
+            <value name="DELTA">
+              <shadow type="indata" id="-8{?2=[6tM3eP|MRamXB">
+                <field name="indata1">1</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="math_change" id="|g}eLorBF5)hJc10#pT.">
+                <field name="NAME">=</field>
+                <value name="var_name">
+                  <shadow xmlns="" type="indata">
+                    <field name="indata1">0</field>
+                  </shadow>
+                  <block type="variables_get" id="5;_6|mb=AmCOKOKFJ!^K">
+                    <field name="VAR" id="oUA5K6QBrggw=-IpT12]">guess_list</field>
+                  </block>
+                </value>
+                <value name="DELTA">
+                  <shadow type="indata" id="rF)(w=rJ.W$;CG_briCd">
+                    <field name="indata1">[]</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="math_change" id="h(C[8qADMr6l)2OrEIX@">
+                    <field name="NAME">=</field>
+                    <value name="var_name">
+                      <shadow xmlns="" type="indata">
+                        <field name="indata1">0</field>
+                      </shadow>
+                      <block type="variables_get" id="%Gu||Xg~jsEohwdB#QF5">
+                        <field name="VAR" id="]+tMM($=;x(o.+X!5!Wf">msg</field>
+                      </block>
+                    </value>
+                    <value name="DELTA">
+                      <shadow type="indata" id="Y_xw7k%oyh:i]LfCoz[F">
+                        <field name="indata1">"1부터 100까지의 숫자를 입력하세요: "</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="math_change" id="T5p9ZVaA3(1_7sr^O]!*">
+                        <field name="NAME">=</field>
+                        <value name="var_name">
+                          <shadow xmlns="" type="indata">
+                            <field name="indata1">0</field>
+                          </shadow>
+                          <block type="variables_get" id="9,z^`NatW!-oobjk#{7%">
+                            <field name="VAR" id="xuDOv/`*7F(ipycs(SN!">guess</field>
+                          </block>
+                        </value>
+                        <value name="DELTA">
+                          <shadow type="indata" id="Rm;TAAprTU(e-zCT~+)R">
+                            <field name="indata1">0</field>
+                          </shadow>
+                          <block type="builtin_bk1" id="6VSw)j^1tYT|LIJ$zDAg">
+                            <field name="NAME">int</field>
+                            <value name="v1">
+                              <shadow type="indata">&#10;    </shadow>
+                              <block type="io_input" id="14X$GC7oos-OjT)eM,_j">
+                                <value name="content1">
+                                  <shadow type="indata" id="~lt=3.T?jdiox[CGa$7=">
+                                    <field name="indata1">"메시지"</field>
+                                  </shadow>
+                                  <block type="variables_get" id="sCIDM-~w8=JM0FZ};S{*">
+                                    <field name="VAR" id="]+tMM($=;x(o.+X!5!Wf">msg</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="io_chain_tb" id="~V{Th7VbmZT4S/g9f,S2">
+                            <value name="v1">
+                              <shadow xmlns="" type="indata">
+                                <field name="indata1"></field>
+                              </shadow>
+                              <block type="variables_get" id="`s}CUJ|]eu4WKY3GOlEm">
+                                <field name="VAR" id="oUA5K6QBrggw=-IpT12]">guess_list</field>
+                              </block>
+                            </value>
+                            <value name="v2">
+                              <shadow type="indata">
+                                <field name="indata1"></field>
+                              </shadow>
+                              <block type="builtin_bk4" id="BZt*V@)HUX{I!g_Y}W-o">
+                                <field name="NAME">append</field>
+                                <value name="v1">
+                                  <shadow xmlns="" type="indata">
+                                    <field name="indata1"></field>
+                                  </shadow>
+                                  <block type="variables_get" id="@OVsTe[h]d%byyi7KL^-">
+                                    <field name="VAR" id="xuDOv/`*7F(ipycs(SN!">guess</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="repeat_bk2" id="I_PX*6,F,,^{UsscO{vY">
+                                <value name="v1">
+                                  <block type="variables_get" id="HFz/ZL0[8*Z2WHpr13S9">
+                                    <field name="VAR" id="Zq--5LH]p7i%O=W9AnAI">True</field>
+                                  </block>
+                                </value>
+                                <statement name="v2">
+                                  <block type="logic_bk1" id="B_MSE-)/[UbQ7zV$9#k%">
+                                    <value name="v1">
+                                      <shadow type="indata">
+                                        <field name="indata1"></field>
+                                      </shadow>
+                                      <block type="oper_compare" id="3vg%nEs$d$v*E.Qe)7xt">
+                                        <field name="NAME">&gt;</field>
+                                        <value name="v1">
+                                          <shadow type="indata">
+                                            <field name="indata1"></field>
+                                          </shadow>
+                                          <block type="variables_get" id="m7K;$~gY~s7A(*4atPbi">
+                                            <field name="VAR" id="xuDOv/`*7F(ipycs(SN!">guess</field>
+                                          </block>
+                                        </value>
+                                        <value name="v2">
+                                          <shadow type="indata" id="Es{BC0QANP@W1(CjQ[{t">
+                                            <field name="indata1">0</field>
+                                          </shadow>
+                                          <block type="variables_get" id="lC(9]3Uo*t6^}u7E7=xk">
+                                            <field name="VAR" id="xS;Sn-27|o@#y,!!}=jV">number</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <statement name="v2">
+                                      <block type="math_change" id="j!nSYwrUs[c3v@o}q8.a">
+                                        <field name="NAME">=</field>
+                                        <value name="var_name">
+                                          <shadow xmlns="" type="indata">
+                                            <field name="indata1">0</field>
+                                          </shadow>
+                                          <block type="variables_get" id="|;-%_xciB?)J7L_MUjII">
+                                            <field name="VAR" id="]+tMM($=;x(o.+X!5!Wf">msg</field>
+                                          </block>
+                                        </value>
+                                        <value name="DELTA">
+                                          <shadow type="indata" id="AVois!VrrNt!:YudKzx*">
+                                            <field name="indata1">"입력한 숫자가 너무 큽니다."</field>
+                                          </shadow>
+                                        </value>
+                                      </block>
+                                    </statement>
+                                    <next>
+                                      <block type="logic_bk2" id="l`^EpvCifp|;jp}4hs.Z">
+                                        <value name="v1">
+                                          <shadow type="indata" id="4#.OOzmV|u@j[[+(2ZK?">
+                                            <field name="indata1"></field>
+                                          </shadow>
+                                          <block type="oper_compare" id="X;1xCl+FqC$C6A(rO(P;">
+                                            <field name="NAME">&lt;</field>
+                                            <value name="v1">
+                                              <shadow type="indata">
+                                                <field name="indata1"></field>
+                                              </shadow>
+                                              <block type="variables_get" id="DhtER,K|(h0%Hf^13F9G">
+                                                <field name="VAR" id="xuDOv/`*7F(ipycs(SN!">guess</field>
+                                              </block>
+                                            </value>
+                                            <value name="v2">
+                                              <shadow type="indata" id="Mf41UhC!{XeSq6Lj+OrF">
+                                                <field name="indata1">0</field>
+                                              </shadow>
+                                              <block type="variables_get" id="6PvXS{AbL8thd=CTRd-^">
+                                                <field name="VAR" id="xS;Sn-27|o@#y,!!}=jV">number</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <statement name="v2">
+                                          <block type="math_change" id="3_7[mnn|J^{GWl2EM}Z|">
+                                            <field name="NAME">=</field>
+                                            <value name="var_name">
+                                              <shadow xmlns="" type="indata">
+                                                <field name="indata1">0</field>
+                                              </shadow>
+                                              <block type="variables_get" id="gcPi0WnYjP^0KCRg:@e1">
+                                                <field name="VAR" id="]+tMM($=;x(o.+X!5!Wf">msg</field>
+                                              </block>
+                                            </value>
+                                            <value name="DELTA">
+                                              <shadow type="indata" id="qBJ/a$,~8x+Tus}#%kw4">
+                                                <field name="indata1">"입력한 숫자가 너무 작습니다."</field>
+                                              </shadow>
+                                            </value>
+                                          </block>
+                                        </statement>
+                                        <next>
+                                          <block type="logic_bk3" id="?^PTE6Z:Q]06LhgoT_?q">
+                                            <statement name="v2">
+                                              <block type="io_bk1" id="fK`Zv`6.v=T/pVm?UO+7">
+                                                <value name="content1">
+                                                  <shadow type="indata" id="lS?I5{]=t/P|ozkP_;@m">
+                                                    <field name="indata1"></field>
+                                                  </shadow>
+                                                  <block type="io_bk4" id="qx$@`9=vk9p-Eq,VBfTH">
+                                                    <field name="NAME">{var}</field>
+                                                    <value name="v1">
+                                                      <shadow type="indata" id="olyqB.ySX[f[gw3*4j//">
+                                                        <field name="indata1">축하합니다! {cnt}회 만에 숫자를 맞췄습니다.</field>
+                                                      </shadow>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                                <next>
+                                                  <block type="io_bk2" id="Io-A.%u.@=X[s~c6igMT">
+                                                    <value name="content">
+                                                      <shadow type="indata">
+                                                        <field name="indata1"></field>
+                                                      </shadow>
+                                                      <block type="variables_get" id="V;fiIQ7]6sx1j4k|3t2?">
+                                                        <field name="VAR" id="oUA5K6QBrggw=-IpT12]">guess_list</field>
+                                                      </block>
+                                                    </value>
+                                                    <next>
+                                                      <block type="repeat_bk3" id="X*EGI0tiG{Jq)Dw|.*:%"></block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </statement>
+                                            <next>
+                                              <block type="math_change" id="[?}`xup-(hTUleRyQU/_">
+                                                <field name="NAME">=</field>
+                                                <value name="var_name">
+                                                  <shadow xmlns="" type="indata">
+                                                    <field name="indata1">0</field>
+                                                  </shadow>
+                                                  <block type="variables_get" id="0e$k),v-dr|MF{R~LGt^">
+                                                    <field name="VAR" id="xuDOv/`*7F(ipycs(SN!">guess</field>
+                                                  </block>
+                                                </value>
+                                                <value name="DELTA">
+                                                  <shadow type="indata">
+                                                    <field name="indata1">0</field>
+                                                  </shadow>
+                                                  <block type="builtin_bk1" id="VP*K$Xj,1!=FcD2~-wa:">
+                                                    <field name="NAME">int</field>
+                                                    <value name="v1">
+                                                      <shadow type="indata">&#10;    </shadow>
+                                                      <block type="io_input" id="pG$]IS!Lx2yMa_L1l_t6">
+                                                        <value name="content1">
+                                                          <shadow type="indata">
+                                                            <field name="indata1">"메시지"</field>
+                                                          </shadow>
+                                                          <block type="variables_get" id="TvFWrGv+)Ha)=x3QUv9]">
+                                                            <field name="VAR" id="]+tMM($=;x(o.+X!5!Wf">msg</field>
+                                                          </block>
+                                                        </value>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                                <next>
+                                                  <block type="io_chain_tb" id="c!jeMHbW;XeT.XT%+_2[">
+                                                    <value name="v1">
+                                                      <shadow xmlns="" type="indata">
+                                                        <field name="indata1"></field>
+                                                      </shadow>
+                                                      <block type="variables_get" id="N@y$NM}#i/_9NaGlX{w.">
+                                                        <field name="VAR" id="oUA5K6QBrggw=-IpT12]">guess_list</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="v2">
+                                                      <shadow type="indata">
+                                                        <field name="indata1"></field>
+                                                      </shadow>
+                                                      <block type="builtin_bk4" id="Z0!UX/6QnS!_w@uN)DjY">
+                                                        <field name="NAME">append</field>
+                                                        <value name="v1">
+                                                          <shadow xmlns="" type="indata">
+                                                            <field name="indata1"></field>
+                                                          </shadow>
+                                                          <block type="variables_get" id="yB2[Fat/y)8I[k9ClpM;">
+                                                            <field name="VAR" id="xuDOv/`*7F(ipycs(SN!">guess</field>
+                                                          </block>
+                                                        </value>
+                                                      </block>
+                                                    </value>
+                                                    <next>
+                                                      <block type="math_change" id="$N-aj01-vBS#VEXPcw7]">
+                                                        <field name="NAME">+=</field>
+                                                        <value name="var_name">
+                                                          <shadow xmlns="" type="indata">
+                                                            <field name="indata1">0</field>
+                                                          </shadow>
+                                                          <block type="variables_get" id="-x`73OVp3sEIGPFgH/a-">
+                                                            <field name="VAR" id="Fi`7uJZk]JP/rE;i[zt5">cnt</field>
+                                                          </block>
+                                                        </value>
+                                                        <value name="DELTA">
+                                                          <shadow type="indata" id="(Pt].5Mf}PF*{sfGO[m.">
+                                                            <field name="indata1">1</field>
+                                                          </shadow>
+                                                        </value>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </statement>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
