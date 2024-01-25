@@ -1,0 +1,431 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="MZDMI]pI_}npPXr8HjBN">tot</variable>
+    <variable id="egqxXYWqudv54`wxZ/3u">rank</variable>
+    <variable id="|y6`_nDNFPh:C(MC8ye5">i</variable>
+    <variable id="Y0ojQEX~U#]YSl_-Mn2;">rank_tot</variable>
+  </variables>
+  <block type="io_comment_dropdown" id="yU),BR0hWb}K[]N.Jto[" x="292" y="83">
+    <field name="NAME">#</field>
+    <value name="v1">
+      <shadow type="indata" id="lVd4cLI[t:ySG+bA7~a4">
+        <field name="indata1">등수 구하기</field>
+      </shadow>
+    </value>
+    <next>
+      <block type="math_change" id="*O-=_Z)bvo,47,t~U6YZ">
+        <field name="NAME">=</field>
+        <value name="var_name">
+          <shadow type="indata" id="Pyvdtg{USj2kX!n)TCBd">
+            <field name="indata1">0</field>
+          </shadow>
+          <block type="variables_get" id=".a5acwknLC!h8LAZoY)a">
+            <field name="VAR" id="MZDMI]pI_}npPXr8HjBN">tot</field>
+          </block>
+        </value>
+        <value name="DELTA">
+          <shadow type="indata" id="i=cB!Y0g8v0$f?SO*pP5">
+            <field name="indata1">[60, 0, 70, 60, 70, 80, 100, 60, 80, 100]</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="math_change" id="_oU6j]zm~e6YN$D%Wdht">
+            <field name="NAME">=</field>
+            <value name="var_name">
+              <shadow xmlns="" type="indata">
+                <field name="indata1">0</field>
+              </shadow>
+              <block type="variables_get" id="}z*04?PsoYR0DvVv0I!d">
+                <field name="VAR" id="egqxXYWqudv54`wxZ/3u">rank</field>
+              </block>
+            </value>
+            <value name="DELTA">
+              <shadow type="indata" id="*ZUihz,-Z+t.hb`)Pge:">
+                <field name="indata1">0</field>
+              </shadow>
+              <block type="oper_arithmetic" id="oNh59+Dod%rW/7v[oezs">
+                <field name="NAME">*</field>
+                <value name="v1">
+                  <shadow type="indata" id=",z3:|TfJ5$_hdS^yQXw,">
+                    <field name="indata1">[0]</field>
+                  </shadow>
+                </value>
+                <value name="v2">
+                  <shadow type="indata" id="#Q$dtH9xHU-{XfYGgW03">
+                    <field name="indata1">101</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="io_comment_dropdown" id="OIhxyPLt_%V1fIRMM316">
+                <field name="NAME">#</field>
+                <value name="v1">
+                  <shadow type="indata" id="[S_C_k.3=gF2fCN}f#p+">
+                    <field name="indata1">각 점수의 등장 횟수 카운트 </field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="repeat_bk1" id="ZMf-N+4X)/8(MyYXLXHf">
+                    <value name="v1">
+                      <shadow type="indata">
+                        <field name="indata1"></field>
+                      </shadow>
+                      <block type="variables_get" id="^zn|t3}H][yxD{(0E3SW">
+                        <field name="VAR" id="|y6`_nDNFPh:C(MC8ye5">i</field>
+                      </block>
+                    </value>
+                    <value name="v2">
+                      <shadow type="indata">
+                        <field name="indata1"></field>
+                      </shadow>
+                      <block type="builtin_bk3" id="i;`16n_O.Y.]Jf4Uf@g0">
+                        <field name="NAME">range</field>
+                        <value name="v1">
+                          <shadow type="indata" id="3ViyABhW0-jff+E;Xc]n">
+                            <field name="indata1">10</field>
+                          </shadow>
+                          <block type="builtin_bk3" id="$A!n0GFhkldom$:,:M*T">
+                            <field name="NAME">len</field>
+                            <value name="v1">
+                              <shadow type="indata">
+                                <field name="indata1">10</field>
+                              </shadow>
+                              <block type="variables_get" id="EqLQ-^i{n6yb/#`+Dz_f">
+                                <field name="VAR" id="MZDMI]pI_}npPXr8HjBN">tot</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="v3">
+                      <block type="math_change" id="I#gL/k!gW^NaZByWk957">
+                        <field name="NAME">=</field>
+                        <value name="var_name">
+                          <shadow type="indata" id="R1MT5nb;N*!3BIz`j]TB">
+                            <field name="indata1">0</field>
+                          </shadow>
+                          <block type="list_index" id="ps(6Jkn_2:pmPKz6x`jS">
+                            <value name="list">
+                              <shadow xmlns="" type="indata">
+                                <field name="indata1"></field>
+                              </shadow>
+                              <block type="variables_get" id="+`JFCG?wM7Nd+zx{!E%~">
+                                <field name="VAR" id="egqxXYWqudv54`wxZ/3u">rank</field>
+                              </block>
+                            </value>
+                            <value name="dic1">
+                              <shadow type="indata" id="bI+xv^Ap[J8`.,f6A/Dr">
+                                <field name="indata1">0</field>
+                              </shadow>
+                              <block type="list_index" id="e;}S?-E3a5f0J[z~sdz`">
+                                <value name="list">
+                                  <shadow xmlns="" type="indata">
+                                    <field name="indata1"></field>
+                                  </shadow>
+                                  <block type="variables_get" id="3|X2,M+XQEdk!aokCtY`">
+                                    <field name="VAR" id="MZDMI]pI_}npPXr8HjBN">tot</field>
+                                  </block>
+                                </value>
+                                <value name="dic1">
+                                  <shadow type="indata" id="T.Jjube|!N~qSs3%k(xP">
+                                    <field name="indata1">0</field>
+                                  </shadow>
+                                  <block type="variables_get" id="3NL,{rMxg~+L^Vq,5^B[">
+                                    <field name="VAR" id="|y6`_nDNFPh:C(MC8ye5">i</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="DELTA">
+                          <shadow type="indata" id="-QcQ0r]VUKUgOh2u^a~3">
+                            <field name="indata1">0</field>
+                          </shadow>
+                          <block type="oper_arithmetic" id="f:fCBdpL{GLmJ;W`Bh0H">
+                            <field name="NAME">+</field>
+                            <value name="v1">
+                              <shadow type="indata" id="dD,2%t%PV-3$7)@35o}L">
+                                <field name="indata1"></field>
+                              </shadow>
+                              <block type="list_index" id="NaF~g*+w2oM2E*|N$fHn">
+                                <value name="list">
+                                  <shadow xmlns="" type="indata">
+                                    <field name="indata1"></field>
+                                  </shadow>
+                                  <block type="variables_get" id="ClJ{CNH4/6A_EI/2X|`U">
+                                    <field name="VAR" id="egqxXYWqudv54`wxZ/3u">rank</field>
+                                  </block>
+                                </value>
+                                <value name="dic1">
+                                  <shadow type="indata">
+                                    <field name="indata1">0</field>
+                                  </shadow>
+                                  <block type="list_index" id="@$Jt%v3u;Iv-SgtM9,cD">
+                                    <value name="list">
+                                      <shadow xmlns="" type="indata">
+                                        <field name="indata1"></field>
+                                      </shadow>
+                                      <block type="variables_get" id="r+7[5.W|q2z7]tkmF0RO">
+                                        <field name="VAR" id="MZDMI]pI_}npPXr8HjBN">tot</field>
+                                      </block>
+                                    </value>
+                                    <value name="dic1">
+                                      <shadow type="indata">
+                                        <field name="indata1">0</field>
+                                      </shadow>
+                                      <block type="variables_get" id="$XCM@S;[36}HsKrbBS9l">
+                                        <field name="VAR" id="|y6`_nDNFPh:C(MC8ye5">i</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="v2">
+                              <shadow type="indata" id="K=rwVfB7sm|6U/DF+3_F">
+                                <field name="indata1">1</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="io_comment_dropdown" id="@%KwGC-_yCa$Hh2pt8H.">
+                        <field name="NAME">#</field>
+                        <value name="v1">
+                          <shadow type="indata" id="8vfGC)dYf5KKuy06:}M]">
+                            <field name="indata1">해당 점수에 대한 등수 만들기 </field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="math_change" id="w#F0(2BmE[AN!(?KIP!u">
+                            <field name="NAME">=</field>
+                            <value name="var_name">
+                              <shadow xmlns="" type="indata">
+                                <field name="indata1">0</field>
+                              </shadow>
+                              <block type="variables_get" id="Td@)%yvP$70,N?m7Iazo">
+                                <field name="VAR" id="Y0ojQEX~U#]YSl_-Mn2;">rank_tot</field>
+                              </block>
+                            </value>
+                            <value name="DELTA">
+                              <shadow type="indata" id="@5^3=_nmg}7igD5U}+}+">
+                                <field name="indata1">0</field>
+                              </shadow>
+                            </value>
+                            <next>
+                              <block type="repeat_bk1" id="O`PC%CW{)UOPjCtE-8Lc">
+                                <value name="v1">
+                                  <shadow type="indata">
+                                    <field name="indata1"></field>
+                                  </shadow>
+                                  <block type="variables_get" id="4b?tG)0K3$@VEi`oO`/a">
+                                    <field name="VAR" id="|y6`_nDNFPh:C(MC8ye5">i</field>
+                                  </block>
+                                </value>
+                                <value name="v2">
+                                  <shadow type="indata">
+                                    <field name="indata1"></field>
+                                  </shadow>
+                                  <block type="builtin_bk3" id="eyJ_f,UoAZcg-WmG1ayg">
+                                    <field name="NAME">range</field>
+                                    <value name="v1">
+                                      <shadow type="indata">
+                                        <field name="indata1">10</field>
+                                      </shadow>
+                                      <block type="builtin_bk3" id="9`#1i}b=mh^t(%C_z,LB">
+                                        <field name="NAME">len</field>
+                                        <value name="v1">
+                                          <shadow type="indata">
+                                            <field name="indata1">10</field>
+                                          </shadow>
+                                          <block type="variables_get" id="69,:L+aSQOv]3-.JK1eY">
+                                            <field name="VAR" id="egqxXYWqudv54`wxZ/3u">rank</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <statement name="v3">
+                                  <block type="math_change" id="xY=i[.ZU/xFnb2{Fdfiu">
+                                    <field name="NAME">+=</field>
+                                    <value name="var_name">
+                                      <shadow type="indata" id="xMaX2{G6/f1yL8i%Ql7j">
+                                        <field name="indata1">0</field>
+                                      </shadow>
+                                      <block type="variables_get" id="pz/t)[iFA=HKNSVZ]TyQ">
+                                        <field name="VAR" id="Y0ojQEX~U#]YSl_-Mn2;">rank_tot</field>
+                                      </block>
+                                    </value>
+                                    <value name="DELTA">
+                                      <shadow type="indata" id="2*@o2-0lNqWWQ$t2h%P8">
+                                        <field name="indata1">0</field>
+                                      </shadow>
+                                      <block type="list_index" id="SwbwXI7wJhufFo$?e]jK">
+                                        <value name="list">
+                                          <shadow xmlns="" type="indata">
+                                            <field name="indata1"></field>
+                                          </shadow>
+                                          <block type="variables_get" id="tFq!Yv86NaO1+p!#NpC:">
+                                            <field name="VAR" id="egqxXYWqudv54`wxZ/3u">rank</field>
+                                          </block>
+                                        </value>
+                                        <value name="dic1">
+                                          <shadow type="indata" id="D+5gY7Zos0ZDvkibn6ao">
+                                            <field name="indata1">0</field>
+                                          </shadow>
+                                          <block type="variables_get" id=")6;xp[(me~)RfVh[cj#Q">
+                                            <field name="VAR" id="|y6`_nDNFPh:C(MC8ye5">i</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="math_change" id="U}2q:AZZz:vQZvr}EDy@">
+                                        <field name="NAME">=</field>
+                                        <value name="var_name">
+                                          <shadow type="indata">
+                                            <field name="indata1">0</field>
+                                          </shadow>
+                                          <block type="list_index" id="j7TZ+J7$9SQWk`VP`,Tc">
+                                            <value name="list">
+                                              <shadow xmlns="" type="indata">
+                                                <field name="indata1"></field>
+                                              </shadow>
+                                              <block type="variables_get" id="an!33_xrvl*CY+})`)WR">
+                                                <field name="VAR" id="egqxXYWqudv54`wxZ/3u">rank</field>
+                                              </block>
+                                            </value>
+                                            <value name="dic1">
+                                              <shadow type="indata">
+                                                <field name="indata1">0</field>
+                                              </shadow>
+                                              <block type="variables_get" id="3^ifXzRr0A3U)^Mg^/T;">
+                                                <field name="VAR" id="|y6`_nDNFPh:C(MC8ye5">i</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <value name="DELTA">
+                                          <shadow type="indata" id="}H6NiMHtm~=dOfS$U3p1">
+                                            <field name="indata1">0</field>
+                                          </shadow>
+                                          <block type="oper_arithmetic" id="Y,dY:+-y(-yW[X+G$yC#">
+                                            <field name="NAME">+</field>
+                                            <value name="v1">
+                                              <shadow type="indata" id="^i.6o7zoRFdFE!NT83%v">
+                                                <field name="indata1"></field>
+                                              </shadow>
+                                              <block type="oper_arithmetic" id="[DD.O1/+vQDG#Ca!ZpTH">
+                                                <field name="NAME">-</field>
+                                                <value name="v1">
+                                                  <shadow type="indata" id="6s(H/SaPW?RAOnv;:cq6">
+                                                    <field name="indata1"></field>
+                                                  </shadow>
+                                                  <block type="builtin_bk3" id="sBi|!=3DPkWeV3dV),DX">
+                                                    <field name="NAME">len</field>
+                                                    <value name="v1">
+                                                      <shadow type="indata">
+                                                        <field name="indata1">10</field>
+                                                      </shadow>
+                                                      <block type="variables_get" id="D{xw)0MM=g2;71s!{^#.">
+                                                        <field name="VAR" id="MZDMI]pI_}npPXr8HjBN">tot</field>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                                <value name="v2">
+                                                  <shadow type="indata" id="i|RDfMhgSFtsU{Z1E,h8">
+                                                    <field name="indata1">0</field>
+                                                  </shadow>
+                                                  <block type="variables_get" id="y6)?SOi|r(AXnL}k}3ol">
+                                                    <field name="VAR" id="Y0ojQEX~U#]YSl_-Mn2;">rank_tot</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <value name="v2">
+                                              <shadow type="indata" id="FwV2sGlxa$/*HmOJ)1M[">
+                                                <field name="indata1">1</field>
+                                              </shadow>
+                                            </value>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </statement>
+                                <next>
+                                  <block type="repeat_bk1" id="mBUDc7nXd~W}W/+#t1rU">
+                                    <value name="v1">
+                                      <shadow type="indata">
+                                        <field name="indata1"></field>
+                                      </shadow>
+                                      <block type="variables_get" id="X=S~x%]x-0zvnMNB@Mm.">
+                                        <field name="VAR" id="|y6`_nDNFPh:C(MC8ye5">i</field>
+                                      </block>
+                                    </value>
+                                    <value name="v2">
+                                      <shadow type="indata">
+                                        <field name="indata1"></field>
+                                      </shadow>
+                                      <block type="builtin_bk3" id="|%[A6dB}.iL3/0OaWGlp">
+                                        <field name="NAME">range</field>
+                                        <value name="v1">
+                                          <shadow type="indata">
+                                            <field name="indata1">10</field>
+                                          </shadow>
+                                          <block type="builtin_bk3" id="P6H/.)+Qm3RG!l%FXvW-">
+                                            <field name="NAME">len</field>
+                                            <value name="v1">
+                                              <shadow type="indata">
+                                                <field name="indata1">10</field>
+                                              </shadow>
+                                              <block type="variables_get" id="J(3@T3~6O@6o,QOL!gdV">
+                                                <field name="VAR" id="MZDMI]pI_}npPXr8HjBN">tot</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <statement name="v3">
+                                      <block type="io_bk1" id="cUr*(se|RykzH+:];4e6">
+                                        <value name="content1">
+                                          <shadow type="indata" id="%$2]MS$I}.*t#4*Tlx+Q">
+                                            <field name="indata1"></field>
+                                          </shadow>
+                                          <block type="io_bk4" id="%B959vt3d^Mf_z!sKhtD">
+                                            <field name="NAME">{var}</field>
+                                            <value name="v1">
+                                              <shadow type="indata" id="vby!C|(aGZHH;LM]dG_j">
+                                                <field name="indata1">{i + 1}번째 학생 점수는 {tot[i]}, 석차는 {rank[tot[i]]}</field>
+                                              </shadow>
+                                            </value>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </statement>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

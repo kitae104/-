@@ -1,0 +1,237 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id=")K!=x$/HfKzA*L#T(,6J">gan</variable>
+    <variable id=".{]`wqtc~dGlO:~o7b:y">zi</variable>
+    <variable id="9Giww_2]ny8Hbd^Bffvb">year</variable>
+    <variable id="sl{OJSN6NEuX$s[Q|_^v">i</variable>
+    <variable id="UeYhP[YAxHkwmU`84fwL">j</variable>
+    <variable id="a;5!9J?^Eq-,r]m^J`xm">ganzi</variable>
+  </variables>
+  <block type="math_change" id="qm7P6Vl4Jj?~GU0!I5S+" x="98" y="38">
+    <field name="NAME">=</field>
+    <value name="var_name">
+      <shadow xmlns="" type="indata">
+        <field name="indata1">0</field>
+      </shadow>
+      <block type="variables_get" id="s|lrWk{g_){;hh9uBUc!">
+        <field name="VAR" id=")K!=x$/HfKzA*L#T(,6J">gan</field>
+      </block>
+    </value>
+    <value name="DELTA">
+      <shadow type="indata" id="UlbTWuutc[qLr3^+?Fl}">
+        <field name="indata1">['갑을병정무기경신임계', '甲乙丙丁戊己庚辛壬係']</field>
+      </shadow>
+    </value>
+    <next>
+      <block type="math_change" id="39@e#;%}Il`GjA+|7F.k">
+        <field name="NAME">=</field>
+        <value name="var_name">
+          <shadow xmlns="" type="indata">
+            <field name="indata1">0</field>
+          </shadow>
+          <block type="variables_get" id="/hF)VQ0:gv}tF4UCT)^_">
+            <field name="VAR" id=".{]`wqtc~dGlO:~o7b:y">zi</field>
+          </block>
+        </value>
+        <value name="DELTA">
+          <shadow type="indata" id="?|_4_-c|h:/FLG$4I,X[">
+            <field name="indata1">['자축인묘진사오미신유술해', '子丑寅卯辰巳午未申酉戌亥']</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="math_change" id="=~tkmXDL?kSY8)1=Jw)G">
+            <field name="NAME">=</field>
+            <value name="var_name">
+              <shadow xmlns="" type="indata">
+                <field name="indata1">0</field>
+              </shadow>
+              <block type="variables_get" id="7kug9LAw{{BWI=m}|Kkb">
+                <field name="VAR" id="9Giww_2]ny8Hbd^Bffvb">year</field>
+              </block>
+            </value>
+            <value name="DELTA">
+              <shadow type="indata" id="g^|?U;Na;s-+=tD]W$:3">
+                <field name="indata1">0</field>
+              </shadow>
+              <block type="builtin_bk1" id="E`6rIlk9(rhWxBK3Vm#;">
+                <field name="NAME">int</field>
+                <value name="v1">
+                  <shadow type="indata">&#10;    </shadow>
+                  <block type="io_input" id="e4Xq#vW;q[_ncX=p*O``">
+                    <value name="content1">
+                      <shadow type="indata" id="UxEXL1[XGa|LMNGltE`7">
+                        <field name="indata1">"년도"</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="logic_bk1" id="1IG#)$jgqG=R7BwMpe;d">
+                <value name="v1">
+                  <shadow type="indata">
+                    <field name="indata1"></field>
+                  </shadow>
+                  <block type="oper_compare" id="5a7wF3NQQ8|H]1{DSLg3">
+                    <field name="NAME">&gt;</field>
+                    <value name="v1">
+                      <shadow type="indata">
+                        <field name="indata1"></field>
+                      </shadow>
+                      <block type="variables_get" id="VVLaG.M_Hoydmg_i2a2@">
+                        <field name="VAR" id="9Giww_2]ny8Hbd^Bffvb">year</field>
+                      </block>
+                    </value>
+                    <value name="v2">
+                      <shadow type="indata" id="jq0^$rZ,)dw#{u%.7NdM">
+                        <field name="indata1">0</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </value>
+                <statement name="v2">
+                  <block type="math_change" id="kbA=3Y,!H_|NX`{UDt+v">
+                    <field name="NAME">=</field>
+                    <value name="var_name">
+                      <shadow xmlns="" type="indata">
+                        <field name="indata1">0</field>
+                      </shadow>
+                      <block type="variables_get" id="rtp@oAsMfl|Y]ReY,/vw">
+                        <field name="VAR" id="sl{OJSN6NEuX$s[Q|_^v">i</field>
+                      </block>
+                    </value>
+                    <value name="DELTA">
+                      <shadow type="indata" id="+ihx2.Rak6472^qt*!l@">
+                        <field name="indata1">0</field>
+                      </shadow>
+                      <block type="oper_arithmetic" id="8^jQ^zh/5iML_)Dpf/W*">
+                        <field name="NAME">%</field>
+                        <value name="v1">
+                          <shadow type="indata" id="VCx{1=s-fI6tX+kxpxWE">
+                            <field name="indata1"></field>
+                          </shadow>
+                          <block type="oper_arithmetic" id="J}cyCY((fJSwD`X]6)dY">
+                            <field name="NAME">-</field>
+                            <value name="v1">
+                              <shadow type="indata">
+                                <field name="indata1"></field>
+                              </shadow>
+                              <block type="variables_get" id="Mi!ufat0Q|;,O.[!6(2%">
+                                <field name="VAR" id="9Giww_2]ny8Hbd^Bffvb">year</field>
+                              </block>
+                            </value>
+                            <value name="v2">
+                              <shadow type="indata" id="*7{8X%^t6}q,H6K$[Q*w">
+                                <field name="indata1">4</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="v2">
+                          <shadow type="indata" id="Tcpr[:-ll?N12^4f$5tE">
+                            <field name="indata1">10</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="math_change" id="u.~v!3x[(0pPYZ.?k,!a">
+                        <field name="NAME">=</field>
+                        <value name="var_name">
+                          <shadow xmlns="" type="indata">
+                            <field name="indata1">0</field>
+                          </shadow>
+                          <block type="variables_get" id="F,O$P?*RQ)(gKkn(=_G7">
+                            <field name="VAR" id="UeYhP[YAxHkwmU`84fwL">j</field>
+                          </block>
+                        </value>
+                        <value name="DELTA">
+                          <shadow type="indata" id="|WBEZ?2Vv$#Emi7hXJss">
+                            <field name="indata1">0</field>
+                          </shadow>
+                          <block type="oper_arithmetic" id="0vDk2q^F[_m^zHG@.23k">
+                            <field name="NAME">%</field>
+                            <value name="v1">
+                              <shadow type="indata">
+                                <field name="indata1"></field>
+                              </shadow>
+                              <block type="oper_arithmetic" id="PZjtvQnlDv%)A?nO#T`4">
+                                <field name="NAME">-</field>
+                                <value name="v1">
+                                  <shadow type="indata">
+                                    <field name="indata1"></field>
+                                  </shadow>
+                                  <block type="variables_get" id="DSnaqa-ao!^jL+4*BZ#X">
+                                    <field name="VAR" id="9Giww_2]ny8Hbd^Bffvb">year</field>
+                                  </block>
+                                </value>
+                                <value name="v2">
+                                  <shadow type="indata" id="`%)[o;5m(Qlq}(M=^e`7">
+                                    <field name="indata1">4</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="v2">
+                              <shadow type="indata" id="lzNC;[).Bp60vD1ke?v3">
+                                <field name="indata1">12</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="math_change" id="{|`{7mPmq_?oWay-]46;">
+                            <field name="NAME">=</field>
+                            <value name="var_name">
+                              <shadow xmlns="" type="indata">
+                                <field name="indata1">0</field>
+                              </shadow>
+                              <block type="variables_get" id="3]MFXBr,$/3G/JYD6F]x">
+                                <field name="VAR" id="a;5!9J?^Eq-,r]m^J`xm">ganzi</field>
+                              </block>
+                            </value>
+                            <value name="DELTA">
+                              <shadow type="indata" id="Aag=|3;EG`p7f@Fi$^c]">
+                                <field name="indata1">gan[0][i] + zi[0][j] + "(" + gan[1][i] + zi[1][j] + ")"</field>
+                              </shadow>
+                            </value>
+                            <next>
+                              <block type="io_bk2" id="]=k4k$|K`wjg_;oE([~(">
+                                <value name="content">
+                                  <shadow type="indata">
+                                    <field name="indata1"></field>
+                                  </shadow>
+                                  <block type="variables_get" id="x^qN$-Y5Vw1!!?Jpg_/A">
+                                    <field name="VAR" id="a;5!9J?^Eq-,r]m^J`xm">ganzi</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <next>
+                  <block type="logic_bk3" id="_ZT3Sv)ft%0}=My,RXn#">
+                    <statement name="v2">
+                      <block type="io_bk1" id="+B+~XP%Rww5w]p_KtM2`">
+                        <value name="content1">
+                          <shadow type="indata" id="bN`3s*G%b/%Ej=6Hlje:">
+                            <field name="indata1">"0보다 큰 숫자를 입력하세요."</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

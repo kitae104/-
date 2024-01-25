@@ -1,0 +1,184 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="NC}H/*84KgM@,Fqp)?uf">id_list</variable>
+    <variable id="I!P4l)uJ$E^^RVJGHqBs">winners</variable>
+  </variables>
+  <block type="module_bk3" id="gTBWQ2U]3UgOX+{c6gG4" x="97" y="98">
+    <field name="NAME">math, random, statistics, datetime</field>
+    <next>
+      <block type="math_change" id="ow$#7*HHqg_kw~d4gLEh">
+        <field name="NAME">=</field>
+        <value name="var_name">
+          <shadow xmlns="" type="indata">
+            <field name="indata1">0</field>
+          </shadow>
+          <block type="variables_get" id="6_u#k61eo4DVGU61s]sq">
+            <field name="VAR" id="NC}H/*84KgM@,Fqp)?uf">id_list</field>
+          </block>
+        </value>
+        <value name="DELTA">
+          <shadow type="indata" id="%sZWijI4tzD#8^~A{INN">
+            <field name="indata1">0</field>
+          </shadow>
+          <block type="builtin_bk1" id=".}lCu|o(jxE_,+bWN6My">
+            <field name="NAME">list</field>
+            <value name="v1">
+              <shadow type="indata" id="mj3=RYC{W~`7gBA64$A5">
+                <field name="indata1">코드</field>
+              </shadow>
+              <block type="builtin_bk3" id="6+g8T*]r5lB0j(Uzqp?~">
+                <field name="NAME">range</field>
+                <value name="v1">
+                  <shadow type="indata" id="iMNgdwIWOqQEb=jh!IVP">
+                    <field name="indata1">1, 21, 1</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="io_empty" id="j|}]Y0a6Q:V2z3Hfc*(^">
+            <value name="v1">
+              <shadow type="indata" id="/{sISL}JB[R`9]PP5[B$">
+                <field name="indata1"></field>
+              </shadow>
+              <block type="module_bk4" id="~H/^{!EJs+To;1bSW!4/">
+                <field name="NAME">shuffle</field>
+                <value name="v1">
+                  <shadow type="indata" id="lU9@ahjI$NHpeDjvDn}Z">
+                    <field name="indata1"></field>
+                  </shadow>
+                  <block type="variables_get" id="9?6I{eJKG(kyBJTwu4|C">
+                    <field name="VAR" id="NC}H/*84KgM@,Fqp)?uf">id_list</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="io_bk2" id="kw?5AMlhj5,qMF;~(h/9">
+                <value name="content">
+                  <shadow type="indata">
+                    <field name="indata1"></field>
+                  </shadow>
+                  <block type="variables_get" id="/|zxJ]?SX|n#G@xAy$yB">
+                    <field name="VAR" id="NC}H/*84KgM@,Fqp)?uf">id_list</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="math_change" id="G/FQ$L@u3^3~d04~(TrG">
+                    <field name="NAME">=</field>
+                    <value name="var_name">
+                      <shadow xmlns="" type="indata">
+                        <field name="indata1">0</field>
+                      </shadow>
+                      <block type="variables_get" id="cPG1c%rL]1SYsdbBg5IR">
+                        <field name="VAR" id="I!P4l)uJ$E^^RVJGHqBs">winners</field>
+                      </block>
+                    </value>
+                    <value name="DELTA">
+                      <shadow type="indata" id="lLX600l#~vCwH25=af?R">
+                        <field name="indata1">0</field>
+                      </shadow>
+                      <block type="module_bk4" id="AKujZre~#pz5W#:E[RI3">
+                        <field name="NAME">sample</field>
+                        <value name="v1">
+                          <shadow type="indata" id="^scF=Z3@LVj0HV=8%11k">
+                            <field name="indata1"></field>
+                          </shadow>
+                          <block type="io_chain_2" id="nNQ*)5/T%RBk,6MjIVxu">
+                            <mutation items="2"></mutation>
+                            <value name="ADD0">
+                              <shadow xmlns="" type="indata">
+                                <field name="indata1"></field>
+                              </shadow>
+                              <block type="variables_get" id="zK]hdK;eSBSidv;E,9GV">
+                                <field name="VAR" id="NC}H/*84KgM@,Fqp)?uf">id_list</field>
+                              </block>
+                            </value>
+                            <value name="ADD1">
+                              <shadow type="indata" id="`P8AX(c_25,C[s%x=-Uc">
+                                <field name="indata1">4</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="io_bk2" id="A9q1^hG5,le%H`f]t*]~">
+                        <value name="content">
+                          <shadow type="indata">
+                            <field name="indata1"></field>
+                          </shadow>
+                          <block type="variables_get" id=";PnD?ITf?%`nH79RRBF8">
+                            <field name="VAR" id="I!P4l)uJ$E^^RVJGHqBs">winners</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="io_bk1" id="QSo!4jA/[5uTjfft5c4^">
+                            <value name="content1">
+                              <shadow type="indata" id="g.FKkBd?[.~-L)Ac)bzQ">
+                                <field name="indata1">"&gt;&gt; 당첨자 발표 &lt;&lt;"</field>
+                              </shadow>
+                            </value>
+                            <next>
+                              <block type="io_bk3" id="z-y}^m5erjg|[0u$ZTX8">
+                                <value name="content1">
+                                  <shadow type="indata" id="]}_$jNt`TdldVw)XDyPO">
+                                    <field name="indata1">"피자 당첨자 :"</field>
+                                  </shadow>
+                                </value>
+                                <value name="content2">
+                                  <shadow type="indata" id=")~!5:5Xh|B]!57}dWA$X">
+                                    <field name="indata1"></field>
+                                  </shadow>
+                                  <block type="list_index" id="~!XR#8/Jb`S1^4q{x4Y^">
+                                    <value name="list">
+                                      <shadow xmlns="" type="indata">
+                                        <field name="indata1"></field>
+                                      </shadow>
+                                      <block type="variables_get" id="+?I1PosRy~f6kOS486OJ">
+                                        <field name="VAR" id="I!P4l)uJ$E^^RVJGHqBs">winners</field>
+                                      </block>
+                                    </value>
+                                    <value name="dic1">
+                                      <shadow type="indata" id="JF7-1;~84YC-5!#i-9Up">
+                                        <field name="indata1">0</field>
+                                      </shadow>
+                                    </value>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="io_bk1" id="MLnG~?Vrj_cKy=BCTZX!">
+                                    <value name="content1">
+                                      <shadow type="indata" id="]dPKGNN#YF+VOVYp~Ne@">
+                                        <field name="indata1"></field>
+                                      </shadow>
+                                      <block type="io_bk4" id="joO-PRTJTX4_h@4JDV__">
+                                        <field name="NAME">{var}</field>
+                                        <value name="v1">
+                                          <shadow type="indata" id="$X/|,UEIm[2JML;ywyd_">
+                                            <field name="indata1">아이스크림 당첨자 {winners[1:]}</field>
+                                          </shadow>
+                                        </value>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
